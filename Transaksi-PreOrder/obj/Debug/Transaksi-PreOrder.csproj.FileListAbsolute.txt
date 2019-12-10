@@ -1,0 +1,11 @@
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.exe.config
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.exe
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.pdb
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csprojAssemblyReference.cache
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Form1.resources
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Properties.Resources.resources
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csproj.GenerateResource.cache
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csproj.CoreCompileInputs.cache
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
+E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Login.resources
