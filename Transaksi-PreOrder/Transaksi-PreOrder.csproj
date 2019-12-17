@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Entity\Barang.cs" />
     <Compile Include="View\DetailPesanan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
+    <Folder Include="Model\Context\" />
+    <Folder Include="Model\Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
