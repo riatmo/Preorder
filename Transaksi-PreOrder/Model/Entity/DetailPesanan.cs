@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Transaksi_PreOrder.Model.Entity
 {
-    class DetailPesanan
+    public class DetailPesanan
     {
+        public string KdDetail { get; set; }
+        public string KdBarang { get; set; }
+        public string KdPesanan { get; set; }
+        public int Qty { get; set; }
+        public int Subtotal { get; set; }
     }
 }

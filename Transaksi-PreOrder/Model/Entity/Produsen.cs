@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Transaksi_PreOrder.Model.Entity
 {
-    class Produsen
+    public class Produsen
     {
+        public string KdProdusen { get; set; }
+        public string Nama { get; set; }
+        public string Alamat { get; set; }
+        public string Telpon { get; set; }
     }
 }

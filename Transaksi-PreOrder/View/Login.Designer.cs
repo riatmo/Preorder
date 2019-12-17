@@ -110,6 +110,7 @@
             this.btnLoginAppForm.TabIndex = 5;
             this.btnLoginAppForm.Text = "Login";
             this.btnLoginAppForm.UseVisualStyleBackColor = false;
+            this.btnLoginAppForm.Click += new System.EventHandler(this.btnLoginAppForm_Click);
             // 
             // label1
             // 
@@ -130,6 +131,7 @@
             this.btnKeluar.TabIndex = 8;
             this.btnKeluar.Text = "Keluar";
             this.btnKeluar.UseVisualStyleBackColor = false;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
             // Login
             // 

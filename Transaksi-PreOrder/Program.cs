@@ -16,7 +16,16 @@ namespace Transaksi_PreOrder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+
+
+            // buat objek form login
+            Login login = new Login();
+
+            // tampilkan form login
+            if (login.ShowDialog() == DialogResult.OK) // jika user dan password benar
+                Application.Run(new FormUtama()); // jalankan form utama
+            else
+                Application.Exit(); // keluar dari aplikasi
         }
     }
 }
