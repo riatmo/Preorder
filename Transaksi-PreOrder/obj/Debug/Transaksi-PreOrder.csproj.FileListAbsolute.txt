@@ -9,3 +9,17 @@ E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN L
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Transaksi-PreOrder\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Login.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.exe.config
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.exe
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\bin\Debug\Transaksi-PreOrder.pdb
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csprojAssemblyReference.cache
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.DetailPesanan.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.EntryBarang.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Form1.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Login.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Pesanan.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Properties.Resources.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csproj.GenerateResource.cache
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.csproj.CoreCompileInputs.cache
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
