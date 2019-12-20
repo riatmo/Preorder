@@ -60,7 +60,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(183, 13);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "Username";
+            this.txtUsername.Text = "root";
             this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel1
@@ -90,7 +90,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(183, 13);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "Password";
+            this.txtPassword.Text = "root";
             // 
             // panel2
             // 

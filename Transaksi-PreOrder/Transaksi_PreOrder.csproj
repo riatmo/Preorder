@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AdminController.cs" />
+    <Compile Include="Controller\BarangController.cs" />
     <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="Model\Entity\Admin.cs" />
     <Compile Include="Model\Entity\Barang.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Model\Entity\Pesanan.cs" />
     <Compile Include="Model\Entity\Produsen.cs" />
     <Compile Include="Model\Repository\AdminRepository.cs" />
+    <Compile Include="Model\Repository\BarangRepository.cs" />
     <Compile Include="View\DetailPesanan.cs">
       <SubType>Form</SubType>
     </Compile>

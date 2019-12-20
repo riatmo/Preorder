@@ -133,6 +133,7 @@
             this.btnBuatPesanan.TabIndex = 3;
             this.btnBuatPesanan.Text = "Buat Pesanan";
             this.btnBuatPesanan.UseVisualStyleBackColor = false;
+            this.btnBuatPesanan.Click += new System.EventHandler(this.btnBuatPesanan_Click);
             // 
             // btnDetailPesanan
             // 
@@ -347,14 +348,14 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 697);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Name = "Form1";
+            this.Name = "FormUtama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panel1.ResumeLayout(false);

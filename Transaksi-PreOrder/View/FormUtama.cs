@@ -36,5 +36,10 @@ namespace Transaksi_PreOrder
             lvwData.Columns.Add("Jatuh Tempo", 200, HorizontalAlignment.Center);
             lvwData.Columns.Add("Status Pesanan", 200, HorizontalAlignment.Center);
         }
+
+        private void btnBuatPesanan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
