@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Data;
 using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace Transaksi_PreOrder.Model.Context
 {

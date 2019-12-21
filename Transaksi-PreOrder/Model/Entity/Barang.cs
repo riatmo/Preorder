@@ -11,6 +11,7 @@ namespace Transaksi_PreOrder.Model.Entity
         public string KdBarang { get; set; }
         public string Nama { get; set; }
         public int Harga { get; set; }
+        //public int Qty { get; set; }
         public string Ukuran { get; set; }
         public string Warna { get; set; }
     }

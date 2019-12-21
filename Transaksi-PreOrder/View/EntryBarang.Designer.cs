@@ -38,9 +38,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.btnHapus = new System.Windows.Forms.Button();
             this.pcPreview = new System.Windows.Forms.PictureBox();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.txtKdBarang = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtNmBarang = new System.Windows.Forms.TextBox();
@@ -152,16 +152,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Preview";
             // 
-            // btnBrowse
+            // pcPreview
             // 
-            this.btnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowse.Location = new System.Drawing.Point(143, 237);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 0;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = false;
+            this.pcPreview.Location = new System.Drawing.Point(6, 37);
+            this.pcPreview.Name = "pcPreview";
+            this.pcPreview.Size = new System.Drawing.Size(302, 187);
+            this.pcPreview.TabIndex = 2;
+            this.pcPreview.TabStop = false;
             // 
             // btnHapus
             // 
@@ -174,13 +171,16 @@
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
             // 
-            // pcPreview
+            // btnBrowse
             // 
-            this.pcPreview.Location = new System.Drawing.Point(6, 37);
-            this.pcPreview.Name = "pcPreview";
-            this.pcPreview.Size = new System.Drawing.Size(302, 187);
-            this.pcPreview.TabIndex = 2;
-            this.pcPreview.TabStop = false;
+            this.btnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowse.Location = new System.Drawing.Point(143, 237);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 0;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = false;
             // 
             // txtKdBarang
             // 
@@ -259,6 +259,7 @@
             this.btnTambah.TabIndex = 20;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // panel1
             // 
@@ -323,7 +324,6 @@
         private System.Windows.Forms.TextBox txtKdBarang;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtNmBarang;
-        private System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.TextBox txtUkuran;
         private System.Windows.Forms.TextBox txtWarna;
         private System.Windows.Forms.TextBox txtQty;
@@ -331,5 +331,6 @@
         private System.Windows.Forms.Button btnTutup;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox txtHarga;
     }
 }

@@ -254,6 +254,7 @@
             this.btnEntryBarang.TabIndex = 1;
             this.btnEntryBarang.Text = "Entry Barang";
             this.btnEntryBarang.UseVisualStyleBackColor = false;
+            this.btnEntryBarang.Click += new System.EventHandler(this.btnEntryBarang_Click);
             // 
             // btnPembayaran
             // 

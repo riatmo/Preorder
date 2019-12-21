@@ -22,14 +22,81 @@ namespace Transaksi_PreOrder.Model.Repository
             _conn = context.Conn;
         }
 
+        
+
+        public int Create(Barang brg)
+        {
+            int result = 0;
+
+            // deklarasi perintah SQL
+            string sql = @"insert into barang (kd_barang, nama, harga, ukuran, warna)
+                           values (@kdbarang, @nama, @harga, @ukuran, @warna)";
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                // mendaftarkan parameter dan mengeset nilainya
+                cmd.Parameters.AddWithValue("@kdbarang", brg.KdBarang);
+                cmd.Parameters.AddWithValue("@nama", brg.Nama);
+                cmd.Parameters.AddWithValue("@harga", brg.Harga);
+                cmd.Parameters.AddWithValue("@ukuran", brg.Ukuran);
+                cmd.Parameters.AddWithValue("@warna", brg.Warna);
+
+
+                try
+                {
+                    // jalankan perintah INSERT dan tampung hasilnya ke dalam variabel result
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Create error: {0}", ex.Message);
+                }
+            }
+
+            return result;
+        }
+
+        public int Update(Barang brg)
+        {
+            int result = 0;
+
+            // deklarasi perintah SQL
+
+            string sql = @"update barang set nama = @nama,  warna = @warna
+                           where kdbarang = @kdbarang";
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                // mendaftarkan parameter dan mengeset nilainya
+                cmd.Parameters.AddWithValue("@kdbarang", brg.KdBarang);
+                cmd.Parameters.AddWithValue("@nama", brg.Nama);
+                cmd.Parameters.AddWithValue("@harga", brg.Harga);
+                cmd.Parameters.AddWithValue("@ukuran", brg.Ukuran);
+                cmd.Parameters.AddWithValue("@warna", brg.Warna);
+
+                try
+                {
+                    // jalankan perintah UPDATE dan tampung hasilnya ke dalam variabel result
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Update error: {0}", ex.Message);
+                }
+            }
+
+            return result;
+        }
+
         public List<Barang> ReadAll()
         {
             List<Barang> list = new List<Barang>();
-
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"select nama, harga, ukuran, warna 
+                string sql = @"select kd_barang, nama,  ukuran, warna, kuantitas
                                from barang 
                                order by nama";
 
@@ -44,8 +111,10 @@ namespace Transaksi_PreOrder.Model.Repository
                         {
                             // proses konversi dari row result set ke object
                             Barang brg = new Barang();
+                            brg.KdBarang = dtr["kd_barang"].ToString();
                             brg.Nama = dtr["nama"].ToString();
-                            brg.Harga = (int)dtr["harga"];
+                            //brg.Harga = (int32)dtr["harga"].ToString(); ;
+                            brg.Harga = Convert.ToInt16(dtr["harga"]);
                             brg.Ukuran = dtr["ukuran"].ToString();
                             brg.Warna = dtr["warna"].ToString();
 
@@ -53,10 +122,7 @@ namespace Transaksi_PreOrder.Model.Repository
                             list.Add(brg);
                         }
                     }
-
-
                 }
-
             }
             catch (Exception ex)
             {
