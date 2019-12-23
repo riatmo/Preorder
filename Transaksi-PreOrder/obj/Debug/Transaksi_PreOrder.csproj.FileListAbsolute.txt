@@ -111,10 +111,8 @@ P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\bin\Debug\System.Runtime.Com
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\bin\Debug\System.Threading.Tasks.Extensions.xml
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.csprojAssemblyReference.cache
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe.config
-P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.DetailPesanan.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.EntryBarang.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Login.resources
-P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Pesanan.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.Properties.Resources.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.csproj.GenerateResource.cache
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.csproj.CoreCompileInputs.cache
@@ -122,3 +120,5 @@ P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormUtama.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormDetailPesanan.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormPesanan.resources

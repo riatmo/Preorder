@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Transaksi_PreOrder
 {
-    public partial class DetailPesanan : Form
+    public partial class FormDetailPesanan : Form
     {
-        public DetailPesanan()
+        public FormDetailPesanan()
         {
             InitializeComponent();
         }

@@ -17,7 +17,11 @@ namespace Transaksi_PreOrder
     {
         private List<Barang> listBarang = new List<Barang>();
 
+        //tampil kode admin yg login
+        public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
+
         private BarangController controller;
+        private PesananController controller1;
 
 
 
@@ -26,10 +30,11 @@ namespace Transaksi_PreOrder
             InitializeComponent();
 
             controller = new BarangController();
-
+            controller1 = new PesananController();
 
             InisialisasiListView();
-        }
+
+    }
 
         private void lvwData_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -50,9 +55,34 @@ namespace Transaksi_PreOrder
             lvwData.Columns.Add("Status Pesanan", 200, HorizontalAlignment.Center);
         }
 
+        private void PesananCreateEventHandler(Pesanan psn)
+        {
+            // tambahkan objek mhs yang baru ke dalam collection
+
+            // ENABLE BUAT DAFTAR PESANAN
+
+            // listBarang.Add(brg);
+
+            // int noUrut = lvwData.Items.Count + 1;
+
+            // // tampilkan data mhs yg baru ke list view
+            // ListViewItem item = new ListViewItem(noUrut.ToString());
+            // item.SubItems.Add(brg.KdBarang);
+            // item.SubItems.Add(brg.Nama);
+            // item.SubItems.Add(Convert.ToString(brg.Harga));
+
+            // lvwData.Items.Add(item);
+        }
+
         private void btnBuatPesanan_Click(object sender, EventArgs e)
         {
+            FormPesanan formPesanan = new FormPesanan("tambah pesanan", controller1);
 
+            formPesanan.PesananCreate += PesananCreateEventHandler;
+
+
+
+            formPesanan.ShowDialog();
         }
 
         private void onCreateEventHandler(Barang brg)
@@ -84,6 +114,12 @@ namespace Transaksi_PreOrder
 
 
             entryBarang.ShowDialog();
+        }
+
+        private void FormUtama_Load(object sender, EventArgs e)
+        {
+            //tampil kode admin yg login
+            txtAdmin.Text = currentAdmin;
         }
     }
 }

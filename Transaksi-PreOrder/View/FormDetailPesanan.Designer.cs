@@ -1,6 +1,6 @@
 ﻿namespace Transaksi_PreOrder
 {
-    partial class DetailPesanan
+    partial class FormDetailPesanan
     {
         /// <summary>
         /// Required designer variable.
@@ -202,7 +202,7 @@
             // 
             // txtCatatan
             // 
-            this.txtCatatan.Location = new System.Drawing.Point(127, 293);
+            this.txtCatatan.Location = new System.Drawing.Point(127, 286);
             this.txtCatatan.Multiline = true;
             this.txtCatatan.Name = "txtCatatan";
             this.txtCatatan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;

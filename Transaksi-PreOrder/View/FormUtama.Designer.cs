@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lvwData = new System.Windows.Forms.ListView();
@@ -48,6 +49,8 @@
             this.btnLoginApp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -200,6 +203,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnEntryBarang, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnPembayaran, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnAkun, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtAdmin, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnPanduan, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.btnTentang, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnLoginApp, 0, 10);
@@ -349,6 +353,18 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtAdmin
+            // 
+            this.txtAdmin.Location = new System.Drawing.Point(3, 195);
+            this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.Size = new System.Drawing.Size(165, 20);
+            this.txtAdmin.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +375,7 @@
             this.Name = "FormUtama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -393,6 +410,8 @@
         private System.Windows.Forms.Button btnLoginApp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtAdmin;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
