@@ -71,6 +71,7 @@ namespace Transaksi_PreOrder
             // untuk edit data, tampilkan data lama
             
             txtKdPesanan.Text = psn.KdPesanan;
+            txtAdmin.Text = psn.KdAdmin;
            
         }
 
@@ -82,6 +83,7 @@ namespace Transaksi_PreOrder
             // set nilai property objek mahasiswa yg diambil dari TextBox
 
             psn.KdPesanan = txtKdPesanan.Text;
+            psn.KdAdmin = txtAdmin.Text;
 
 
             int result1 = 0;

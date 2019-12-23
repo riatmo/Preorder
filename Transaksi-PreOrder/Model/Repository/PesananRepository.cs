@@ -26,8 +26,8 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             int result1 = 0;
         // deklarasi perintah SQL
-        string sql = @"insert into pesanan (kd_pesanan)
-                           values (@kdpesanan)";
+        string sql = @"insert into pesanan (kd_pesanan, kd_admin)
+                           values (@kdpesanan, @kd_admin)";
 
          //string sql = @"insert into pesanan (kd_pesanan, tgl_pesanan, cara_bayar, jatuh_tempo, catatan, uang_muka, sisa_bayar,kd_pembeli, kd_admin)
          //             values (@kd_pesanan, @tgl_pesanan, @cara_bayar, @jatuh_tempo, @catatan,@uang_muka,@sisa_bayar,kd_pembeli,@kd_admin)";
@@ -45,7 +45,7 @@ namespace Transaksi_PreOrder.Model.Repository
                // cmd.Parameters.AddWithValue("@uang_muka", pesanan.Dp);
                // cmd.Parameters.AddWithValue("@sisa_bayar", pesanan.SisaPembayaran);
                // cmd.Parameters.AddWithValue("@kd_pembeli", pesanan.KdPembeli);
-               // cmd.Parameters.AddWithValue("@kd_admin", pesanan.KdPesanan);
+                cmd.Parameters.AddWithValue("@kd_admin", pesanan.KdAdmin);
 
                 try
                 {
