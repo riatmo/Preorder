@@ -19,6 +19,16 @@ namespace Transaksi_PreOrder
             InitializeComponent();
         }
 
+        internal class AdminInfo
+        {
+            public static string CurrentLoggedInAdmin {
+                get;
+                set;
+            }
+        }
+
+        
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -29,9 +39,14 @@ namespace Transaksi_PreOrder
 
         }
 
-        private void btnLoginAppForm_Click(object sender, EventArgs e)
+        public void btnLoginAppForm_Click(object sender, EventArgs e)
         {
             AdminController controller = new AdminController();
+
+            string kodeAdmin = controller.KodeAdmin(txtUsername.Text, txtPassword.Text);
+            AdminInfo.CurrentLoggedInAdmin = kodeAdmin;
+
+            
 
             bool IsValidAdmin = controller.IsValidAdmin(txtUsername.Text, txtPassword.Text);
             if (IsValidAdmin)

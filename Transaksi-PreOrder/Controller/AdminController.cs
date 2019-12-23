@@ -57,6 +57,22 @@ namespace Transaksi_PreOrder.Controller
             return true;
         }
 
+        public string KodeAdmin(string userName, string password)
+        {
+
+            string KodeAdmin;
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new AdminRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                KodeAdmin = _repository.KodeAdmin(userName, password);
+            }
+
+            return KodeAdmin;
+        }
+
 
     }
 }
