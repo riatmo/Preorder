@@ -127,7 +127,6 @@
             // 
             this.txtKdDetail.Location = new System.Drawing.Point(127, 59);
             this.txtKdDetail.Name = "txtKdDetail";
-            this.txtKdDetail.ReadOnly = true;
             this.txtKdDetail.Size = new System.Drawing.Size(117, 20);
             this.txtKdDetail.TabIndex = 8;
             // 
@@ -177,6 +176,7 @@
             this.btnTambah.TabIndex = 16;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // btnTutup
             // 
@@ -226,7 +226,7 @@
             this.panel1.Size = new System.Drawing.Size(332, 34);
             this.panel1.TabIndex = 21;
             // 
-            // DetailPesanan
+            // FormDetailPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -250,8 +250,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "DetailPesanan";
+            this.Name = "FormDetailPesanan";
             this.Text = "DetailPesanan";
+            this.Load += new System.EventHandler(this.FormDetailPesanan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

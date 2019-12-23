@@ -39,14 +39,24 @@ namespace Transaksi_PreOrder
         // deklarasi field untuk meyimpan objek mahasiswa
         private Pesanan psn;
 
+        private DetailPesananController controllerdetail;
 
         public FormPesanan()
         {
             InitializeComponent();
-            
+            controllerdetail = new DetailPesananController();
+
+
         }
 
-        
+        internal class PesananInfo
+        {
+            public static string KodePesanan {
+                get;
+                set;
+            }
+        }
+
 
         // constructor untuk inisialisasi data ketika entri data baru
         public FormPesanan(string title, PesananController controller1)
@@ -75,6 +85,11 @@ namespace Transaksi_PreOrder
            
         }
 
+        private void onCreateEventHandler(DetailPesanan detailPesanan)
+        {
+
+        }
+
         private void btnTambah_Click(object sender, EventArgs e)
         {
             // jika data baru, inisialisasi objek mahasiswa
@@ -84,6 +99,8 @@ namespace Transaksi_PreOrder
 
             psn.KdPesanan = txtKdPesanan.Text;
             psn.KdAdmin = txtAdmin.Text;
+
+            PesananInfo.KodePesanan = txtKdPesanan.Text;
 
 
             int result1 = 0;
@@ -98,7 +115,7 @@ namespace Transaksi_PreOrder
                     PesananCreate(psn); // panggil event OnCreate
 
                     // reset form input, utk persiapan input data berikutnya
-                    txtKdPesanan.Clear();
+                    //txtKdPesanan.Clear();
                     
                 }
             }
@@ -113,6 +130,17 @@ namespace Transaksi_PreOrder
                     this.Close();
                 }
             }
+
+            FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
+
+            formDetail.DetailPesananCreate += onCreateEventHandler;
+
+
+
+            
+
+            
+            formDetail.ShowDialog();
         }
 
         private void FormPesanan_Load(object sender, EventArgs e)

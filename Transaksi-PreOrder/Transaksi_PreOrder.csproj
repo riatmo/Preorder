@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Controller\AdminController.cs" />
     <Compile Include="Controller\BarangController.cs" />
+    <Compile Include="Controller\DetailPesananController.cs" />
     <Compile Include="Controller\PesananController.cs" />
     <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="Model\Entity\Admin.cs" />
