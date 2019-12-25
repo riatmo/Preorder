@@ -16,6 +16,7 @@ namespace Transaksi_PreOrder
     public partial class FormUtama : Form
     {
         private List<Barang> listBarang = new List<Barang>();
+        private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
 
         //tampil kode admin yg login
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
@@ -23,7 +24,7 @@ namespace Transaksi_PreOrder
         private BarangController controller;
         private PesananController controller1;
 
-
+       // private DetailPesananController controllerdetail;
 
         public FormUtama()
         {
@@ -31,6 +32,7 @@ namespace Transaksi_PreOrder
 
             controller = new BarangController();
             controller1 = new PesananController();
+           // controllerdetail = new DetailPesananController();
 
             InisialisasiListView();
 
@@ -80,28 +82,47 @@ namespace Transaksi_PreOrder
 
             formPesanan.PesananCreate += PesananCreateEventHandler;
 
-
-
+             //FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
+            //formDetail.DetailPesananCreate += onCreateEventHandlerDetail;
             formPesanan.ShowDialog();
         }
 
         private void onCreateEventHandler(Barang brg)
         {
+           // tambahkan objek mhs yang baru ke dalam collection
+
+           // ENABLE BUAT DAFTAR PESANAN
+
+           //listBarang.Add(brg);
+
+           //int noUrut = lvwData.Items.Count + 1;
+
+           // // tampilkan data mhs yg baru ke list view
+          // ListViewItem item = new ListViewItem(noUrut.ToString());
+           //item.SubItems.Add(brg.KdBarang);
+          // item.SubItems.Add(brg.Nama);
+          // item.SubItems.Add(Convert.ToString(brg.Harga));
+
+           //lvwData.Items.Add(item);
+        }
+
+        private void onCreateEventHandlerDetail(DetailPesanan p)
+        {
             // tambahkan objek mhs yang baru ke dalam collection
 
             // ENABLE BUAT DAFTAR PESANAN
 
-           // listBarang.Add(brg);
+            detailPesanan.Add(p);
 
-           // int noUrut = lvwData.Items.Count + 1;
+            int noUrut = lvwData.Items.Count + 1;
 
-           // // tampilkan data mhs yg baru ke list view
-           // ListViewItem item = new ListViewItem(noUrut.ToString());
-           // item.SubItems.Add(brg.KdBarang);
-           // item.SubItems.Add(brg.Nama);
-           // item.SubItems.Add(Convert.ToString(brg.Harga));
+            // // tampilkan data mhs yg baru ke list view
+            ListViewItem item = new ListViewItem(noUrut.ToString());
+            item.SubItems.Add(p.KdDetail);
+            item.SubItems.Add(p.KdPesanan);
+            //item.SubItems.Add(Convert.ToString(brg.Harga));
 
-           // lvwData.Items.Add(item);
+            lvwData.Items.Add(item);
         }
 
         private void btnEntryBarang_Click(object sender, EventArgs e)
@@ -110,8 +131,6 @@ namespace Transaksi_PreOrder
             EntryBarang entryBarang = new EntryBarang("tambah Barang", controller);
 
             entryBarang.onCreate += onCreateEventHandler;
-
-
 
             entryBarang.ShowDialog();
         }

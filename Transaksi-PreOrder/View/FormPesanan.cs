@@ -134,11 +134,6 @@ namespace Transaksi_PreOrder
             FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
 
             formDetail.DetailPesananCreate += onCreateEventHandler;
-
-
-
-            
-
             
             formDetail.ShowDialog();
         }

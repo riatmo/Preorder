@@ -76,7 +76,7 @@ namespace Transaksi_PreOrder
             if (isNewData) brg = new Barang();
 
             // set nilai property objek mahasiswa yg diambil dari TextBox
-             brg.Harga = Convert.ToInt32(txtHarga.Text);
+            brg.Harga = Convert.ToInt32(txtHarga.Text);
             //brg.Harga = txtHarga.Text;
             brg.KdBarang = txtKdBarang.Text;
             brg.Nama = txtNmBarang.Text;

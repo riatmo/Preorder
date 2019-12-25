@@ -70,6 +70,18 @@
     <Compile Include="Controller\BarangController.cs" />
     <Compile Include="Controller\DetailPesananController.cs" />
     <Compile Include="Controller\PesananController.cs" />
+    <Compile Include="View\FormPembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPembayaran.Designer.cs">
+      <DependentUpon>FormPembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRegistrasiAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRegistrasiAdmin.Designer.cs">
+      <DependentUpon>FormRegistrasiAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Context\DbContext.cs" />
     <Compile Include="Model\Entity\Admin.cs" />
     <Compile Include="Model\Entity\Barang.cs" />
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FormPembayaran.resx">
+      <DependentUpon>FormPembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRegistrasiAdmin.resx">
+      <DependentUpon>FormRegistrasiAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDetailPesanan.resx">
       <DependentUpon>FormDetailPesanan.cs</DependentUpon>
     </EmbeddedResource>

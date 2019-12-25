@@ -43,13 +43,10 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnEntryBarang = new System.Windows.Forms.Button();
             this.btnPembayaran = new System.Windows.Forms.Button();
-            this.btnAkun = new System.Windows.Forms.Button();
-            this.btnPanduan = new System.Windows.Forms.Button();
-            this.btnTentang = new System.Windows.Forms.Button();
-            this.btnLoginApp = new System.Windows.Forms.Button();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.btnRegisterAdmin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtAdmin = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -202,13 +199,10 @@
             this.tableLayoutPanel1.Controls.Add(this.btnDashboard, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnEntryBarang, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnPembayaran, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnAkun, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtAdmin, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnPanduan, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnTentang, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btnLoginApp, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegisterAdmin, 0, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -274,61 +268,27 @@
             this.btnPembayaran.Text = "Pembayaran";
             this.btnPembayaran.UseVisualStyleBackColor = false;
             // 
-            // btnAkun
+            // txtAdmin
             // 
-            this.btnAkun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnAkun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAkun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAkun.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAkun.ForeColor = System.Drawing.Color.Black;
-            this.btnAkun.Location = new System.Drawing.Point(3, 375);
-            this.btnAkun.Name = "btnAkun";
-            this.btnAkun.Size = new System.Drawing.Size(194, 39);
-            this.btnAkun.TabIndex = 3;
-            this.btnAkun.Text = "Akun";
-            this.btnAkun.UseVisualStyleBackColor = false;
+            this.txtAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAdmin.Location = new System.Drawing.Point(3, 195);
+            this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.Size = new System.Drawing.Size(194, 20);
+            this.txtAdmin.TabIndex = 1;
             // 
-            // btnPanduan
+            // btnRegisterAdmin
             // 
-            this.btnPanduan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnPanduan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPanduan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPanduan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPanduan.ForeColor = System.Drawing.Color.Black;
-            this.btnPanduan.Location = new System.Drawing.Point(3, 420);
-            this.btnPanduan.Name = "btnPanduan";
-            this.btnPanduan.Size = new System.Drawing.Size(194, 39);
-            this.btnPanduan.TabIndex = 4;
-            this.btnPanduan.Text = "Panduan";
-            this.btnPanduan.UseVisualStyleBackColor = false;
-            // 
-            // btnTentang
-            // 
-            this.btnTentang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnTentang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTentang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTentang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTentang.ForeColor = System.Drawing.Color.Black;
-            this.btnTentang.Location = new System.Drawing.Point(3, 465);
-            this.btnTentang.Name = "btnTentang";
-            this.btnTentang.Size = new System.Drawing.Size(194, 39);
-            this.btnTentang.TabIndex = 5;
-            this.btnTentang.Text = "Tentang";
-            this.btnTentang.UseVisualStyleBackColor = false;
-            // 
-            // btnLoginApp
-            // 
-            this.btnLoginApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnLoginApp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLoginApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoginApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginApp.ForeColor = System.Drawing.Color.Black;
-            this.btnLoginApp.Location = new System.Drawing.Point(3, 531);
-            this.btnLoginApp.Name = "btnLoginApp";
-            this.btnLoginApp.Size = new System.Drawing.Size(194, 39);
-            this.btnLoginApp.TabIndex = 6;
-            this.btnLoginApp.Text = "Login";
-            this.btnLoginApp.UseVisualStyleBackColor = false;
+            this.btnRegisterAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnRegisterAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegisterAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnRegisterAdmin.Location = new System.Drawing.Point(3, 420);
+            this.btnRegisterAdmin.Name = "btnRegisterAdmin";
+            this.btnRegisterAdmin.Size = new System.Drawing.Size(194, 39);
+            this.btnRegisterAdmin.TabIndex = 6;
+            this.btnRegisterAdmin.Text = "Registrasi Admin";
+            this.btnRegisterAdmin.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -352,13 +312,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtAdmin
-            // 
-            this.txtAdmin.Location = new System.Drawing.Point(3, 195);
-            this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.Size = new System.Drawing.Size(165, 20);
-            this.txtAdmin.TabIndex = 1;
             // 
             // contextMenuStrip1
             // 
@@ -404,10 +357,7 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnEntryBarang;
         private System.Windows.Forms.Button btnPembayaran;
-        private System.Windows.Forms.Button btnAkun;
-        private System.Windows.Forms.Button btnPanduan;
-        private System.Windows.Forms.Button btnTentang;
-        private System.Windows.Forms.Button btnLoginApp;
+        private System.Windows.Forms.Button btnRegisterAdmin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAdmin;

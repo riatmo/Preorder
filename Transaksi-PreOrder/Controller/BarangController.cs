@@ -41,21 +41,21 @@ namespace Transaksi_PreOrder.Controller
             // cek angkatan yang diinputkan tidak boleh kosong
             if (string.IsNullOrEmpty(Convert.ToString(brg.Harga)))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Harga harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
             if (string.IsNullOrEmpty(brg.Warna))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Warna harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
             if (string.IsNullOrEmpty(brg.Ukuran))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Ukuran harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -72,11 +72,11 @@ namespace Transaksi_PreOrder.Controller
 
             if (result > 0)
             {
-                MessageBox.Show("Data mahasiswa berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Barang berhasil disimpan !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data mahasiswa gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data Barang gagal disimpan !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result;
@@ -105,21 +105,21 @@ namespace Transaksi_PreOrder.Controller
             // cek angkatan yang diinputkan tidak boleh kosong
             if (string.IsNullOrEmpty(Convert.ToString(brg.Harga)))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Harga harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
             if (string.IsNullOrEmpty(brg.Warna))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Warna harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
             if (string.IsNullOrEmpty(brg.Ukuran))
             {
-                MessageBox.Show("Angkatan harus diisi !!!", "Peringatan",
+                MessageBox.Show("Ukuran harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -136,11 +136,11 @@ namespace Transaksi_PreOrder.Controller
 
             if (result > 0)
             {
-                MessageBox.Show("Data mahasiswa berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Barang berhasil disimpan !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data mahasiswa gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data Barang gagal disimpan !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result;
