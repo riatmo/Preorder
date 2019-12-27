@@ -112,6 +112,7 @@ namespace Transaksi_PreOrder
 
             ListViewItem itemRow = lvwData.Items[index];
             itemRow.SubItems[1].Text = psn.KdPesanan;
+            itemRow.SubItems[2].Text = psn.CaraBayar;
 
             
         }
