@@ -104,6 +104,32 @@ namespace Transaksi_PreOrder.Controller
 
         }
 
+        public int Delete(Pesanan psn)
+        {
+            int result = 0;
+
+
+            // membuat objek context menggunakan blok using
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek dari class repository
+                _repository = new PesananRepository(context);
+
+                // panggil method Delete class repository untuk menghapus data
+                result = _repository.Delete(psn);
+            }
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data mahasiswa berhasil dihapus !", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Data mahasiswa gagal dihapus !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            return result;
+        }
 
     }
 }

@@ -94,7 +94,6 @@ namespace Transaksi_PreOrder.Model.Repository
             return result1;
         }
 
-
         public List<Pesanan> ReadAll()
         {
             // membuat objek collection untuk menampung objek mahasiswa
@@ -134,6 +133,34 @@ namespace Transaksi_PreOrder.Model.Repository
             }
 
             return list;
+        }
+
+        public int Delete(Pesanan psn)
+        {
+            int result = 0;
+
+            // deklarasi perintah SQL
+            string sql = @"DELETE FROM detail_pesanan where kd_pesanan=@kd_pesanan;
+                           DELETE FROM pesanan where kd_pesanan=@kd_pesanan";
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                // mendaftarkan parameter dan mengeset nilainya
+                cmd.Parameters.AddWithValue("@kd_pesanan", psn.KdPesanan);
+
+                try
+                {
+                    // jalankan perintah DELETE dan tampung hasilnya ke dalam variabel result
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Delete error: {0}", ex.Message);
+                }
+            }
+
+            return result;
         }
 
     }

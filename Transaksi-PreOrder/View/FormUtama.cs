@@ -204,5 +204,29 @@ namespace Transaksi_PreOrder
                         MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lvwData.SelectedItems.Count > 0)
+            {
+                var konfirmasi = MessageBox.Show("Apakah data mahasiswa ingin dihapus?", "Konfirmasi",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (konfirmasi == DialogResult.Yes)
+                {
+                    // ambil objek mhs yang mau dihapus dari collection
+                    Pesanan pesanan = listPesanan[lvwData.SelectedIndices[0]];
+
+                    // panggil operasi CRUD
+                    var result = controller1.Delete(pesanan);
+                    if (result > 0) loadPesanan();
+                }
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

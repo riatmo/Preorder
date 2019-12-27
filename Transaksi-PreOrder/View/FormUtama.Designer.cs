@@ -37,6 +37,7 @@
             this.btnBuatPesanan = new System.Windows.Forms.Button();
             this.btnDetailPesanan = new System.Windows.Forms.Button();
             this.btnCari = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,7 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegisterAdmin = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -95,18 +96,20 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 6;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.414146F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.962544F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.0812F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.81833F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.62039F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.103385F));
+            this.tableLayoutPanel4.ColumnCount = 7;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.614238F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.17429F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.42509F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.38834F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.88863F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.296871F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.21254F));
             this.tableLayoutPanel4.Controls.Add(this.srcText, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnBuatPesanan, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDetailPesanan, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnCari, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnUpdate, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnDelete, 6, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 53);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -118,9 +121,9 @@
             // srcText
             // 
             this.srcText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.srcText.Location = new System.Drawing.Point(514, 7);
+            this.srcText.Location = new System.Drawing.Point(402, 7);
             this.srcText.Name = "srcText";
-            this.srcText.Size = new System.Drawing.Size(261, 20);
+            this.srcText.Size = new System.Drawing.Size(266, 20);
             this.srcText.TabIndex = 2;
             this.srcText.Text = "Ketik tanggal pesanan disini...";
             // 
@@ -131,7 +134,7 @@
             this.btnBuatPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuatPesanan.Location = new System.Drawing.Point(3, 3);
             this.btnBuatPesanan.Name = "btnBuatPesanan";
-            this.btnBuatPesanan.Size = new System.Drawing.Size(87, 28);
+            this.btnBuatPesanan.Size = new System.Drawing.Size(89, 28);
             this.btnBuatPesanan.TabIndex = 3;
             this.btnBuatPesanan.Text = "Buat Pesanan";
             this.btnBuatPesanan.UseVisualStyleBackColor = false;
@@ -142,9 +145,9 @@
             this.btnDetailPesanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnDetailPesanan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDetailPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailPesanan.Location = new System.Drawing.Point(96, 3);
+            this.btnDetailPesanan.Location = new System.Drawing.Point(98, 3);
             this.btnDetailPesanan.Name = "btnDetailPesanan";
-            this.btnDetailPesanan.Size = new System.Drawing.Size(93, 28);
+            this.btnDetailPesanan.Size = new System.Drawing.Size(95, 28);
             this.btnDetailPesanan.TabIndex = 4;
             this.btnDetailPesanan.Text = "Detail Pesanan";
             this.btnDetailPesanan.UseVisualStyleBackColor = false;
@@ -154,12 +157,22 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnCari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCari.Location = new System.Drawing.Point(781, 3);
+            this.btnCari.Location = new System.Drawing.Point(674, 3);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(119, 28);
+            this.btnCari.Size = new System.Drawing.Size(122, 28);
             this.btnCari.TabIndex = 5;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(802, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(86, 28);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -320,15 +333,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // btnUpdate
+            // btnDelete
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(906, 3);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(87, 28);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnDelete.Location = new System.Drawing.Point(894, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(86, 28);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormUtama
             // 
@@ -375,6 +388,7 @@
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
