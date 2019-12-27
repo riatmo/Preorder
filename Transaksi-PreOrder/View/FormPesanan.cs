@@ -99,6 +99,7 @@ namespace Transaksi_PreOrder
 
             psn.KdPesanan = txtKdPesanan.Text;
             psn.KdAdmin = txtAdmin.Text;
+            psn.CaraBayar = cmbPlhPembayaran.Text;
 
             PesananInfo.KodePesanan = txtKdPesanan.Text;
 

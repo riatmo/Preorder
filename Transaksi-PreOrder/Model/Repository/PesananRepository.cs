@@ -26,8 +26,8 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             int result1 = 0;
         // deklarasi perintah SQL
-        string sql = @"insert into pesanan (kd_pesanan, kd_admin)
-                           values (@kdpesanan, @kd_admin)";
+        string sql = @"insert into pesanan (kd_pesanan, kd_admin, cara_bayar )
+                           values (@kdpesanan, @kd_admin, @cara_bayar)";
 
          //string sql = @"insert into pesanan (kd_pesanan, tgl_pesanan, cara_bayar, jatuh_tempo, catatan, uang_muka, sisa_bayar,kd_pembeli, kd_admin)
          //             values (@kd_pesanan, @tgl_pesanan, @cara_bayar, @jatuh_tempo, @catatan,@uang_muka,@sisa_bayar,kd_pembeli,@kd_admin)";
@@ -39,7 +39,7 @@ namespace Transaksi_PreOrder.Model.Repository
                 // mendaftarkan parameter dan mengeset nilainya
                 cmd.Parameters.AddWithValue("@kdpesanan", pesanan.KdPesanan);
                 //cmd.Parameters.AddWithValue("@tgl_pesanan", pesanan.TglPesan);
-                //cmd.Parameters.AddWithValue("@cara_bayar", pesanan.CaraBayar);
+                cmd.Parameters.AddWithValue("@cara_bayar", pesanan.CaraBayar);
                 //cmd.Parameters.AddWithValue("@jatuh_tempo", pesanan.JatuhTempo);
                 //cmd.Parameters.AddWithValue("@catatan", pesanan.Catatan);
                // cmd.Parameters.AddWithValue("@uang_muka", pesanan.Dp);
@@ -69,7 +69,7 @@ namespace Transaksi_PreOrder.Model.Repository
             // deklarasi perintah SQL
          
 
-            string sql = @"update pesanan set jatuh_tempo = @jatuh_tempo
+            string sql = @"update pesanan set cara_bayar = @cara_bayar
                            where kd_pesanan = @kd_pesanan";
 
             // membuat objek command menggunakan blok using
@@ -77,7 +77,7 @@ namespace Transaksi_PreOrder.Model.Repository
             {
                 // mendaftarkan parameter dan mengeset nilainya
                 cmd.Parameters.AddWithValue("@kd_pesanan", psn.KdPesanan);
-                cmd.Parameters.AddWithValue("@jatuh_tempo", psn.JatuhTempo);
+                cmd.Parameters.AddWithValue("@cara_bayar", psn.CaraBayar);
                 
 
                 try
@@ -93,6 +93,48 @@ namespace Transaksi_PreOrder.Model.Repository
 
             return result1;
         }
-        
+
+
+        public List<Pesanan> ReadAll()
+        {
+            // membuat objek collection untuk menampung objek mahasiswa
+            List<Pesanan> list = new List<Pesanan>();
+
+            try
+            {
+                // deklarasi perintah SQL
+                string sql = @"select kd_pesanan, cara_bayar
+                               from pesanan order by kd_pesanan";
+                //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
+
+                // membuat objek command menggunakan blok using
+                using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+                {
+                    using (MySqlDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            Pesanan psn = new Pesanan();
+                            
+                            psn.KdPesanan = dtr["kd_pesanan"].ToString();
+                            // psn.TglPesan = dtr["tgl_pesanan"].ToString();
+                            // psn.JatuhTempo = dtr["jatuh_tempo"].ToString();
+                            //psn.StatusPesanan = dtr["sts_pesanan"].ToString();
+                            psn.CaraBayar = dtr["cara_bayar"].ToString();
+
+                            list.Add(psn);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("ReadAll error: {0}", ex.Message);
+            }
+
+            return list;
+        }
+
     }
 }

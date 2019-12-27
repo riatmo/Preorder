@@ -87,6 +87,23 @@ namespace Transaksi_PreOrder.Controller
             return result1;
         }
 
+        public List<Pesanan> ReadAllPesanan()
+        {
+            List<Pesanan> list = new List<Pesanan>();
+
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new PesananRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                list = _repository.ReadAll();
+            }
+
+            return list;
+
+        }
+
 
     }
 }

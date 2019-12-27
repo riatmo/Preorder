@@ -44,10 +44,11 @@
             this.btnEntryBarang = new System.Windows.Forms.Button();
             this.btnPembayaran = new System.Windows.Forms.Button();
             this.txtAdmin = new System.Windows.Forms.TextBox();
-            this.btnRegisterAdmin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRegisterAdmin = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -91,20 +92,21 @@
             this.lvwData.Size = new System.Drawing.Size(990, 604);
             this.lvwData.TabIndex = 0;
             this.lvwData.UseCompatibleStateImageBehavior = false;
-            this.lvwData.SelectedIndexChanged += new System.EventHandler(this.lvwData_SelectedIndexChanged);
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 5;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.34137F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.94378F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.24096F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.45974F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.8634F));
+            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.414146F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.962544F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.0812F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.81833F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.62039F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.103385F));
             this.tableLayoutPanel4.Controls.Add(this.srcText, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnBuatPesanan, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDetailPesanan, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnCari, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnUpdate, 5, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 53);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -116,9 +118,9 @@
             // srcText
             // 
             this.srcText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.srcText.Location = new System.Drawing.Point(566, 7);
+            this.srcText.Location = new System.Drawing.Point(514, 7);
             this.srcText.Name = "srcText";
-            this.srcText.Size = new System.Drawing.Size(287, 20);
+            this.srcText.Size = new System.Drawing.Size(261, 20);
             this.srcText.TabIndex = 2;
             this.srcText.Text = "Ketik tanggal pesanan disini...";
             // 
@@ -129,7 +131,7 @@
             this.btnBuatPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuatPesanan.Location = new System.Drawing.Point(3, 3);
             this.btnBuatPesanan.Name = "btnBuatPesanan";
-            this.btnBuatPesanan.Size = new System.Drawing.Size(97, 28);
+            this.btnBuatPesanan.Size = new System.Drawing.Size(87, 28);
             this.btnBuatPesanan.TabIndex = 3;
             this.btnBuatPesanan.Text = "Buat Pesanan";
             this.btnBuatPesanan.UseVisualStyleBackColor = false;
@@ -140,9 +142,9 @@
             this.btnDetailPesanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnDetailPesanan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDetailPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailPesanan.Location = new System.Drawing.Point(106, 3);
+            this.btnDetailPesanan.Location = new System.Drawing.Point(96, 3);
             this.btnDetailPesanan.Name = "btnDetailPesanan";
-            this.btnDetailPesanan.Size = new System.Drawing.Size(103, 28);
+            this.btnDetailPesanan.Size = new System.Drawing.Size(93, 28);
             this.btnDetailPesanan.TabIndex = 4;
             this.btnDetailPesanan.Text = "Detail Pesanan";
             this.btnDetailPesanan.UseVisualStyleBackColor = false;
@@ -152,9 +154,9 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnCari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCari.Location = new System.Drawing.Point(859, 3);
+            this.btnCari.Location = new System.Drawing.Point(781, 3);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(134, 28);
+            this.btnCari.Size = new System.Drawing.Size(119, 28);
             this.btnCari.TabIndex = 5;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
@@ -276,20 +278,6 @@
             this.txtAdmin.Size = new System.Drawing.Size(194, 20);
             this.txtAdmin.TabIndex = 1;
             // 
-            // btnRegisterAdmin
-            // 
-            this.btnRegisterAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnRegisterAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRegisterAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnRegisterAdmin.Location = new System.Drawing.Point(3, 420);
-            this.btnRegisterAdmin.Name = "btnRegisterAdmin";
-            this.btnRegisterAdmin.Size = new System.Drawing.Size(194, 39);
-            this.btnRegisterAdmin.TabIndex = 6;
-            this.btnRegisterAdmin.Text = "Registrasi Admin";
-            this.btnRegisterAdmin.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,10 +301,34 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnRegisterAdmin
+            // 
+            this.btnRegisterAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnRegisterAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRegisterAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnRegisterAdmin.Location = new System.Drawing.Point(3, 420);
+            this.btnRegisterAdmin.Name = "btnRegisterAdmin";
+            this.btnRegisterAdmin.Size = new System.Drawing.Size(194, 39);
+            this.btnRegisterAdmin.TabIndex = 6;
+            this.btnRegisterAdmin.Text = "Registrasi Admin";
+            this.btnRegisterAdmin.UseVisualStyleBackColor = false;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(906, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(87, 28);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FormUtama
             // 
@@ -362,6 +374,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

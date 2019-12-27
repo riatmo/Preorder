@@ -17,12 +17,14 @@ namespace Transaksi_PreOrder
     {
         private List<Barang> listBarang = new List<Barang>();
         private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
+        private List<Pesanan> listPesanan = new List<Pesanan>();
 
         //tampil kode admin yg login
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
 
         private BarangController controller;
         private PesananController controller1;
+        //private PesananController pesananController;
 
        // private DetailPesananController controllerdetail;
 
@@ -32,16 +34,15 @@ namespace Transaksi_PreOrder
 
             controller = new BarangController();
             controller1 = new PesananController();
+            //pesananController = new pesa
            // controllerdetail = new DetailPesananController();
 
             InisialisasiListView();
+            loadPesanan();
 
     }
 
-        private void lvwData_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void InisialisasiListView()
         {
@@ -57,23 +58,62 @@ namespace Transaksi_PreOrder
             lvwData.Columns.Add("Status Pesanan", 200, HorizontalAlignment.Center);
         }
 
+
+        private void loadPesanan()
+        {
+            lvwData.Items.Clear();
+
+
+            listPesanan = controller1.ReadAllPesanan();
+
+            foreach(var psn in listPesanan)
+            {
+                var noUrut = lvwData.Items.Count + 1;
+
+                // // tampilkan data mhs yg baru ke list view
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(psn.KdPesanan);
+               // item.SubItems.Add(psn.TglPesan);
+               item.SubItems.Add(psn.CaraBayar);
+                //item.SubItems.Add(psn.JatuhTempo);
+
+
+
+                lvwData.Items.Add(item);
+            }
+        }
+
+
         private void PesananCreateEventHandler(Pesanan psn)
         {
             // tambahkan objek mhs yang baru ke dalam collection
 
             // ENABLE BUAT DAFTAR PESANAN
 
-            // listBarang.Add(brg);
+            listPesanan.Add(psn);
 
-            // int noUrut = lvwData.Items.Count + 1;
+             int noUrut = lvwData.Items.Count + 1;
 
             // // tampilkan data mhs yg baru ke list view
-            // ListViewItem item = new ListViewItem(noUrut.ToString());
-            // item.SubItems.Add(brg.KdBarang);
-            // item.SubItems.Add(brg.Nama);
-            // item.SubItems.Add(Convert.ToString(brg.Harga));
+             ListViewItem item = new ListViewItem(noUrut.ToString());
+             item.SubItems.Add(psn.KdPesanan);
+           //  item.SubItems.Add(psn.TglPesan);
+           // item.SubItems.Add(psn.CaraBayar);
+           // item.SubItems.Add(psn.JatuhTempo);
+            
 
-            // lvwData.Items.Add(item);
+
+            lvwData.Items.Add(item);
+        }
+
+        private void PesananUpdateEventHandler(Pesanan psn)
+        {
+            int index = lvwData.SelectedIndices[0];
+
+            ListViewItem itemRow = lvwData.Items[index];
+            itemRow.SubItems[1].Text = psn.KdPesanan;
+
+            
         }
 
         private void btnBuatPesanan_Click(object sender, EventArgs e)
@@ -139,6 +179,29 @@ namespace Transaksi_PreOrder
         {
             //tampil kode admin yg login
             txtAdmin.Text = currentAdmin;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (lvwData.SelectedItems.Count > 0)
+            {
+                // ambil objek mhs yang mau diedit dari collection
+                Pesanan psn = listPesanan[lvwData.SelectedIndices[0]];
+
+                // buat objek form entry data mahasiswa
+                FormPesanan frmPesanan = new FormPesanan("Update", psn, controller1);
+
+                // mendaftarkan method event handler untuk merespon event OnUpdate
+                frmPesanan.PesananUpdate += PesananUpdateEventHandler;
+
+                // tampilkan form entry mahasiswa
+                frmPesanan.ShowDialog();
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data belum dipilih", "Peringatan", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

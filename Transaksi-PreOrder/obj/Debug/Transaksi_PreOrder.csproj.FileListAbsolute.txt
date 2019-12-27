@@ -247,3 +247,5 @@ E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN L
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Update\RE-FP_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Update\RE-FP_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
 E:\Data\Perkuliahan\TahunAjaran_2018-2019\Informatika-7\Semester_3\PEMROGRAMAN LANJUT\UAS\Update\RE-FP_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormRegistrasiAdmin.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormPembayaran.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormRegistrasiAdmin.resources
