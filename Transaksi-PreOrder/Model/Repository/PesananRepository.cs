@@ -163,5 +163,32 @@ namespace Transaksi_PreOrder.Model.Repository
             return result;
         }
 
+        public int NoPesanan()
+        {
+            int no = 0;
+
+            string sql = @"select right(kd_pesanan,2) as nopesanan
+                           from pesanan
+                           WHERE kd_pesanan=(SELECT MAX(kd_pesanan) FROM pesanan);";
+                           
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
+                using (MySqlDataReader dtr = cmd.ExecuteReader())
+                {
+                    // panggil method Read untuk mendapatkan baris dari result set
+                    if (dtr.Read())
+                    {
+
+                        no = Convert.ToInt32(dtr["nopesanan"]);
+                    }
+                }
+            }
+
+            return no;
+        }
+
     }
 }

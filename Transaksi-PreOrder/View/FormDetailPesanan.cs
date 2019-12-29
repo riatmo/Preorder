@@ -39,7 +39,13 @@ namespace Transaksi_PreOrder
             InitializeComponent();
         }
 
-       
+        private void ReloadForm()
+        {
+            txtKdDetail.ResetText();
+            txtKdDetail.Update();
+            txtKdDetail.Text = FormPesanan.PesananInfo.KodePesanan + "X" + Convert.ToString(controller1.noDetail(txtKdPesanan.Text) + 1);
+            //and how many controls or settings you want, just add them here
+        }
 
         // constructor untuk inisialisasi data ketika entri data baru
         public FormDetailPesanan(string title, DetailPesananController controller1)
@@ -99,12 +105,14 @@ namespace Transaksi_PreOrder
 
                 }
             }
-
+            ReloadForm();
         }
 
         private void FormDetailPesanan_Load(object sender, EventArgs e)
         {
             txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
+            txtKdDetail.Text = FormPesanan.PesananInfo.KodePesanan + "X" + Convert.ToString(controller1.noDetail(txtKdPesanan.Text)+1);
+           // txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
         }
     }
 }

@@ -32,6 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lvwData = new System.Windows.Forms.ListView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCari = new System.Windows.Forms.TextBox();
             this.btnCari = new System.Windows.Forms.Button();
@@ -41,30 +44,27 @@
             this.btnPembayaran = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblOperator = new System.Windows.Forms.Label();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuatPesanan = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDetailPesanan = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barAdmin = new System.Windows.Forms.ToolStripMenuItem();
-            this.barPanduan = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.barTentang = new System.Windows.Forms.ToolStripMenuItem();
             this.lstBarang = new System.Windows.Forms.ToolStripMenuItem();
             this.lstDistributor = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblOperator = new System.Windows.Forms.Label();
-            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.barAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.barPanduan = new System.Windows.Forms.ToolStripMenuItem();
+            this.barTentang = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +103,47 @@
             this.lvwData.Size = new System.Drawing.Size(990, 584);
             this.lvwData.TabIndex = 0;
             this.lvwData.UseCompatibleStateImageBehavior = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.93939F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.06061F));
+            this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 596);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(990, 34);
+            this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(3, 3);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(527, 28);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(536, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(451, 28);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // tableLayoutPanel4
             // 
@@ -238,141 +279,6 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.menuStrip1, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1196, 24);
-            this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // filToolStripMenuItem
-            // 
-            this.filToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBuatPesanan,
-            this.btnDetailPesanan});
-            this.filToolStripMenuItem.Name = "filToolStripMenuItem";
-            this.filToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.filToolStripMenuItem.Text = "Pesanan";
-            this.filToolStripMenuItem.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
-            // 
-            // btnBuatPesanan
-            // 
-            this.btnBuatPesanan.Name = "btnBuatPesanan";
-            this.btnBuatPesanan.Size = new System.Drawing.Size(180, 22);
-            this.btnBuatPesanan.Text = "Buat Pesanan";
-            this.btnBuatPesanan.Click += new System.EventHandler(this.btnBuatPesanan_Click_1);
-            // 
-            // btnDetailPesanan
-            // 
-            this.btnDetailPesanan.Name = "btnDetailPesanan";
-            this.btnDetailPesanan.Size = new System.Drawing.Size(180, 22);
-            this.btnDetailPesanan.Text = "Detail Pesanan";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lstBarang,
-            this.lstDistributor});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.aboutToolStripMenuItem.Text = "Logistik";
-            // 
-            // barAdmin
-            // 
-            this.barAdmin.Name = "barAdmin";
-            this.barAdmin.Size = new System.Drawing.Size(55, 20);
-            this.barAdmin.Text = "Admin";
-            // 
-            // barPanduan
-            // 
-            this.barPanduan.Name = "barPanduan";
-            this.barPanduan.Size = new System.Drawing.Size(66, 20);
-            this.barPanduan.Text = "Panduan";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.barAdmin,
-            this.barPanduan,
-            this.barTentang});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1196, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.93939F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.06061F));
-            this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 596);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(990, 34);
-            this.tableLayoutPanel2.TabIndex = 4;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 3);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(527, 28);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(536, 3);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(451, 28);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // barTentang
-            // 
-            this.barTentang.Name = "barTentang";
-            this.barTentang.Size = new System.Drawing.Size(62, 20);
-            this.barTentang.Text = "Tentang";
-            // 
-            // lstBarang
-            // 
-            this.lstBarang.Name = "lstBarang";
-            this.lstBarang.Size = new System.Drawing.Size(180, 22);
-            this.lstBarang.Text = "List Barang";
-            // 
-            // lstDistributor
-            // 
-            this.lstDistributor.Name = "lstDistributor";
-            this.lstDistributor.Size = new System.Drawing.Size(180, 22);
-            this.lstDistributor.Text = "Distributor";
-            // 
             // lblOperator
             // 
             this.lblOperator.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -396,6 +302,102 @@
             this.txtAdmin.TabIndex = 10;
             this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1196, 24);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filToolStripMenuItem,
+            this.aboutToolStripMenuItem,
+            this.barAdmin,
+            this.barPanduan,
+            this.barTentang});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1196, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // filToolStripMenuItem
+            // 
+            this.filToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuatPesanan,
+            this.btnDetailPesanan});
+            this.filToolStripMenuItem.Name = "filToolStripMenuItem";
+            this.filToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.filToolStripMenuItem.Text = "Pesanan";
+            this.filToolStripMenuItem.Click += new System.EventHandler(this.filToolStripMenuItem_Click);
+            // 
+            // btnBuatPesanan
+            // 
+            this.btnBuatPesanan.Name = "btnBuatPesanan";
+            this.btnBuatPesanan.Size = new System.Drawing.Size(151, 22);
+            this.btnBuatPesanan.Text = "Buat Pesanan";
+            this.btnBuatPesanan.Click += new System.EventHandler(this.btnBuatPesanan_Click_1);
+            // 
+            // btnDetailPesanan
+            // 
+            this.btnDetailPesanan.Name = "btnDetailPesanan";
+            this.btnDetailPesanan.Size = new System.Drawing.Size(151, 22);
+            this.btnDetailPesanan.Text = "Detail Pesanan";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lstBarang,
+            this.lstDistributor});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.aboutToolStripMenuItem.Text = "Logistik";
+            // 
+            // lstBarang
+            // 
+            this.lstBarang.Name = "lstBarang";
+            this.lstBarang.Size = new System.Drawing.Size(132, 22);
+            this.lstBarang.Text = "List Barang";
+            // 
+            // lstDistributor
+            // 
+            this.lstDistributor.Name = "lstDistributor";
+            this.lstDistributor.Size = new System.Drawing.Size(132, 22);
+            this.lstDistributor.Text = "Distributor";
+            // 
+            // barAdmin
+            // 
+            this.barAdmin.Name = "barAdmin";
+            this.barAdmin.Size = new System.Drawing.Size(55, 20);
+            this.barAdmin.Text = "Admin";
+            // 
+            // barPanduan
+            // 
+            this.barPanduan.Name = "barPanduan";
+            this.barPanduan.Size = new System.Drawing.Size(66, 20);
+            this.barPanduan.Text = "Panduan";
+            // 
+            // barTentang
+            // 
+            this.barTentang.Name = "barTentang";
+            this.barTentang.Size = new System.Drawing.Size(62, 20);
+            this.barTentang.Text = "Tentang";
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,6 +413,7 @@
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -419,7 +422,6 @@
             this.tableLayoutPanel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

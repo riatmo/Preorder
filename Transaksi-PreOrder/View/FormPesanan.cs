@@ -12,12 +12,13 @@ using Transaksi_PreOrder.Model.Entity;
 using Transaksi_PreOrder.Controller;
 
 
+
 namespace Transaksi_PreOrder
 {
     public partial class FormPesanan : Form
     {
 
-        //tampil kode admin yg login
+        //Menampilkan kode admin yg login saat ini
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
 
         //deklarasi untuk event tambah data & update
@@ -29,17 +30,21 @@ namespace Transaksi_PreOrder
         //event update data
         public event CreatePesananHandler PesananUpdate;
 
-        //objek kontraoller
+        //objek kontroller pesanan
         private PesananController controller1;
+
+        //objek kontroller detail
+        private DetailPesananController controllerdetail;
+
         //private AdminController controllerAdmin;
 
         // deklarasi field untuk menyimpan status entry data (input baru atau update)
         private bool isNewData = true;
 
-        // deklarasi field untuk meyimpan objek mahasiswa
+        // deklarasi field untuk meyimpan objek pesanan
         private Pesanan psn;
 
-        private DetailPesananController controllerdetail;
+        
 
         public FormPesanan()
         {
@@ -65,7 +70,18 @@ namespace Transaksi_PreOrder
             // ganti text/judul form
             this.Text = title;
             this.controller1 = controller1;
+
+            txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
         }
+
+        private void FormPesanan_Load(object sender, EventArgs e)
+        {
+            //tampil kode admin yg login
+            txtAdmin.Text = currentAdmin;
+            
+
+        }
+
 
         // constructor untuk inisialisasi data ketika mengedit data
         public FormPesanan(string title, Pesanan obj1, PesananController controller1)
@@ -96,10 +112,10 @@ namespace Transaksi_PreOrder
             if (isNewData) psn = new Pesanan();
 
             // set nilai property objek mahasiswa yg diambil dari TextBox
-
+            
             psn.KdPesanan = txtKdPesanan.Text;
             psn.KdAdmin = txtAdmin.Text;
-            psn.CaraBayar = cmbPlhPembayaran.Text;
+            //psn.CaraBayar = cmbPlhPembayaran.Text;
 
             PesananInfo.KodePesanan = txtKdPesanan.Text;
 
@@ -139,11 +155,7 @@ namespace Transaksi_PreOrder
             formDetail.ShowDialog();
         }
 
-        private void FormPesanan_Load(object sender, EventArgs e)
-        {
-            //tampil kode admin yg login
-            txtAdmin.Text = currentAdmin;
-        }
+       
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

@@ -69,7 +69,7 @@ namespace Transaksi_PreOrder
             foreach(var psn in listPesanan)
             {
                 var noUrut = lvwData.Items.Count + 1;
-
+                
                 // // tampilkan data mhs yg baru ke list view
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(psn.KdPesanan);
@@ -101,7 +101,7 @@ namespace Transaksi_PreOrder
            // item.SubItems.Add(psn.CaraBayar);
            // item.SubItems.Add(psn.JatuhTempo);
             
-
+            
 
             lvwData.Items.Add(item);
         }
@@ -158,6 +158,7 @@ namespace Transaksi_PreOrder
             //item.SubItems.Add(Convert.ToString(brg.Harga));
 
             lvwData.Items.Add(item);
+            
         }
 
         private void btnEntryBarang_Click(object sender, EventArgs e)
@@ -174,9 +175,10 @@ namespace Transaksi_PreOrder
         {
             //tampil kode admin yg login
            txtAdmin.Text = currentAdmin;
+            
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             if (lvwData.SelectedItems.Count > 0)
             {
@@ -199,7 +201,7 @@ namespace Transaksi_PreOrder
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             if (lvwData.SelectedItems.Count > 0)
             {
@@ -248,10 +250,12 @@ namespace Transaksi_PreOrder
             FormPesanan formPesanan = new FormPesanan("tambah pesanan", controller1);
 
             formPesanan.PesananCreate += PesananCreateEventHandler;
-
+    
             //FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
             //formDetail.DetailPesananCreate += onCreateEventHandlerDetail;
             formPesanan.ShowDialog();
         }
+
+       
     }
 }

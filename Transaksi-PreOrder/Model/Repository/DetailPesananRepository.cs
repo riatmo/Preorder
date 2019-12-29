@@ -58,5 +58,34 @@ namespace Transaksi_PreOrder.Model.Repository
             return result;
         }
 
+
+        public int NoDetail(string kdpesanan)
+        {
+            int no = 0;
+
+            string sql = @"select right(kd_detail,1) as nodetail
+                           from detail_pesanan
+                           where kd_detail = (SELECT MAX(kd_detail) FROM detail_pesanan where kd_pesanan = @kdpesanan)";
+            
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+
+
+            {
+                cmd.Parameters.AddWithValue("@kdpesanan", kdpesanan);
+                // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
+                using (MySqlDataReader dtr = cmd.ExecuteReader())
+                {
+                    // panggil method Read untuk mendapatkan baris dari result set
+                    if (dtr.Read())
+                    {
+                        no = Convert.ToInt16(dtr["nodetail"]);
+                    }
+                }
+            }
+
+            return no;
+        }
     }
 }
