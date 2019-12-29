@@ -51,6 +51,50 @@ namespace Transaksi_PreOrder.Controller
             return result1;
         }
 
+        public int Update(DetailPesanan detail)
+        {
+            int result = 0;
+
+
+            // membuat objek context menggunakan blok using
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek dari class repository
+                _repository = new DetailPesananRepository(context);
+
+                // panggil method Update class repository untuk mengupdate data
+                result = _repository.Update(detail);
+            }
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data mahasiswa berhasil diupdate !", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Data mahasiswa gagal diupdate !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            return result;
+        }
+
+        public List<DetailPesanan> ReadAllDetail()
+        {
+            List<DetailPesanan> list = new List<DetailPesanan>();
+
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new DetailPesananRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                list = _repository.ReadAll();
+            }
+
+            return list;
+
+        }
+
 
         public int noDetail(string kdpesanan)
         {

@@ -134,7 +134,6 @@
             // 
             this.txtKdPesanan.Location = new System.Drawing.Point(127, 123);
             this.txtKdPesanan.Name = "txtKdPesanan";
-            this.txtKdPesanan.ReadOnly = true;
             this.txtKdPesanan.Size = new System.Drawing.Size(230, 20);
             this.txtKdPesanan.TabIndex = 11;
             // 

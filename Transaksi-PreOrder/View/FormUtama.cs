@@ -16,7 +16,7 @@ namespace Transaksi_PreOrder
     public partial class FormUtama : Form
     {
         private List<Barang> listBarang = new List<Barang>();
-        private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
+        //private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
         private List<Pesanan> listPesanan = new List<Pesanan>();
 
         //tampil kode admin yg login
@@ -141,25 +141,7 @@ namespace Transaksi_PreOrder
            //lvwData.Items.Add(item);
         }
 
-        private void onCreateEventHandlerDetail(DetailPesanan p)
-        {
-            // tambahkan objek mhs yang baru ke dalam collection
-
-            // ENABLE BUAT DAFTAR PESANAN
-
-            detailPesanan.Add(p);
-
-            int noUrut = lvwData.Items.Count + 1;
-
-            // // tampilkan data mhs yg baru ke list view
-            ListViewItem item = new ListViewItem(noUrut.ToString());
-            item.SubItems.Add(p.KdDetail);
-            item.SubItems.Add(p.KdPesanan);
-            //item.SubItems.Add(Convert.ToString(brg.Harga));
-
-            lvwData.Items.Add(item);
-            
-        }
+      
 
         private void btnEntryBarang_Click(object sender, EventArgs e)
         {
@@ -259,6 +241,12 @@ namespace Transaksi_PreOrder
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnDetailPesanan_Click(object sender, EventArgs e)
+        {
+            FormListDetail frm = new FormListDetail();
+            frm.ShowDialog();
         }
     }
 }

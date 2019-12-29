@@ -377,3 +377,4 @@ C:\Users\GRM\Documents\GitHub\FP_PreOrder-dan-Transaksii\Transaksi-PreOrder\obj\
 C:\Users\GRM\Documents\GitHub\FP_PreOrder-dan-Transaksii\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.exe
 C:\Users\GRM\Documents\GitHub\FP_PreOrder-dan-Transaksii\Transaksi-PreOrder\obj\Debug\Transaksi-PreOrder.pdb
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormProdusen.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormListDetail.resources

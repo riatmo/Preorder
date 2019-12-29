@@ -71,14 +71,15 @@ namespace Transaksi_PreOrder
             this.Text = title;
             this.controller1 = controller1;
 
-            txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
+            //txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
         }
 
         private void FormPesanan_Load(object sender, EventArgs e)
         {
             //tampil kode admin yg login
             txtAdmin.Text = currentAdmin;
-            
+            txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
+
 
         }
 

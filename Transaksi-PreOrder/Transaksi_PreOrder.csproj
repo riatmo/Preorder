@@ -72,6 +72,12 @@
     <Compile Include="Controller\PembelianController.cs" />
     <Compile Include="Controller\PesananController.cs" />
     <Compile Include="Controller\ProdusenController.cs" />
+    <Compile Include="View\FormListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListDetail.Designer.cs">
+      <DependentUpon>FormListDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Repository\PembelianRepository.cs" />
     <Compile Include="View\FormProdusen.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FormListDetail.resx">
+      <DependentUpon>FormListDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormProdusen.resx">
       <DependentUpon>FormProdusen.cs</DependentUpon>
     </EmbeddedResource>

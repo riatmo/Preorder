@@ -350,15 +350,16 @@
             // btnBuatPesanan
             // 
             this.btnBuatPesanan.Name = "btnBuatPesanan";
-            this.btnBuatPesanan.Size = new System.Drawing.Size(151, 22);
+            this.btnBuatPesanan.Size = new System.Drawing.Size(180, 22);
             this.btnBuatPesanan.Text = "Buat Pesanan";
             this.btnBuatPesanan.Click += new System.EventHandler(this.btnBuatPesanan_Click_1);
             // 
             // btnDetailPesanan
             // 
             this.btnDetailPesanan.Name = "btnDetailPesanan";
-            this.btnDetailPesanan.Size = new System.Drawing.Size(151, 22);
+            this.btnDetailPesanan.Size = new System.Drawing.Size(180, 22);
             this.btnDetailPesanan.Text = "Detail Pesanan";
+            this.btnDetailPesanan.Click += new System.EventHandler(this.btnDetailPesanan_Click);
             // 
             // aboutToolStripMenuItem
             // 

@@ -167,10 +167,12 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             int no = 0;
 
-            string sql = @"select right(kd_pesanan,2) as nopesanan
-                           from pesanan
-                           WHERE kd_pesanan=(SELECT MAX(kd_pesanan) FROM pesanan);";
-                           
+            //string sql = @"select right(kd_pesanan,2) as nopesanan
+            //               from pesanan
+            //               WHERE kd_pesanan=(SELECT MAX(kd_pesanan) FROM pesanan);";
+
+            string sql = @"SELECT MAX(right(kd_pesanan,2)) as nopesanan FROM pesanan";
+
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))

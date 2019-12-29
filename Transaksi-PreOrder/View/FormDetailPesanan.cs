@@ -22,7 +22,7 @@ namespace Transaksi_PreOrder
         public event CreateDetailPesananHandler DetailPesananCreate;
 
         //event update data
-        //public event CreateDetailPesananHandler PesananUpdate;
+        public event CreateDetailPesananHandler DetailPesananUpdate;
 
         //objek kontraoller
         private DetailPesananController controller1;
@@ -54,6 +54,9 @@ namespace Transaksi_PreOrder
             // ganti text/judul form
             this.Text = title;
             this.controller1 = controller1;
+            txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
+            //kode detail
+            txtKdDetail.Text = FormPesanan.PesananInfo.KodePesanan + "X" + Convert.ToString(controller1.noDetail(txtKdPesanan.Text) + 1);
         }
 
         // constructor untuk inisialisasi data ketika mengedit data
@@ -86,9 +89,6 @@ namespace Transaksi_PreOrder
             detpsn.KdPesanan = txtKdPesanan.Text;
             //psn.KdAdmin = txtAdmin.Text;
 
-            
-
-
             int result1 = 0;
 
             if (isNewData) // tambah data baru, panggil method Create
@@ -102,16 +102,30 @@ namespace Transaksi_PreOrder
 
                     // reset form input, utk persiapan input data berikutnya
                     //txtKdPesanan.Clear();
+                    ReloadForm();
+                }
 
+                
+            }
+            else // edit data, panggil method Update
+            {
+                // panggil operasi CRUD
+                result1 = controller1.Update(detpsn);
+
+                if (result1 > 0)
+                {
+                    DetailPesananUpdate(detpsn); // panggil event OnUpdate
+                    this.Close();
                 }
             }
-            ReloadForm();
+
+
         }
 
         private void FormDetailPesanan_Load(object sender, EventArgs e)
         {
-            txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
-            txtKdDetail.Text = FormPesanan.PesananInfo.KodePesanan + "X" + Convert.ToString(controller1.noDetail(txtKdPesanan.Text)+1);
+           // txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
+            
            // txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
         }
     }
