@@ -256,6 +256,9 @@ namespace Transaksi_PreOrder
             formPesanan.ShowDialog();
         }
 
-       
+        private void btnPembayaran_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

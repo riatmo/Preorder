@@ -255,6 +255,7 @@
             this.btnPembayaran.TabIndex = 2;
             this.btnPembayaran.Text = "Pembayaran";
             this.btnPembayaran.UseVisualStyleBackColor = false;
+            this.btnPembayaran.Click += new System.EventHandler(this.btnPembayaran_Click);
             // 
             // label2
             // 
