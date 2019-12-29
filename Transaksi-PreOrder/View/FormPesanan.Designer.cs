@@ -231,7 +231,7 @@
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambah.Location = new System.Drawing.Point(342, 411);
+            this.btnTambah.Location = new System.Drawing.Point(28, 406);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(281, 23);
             this.btnTambah.TabIndex = 23;
@@ -243,7 +243,7 @@
             // 
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Location = new System.Drawing.Point(27, 411);
+            this.btnTutup.Location = new System.Drawing.Point(342, 406);
             this.btnTutup.Name = "btnTutup";
             this.btnTutup.Size = new System.Drawing.Size(281, 23);
             this.btnTutup.TabIndex = 24;
