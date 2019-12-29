@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblStatusPesanan = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbPlhPembayaran = new System.Windows.Forms.ComboBox();
             this.txtKdPesanan = new System.Windows.Forms.TextBox();
             this.txtTglPesanan = new System.Windows.Forms.TextBox();
             this.txtJthTempo = new System.Windows.Forms.TextBox();
@@ -54,7 +52,6 @@
             this.btnTutup = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtNama = new System.Windows.Forms.Label();
             this.txtAlamat = new System.Windows.Forms.TextBox();
@@ -63,7 +60,6 @@
             this.lblTelfon = new System.Windows.Forms.Label();
             this.txtStatusPesanan = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,25 +74,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 69);
+            this.label2.Location = new System.Drawing.Point(299, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tanggal Pesanan";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Pilih Pembayaran";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 107);
+            this.label4.Location = new System.Drawing.Point(299, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 3;
@@ -105,7 +92,7 @@
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Location = new System.Drawing.Point(299, 150);
+            this.lblAdmin.Location = new System.Drawing.Point(25, 101);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(36, 13);
             this.lblAdmin.TabIndex = 4;
@@ -114,7 +101,7 @@
             // lblStatusPesanan
             // 
             this.lblStatusPesanan.AutoSize = true;
-            this.lblStatusPesanan.Location = new System.Drawing.Point(24, 342);
+            this.lblStatusPesanan.Location = new System.Drawing.Point(24, 277);
             this.lblStatusPesanan.Name = "lblStatusPesanan";
             this.lblStatusPesanan.Size = new System.Drawing.Size(82, 13);
             this.lblStatusPesanan.TabIndex = 5;
@@ -123,7 +110,7 @@
             // txtKdPembeli
             // 
             this.txtKdPembeli.AutoSize = true;
-            this.txtKdPembeli.Location = new System.Drawing.Point(24, 272);
+            this.txtKdPembeli.Location = new System.Drawing.Point(24, 207);
             this.txtKdPembeli.Name = "txtKdPembeli";
             this.txtKdPembeli.Size = new System.Drawing.Size(72, 13);
             this.txtKdPembeli.TabIndex = 6;
@@ -132,7 +119,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(299, 307);
+            this.label8.Location = new System.Drawing.Point(299, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 7;
@@ -141,7 +128,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(299, 339);
+            this.label9.Location = new System.Drawing.Point(299, 280);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 8;
@@ -150,7 +137,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(299, 371);
+            this.label10.Location = new System.Drawing.Point(299, 318);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 13);
             this.label10.TabIndex = 9;
@@ -159,85 +146,74 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(299, 404);
+            this.label11.Location = new System.Drawing.Point(299, 359);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 13);
             this.label11.TabIndex = 10;
             this.label11.Text = "Kode Pos";
             // 
-            // cmbPlhPembayaran
-            // 
-            this.cmbPlhPembayaran.FormattingEnabled = true;
-            this.cmbPlhPembayaran.Items.AddRange(new object[] {
-            "Tunai",
-            "Transfer"});
-            this.cmbPlhPembayaran.Location = new System.Drawing.Point(126, 99);
-            this.cmbPlhPembayaran.Name = "cmbPlhPembayaran";
-            this.cmbPlhPembayaran.Size = new System.Drawing.Size(121, 21);
-            this.cmbPlhPembayaran.TabIndex = 11;
-            // 
             // txtKdPesanan
             // 
             this.txtKdPesanan.Location = new System.Drawing.Point(126, 63);
             this.txtKdPesanan.Name = "txtKdPesanan";
-            this.txtKdPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtKdPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtKdPesanan.TabIndex = 12;
             // 
             // txtTglPesanan
             // 
-            this.txtTglPesanan.Location = new System.Drawing.Point(401, 66);
+            this.txtTglPesanan.Location = new System.Drawing.Point(401, 63);
             this.txtTglPesanan.Name = "txtTglPesanan";
-            this.txtTglPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtTglPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtTglPesanan.TabIndex = 13;
             // 
             // txtJthTempo
             // 
-            this.txtJthTempo.Location = new System.Drawing.Point(401, 104);
+            this.txtJthTempo.Location = new System.Drawing.Point(401, 98);
             this.txtJthTempo.Name = "txtJthTempo";
-            this.txtJthTempo.Size = new System.Drawing.Size(121, 20);
+            this.txtJthTempo.Size = new System.Drawing.Size(152, 20);
             this.txtJthTempo.TabIndex = 14;
             // 
             // txtAdmin
             // 
-            this.txtAdmin.Location = new System.Drawing.Point(401, 147);
+            this.txtAdmin.Location = new System.Drawing.Point(126, 98);
             this.txtAdmin.Name = "txtAdmin";
             this.txtAdmin.ReadOnly = true;
-            this.txtAdmin.Size = new System.Drawing.Size(121, 20);
+            this.txtAdmin.Size = new System.Drawing.Size(152, 20);
             this.txtAdmin.TabIndex = 15;
             // 
             // txtAltPesanan
             // 
-            this.txtAltPesanan.Location = new System.Drawing.Point(126, 269);
+            this.txtAltPesanan.Location = new System.Drawing.Point(126, 204);
             this.txtAltPesanan.Name = "txtAltPesanan";
-            this.txtAltPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtAltPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtAltPesanan.TabIndex = 17;
             // 
             // txtKecPesanan
             // 
-            this.txtKecPesanan.Location = new System.Drawing.Point(401, 304);
+            this.txtKecPesanan.Location = new System.Drawing.Point(401, 242);
             this.txtKecPesanan.Name = "txtKecPesanan";
-            this.txtKecPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtKecPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtKecPesanan.TabIndex = 18;
             // 
             // txtKabPesanan
             // 
-            this.txtKabPesanan.Location = new System.Drawing.Point(401, 336);
+            this.txtKabPesanan.Location = new System.Drawing.Point(401, 277);
             this.txtKabPesanan.Name = "txtKabPesanan";
-            this.txtKabPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtKabPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtKabPesanan.TabIndex = 19;
             // 
             // txtProvPesanan
             // 
-            this.txtProvPesanan.Location = new System.Drawing.Point(401, 368);
+            this.txtProvPesanan.Location = new System.Drawing.Point(401, 315);
             this.txtProvPesanan.Name = "txtProvPesanan";
-            this.txtProvPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtProvPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtProvPesanan.TabIndex = 20;
             // 
             // txtKdPosPesanan
             // 
-            this.txtKdPosPesanan.Location = new System.Drawing.Point(401, 401);
+            this.txtKdPosPesanan.Location = new System.Drawing.Point(401, 356);
             this.txtKdPosPesanan.Name = "txtKdPosPesanan";
-            this.txtKdPosPesanan.Size = new System.Drawing.Size(121, 20);
+            this.txtKdPosPesanan.Size = new System.Drawing.Size(152, 20);
             this.txtKdPosPesanan.TabIndex = 22;
             // 
             // label12
@@ -245,7 +221,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(104, 8);
+            this.label12.Location = new System.Drawing.Point(241, 8);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(122, 20);
             this.label12.TabIndex = 26;
@@ -255,9 +231,9 @@
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambah.Location = new System.Drawing.Point(222, 462);
+            this.btnTambah.Location = new System.Drawing.Point(342, 411);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(75, 23);
+            this.btnTambah.Size = new System.Drawing.Size(281, 23);
             this.btnTambah.TabIndex = 23;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -267,9 +243,9 @@
             // 
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Location = new System.Drawing.Point(315, 462);
+            this.btnTutup.Location = new System.Drawing.Point(27, 411);
             this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(75, 23);
+            this.btnTutup.Size = new System.Drawing.Size(281, 23);
             this.btnTutup.TabIndex = 24;
             this.btnTutup.Text = "Tutup";
             this.btnTutup.UseVisualStyleBackColor = false;
@@ -280,40 +256,29 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(27, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 36);
+            this.panel1.Size = new System.Drawing.Size(596, 36);
             this.panel1.TabIndex = 27;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Location = new System.Drawing.Point(27, 182);
+            this.panel2.Location = new System.Drawing.Point(27, 138);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(330, 36);
+            this.panel2.Size = new System.Drawing.Size(596, 5);
             this.panel2.TabIndex = 28;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(104, 8);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 20);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Buat Pesanan";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 234);
+            this.textBox2.Location = new System.Drawing.Point(126, 169);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.Size = new System.Drawing.Size(152, 20);
             this.textBox2.TabIndex = 31;
             // 
             // txtNama
             // 
             this.txtNama.AutoSize = true;
-            this.txtNama.Location = new System.Drawing.Point(24, 237);
+            this.txtNama.Location = new System.Drawing.Point(24, 172);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(35, 13);
             this.txtNama.TabIndex = 30;
@@ -321,7 +286,7 @@
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(401, 224);
+            this.txtAlamat.Location = new System.Drawing.Point(401, 159);
             this.txtAlamat.Multiline = true;
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(222, 65);
@@ -330,7 +295,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(299, 240);
+            this.label16.Location = new System.Drawing.Point(299, 172);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(39, 13);
             this.label16.TabIndex = 32;
@@ -338,15 +303,15 @@
             // 
             // txtTelfon
             // 
-            this.txtTelfon.Location = new System.Drawing.Point(126, 307);
+            this.txtTelfon.Location = new System.Drawing.Point(126, 242);
             this.txtTelfon.Name = "txtTelfon";
-            this.txtTelfon.Size = new System.Drawing.Size(121, 20);
+            this.txtTelfon.Size = new System.Drawing.Size(152, 20);
             this.txtTelfon.TabIndex = 35;
             // 
             // lblTelfon
             // 
             this.lblTelfon.AutoSize = true;
-            this.lblTelfon.Location = new System.Drawing.Point(24, 310);
+            this.lblTelfon.Location = new System.Drawing.Point(24, 245);
             this.lblTelfon.Name = "lblTelfon";
             this.lblTelfon.Size = new System.Drawing.Size(37, 13);
             this.lblTelfon.TabIndex = 34;
@@ -359,16 +324,16 @@
             "Proses",
             "Tunda",
             "Selesai"});
-            this.txtStatusPesanan.Location = new System.Drawing.Point(126, 342);
+            this.txtStatusPesanan.Location = new System.Drawing.Point(126, 277);
             this.txtStatusPesanan.Name = "txtStatusPesanan";
-            this.txtStatusPesanan.Size = new System.Drawing.Size(121, 21);
+            this.txtStatusPesanan.Size = new System.Drawing.Size(152, 21);
             this.txtStatusPesanan.TabIndex = 36;
             // 
             // FormPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 506);
+            this.ClientSize = new System.Drawing.Size(653, 451);
             this.Controls.Add(this.txtStatusPesanan);
             this.Controls.Add(this.txtTelfon);
             this.Controls.Add(this.lblTelfon);
@@ -389,7 +354,6 @@
             this.Controls.Add(this.txtJthTempo);
             this.Controls.Add(this.txtTglPesanan);
             this.Controls.Add(this.txtKdPesanan);
-            this.Controls.Add(this.cmbPlhPembayaran);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -398,7 +362,6 @@
             this.Controls.Add(this.lblStatusPesanan);
             this.Controls.Add(this.lblAdmin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -407,8 +370,6 @@
             this.Load += new System.EventHandler(this.FormPesanan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,7 +379,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Label lblStatusPesanan;
@@ -427,7 +387,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbPlhPembayaran;
         private System.Windows.Forms.TextBox txtKdPesanan;
         private System.Windows.Forms.TextBox txtTglPesanan;
         private System.Windows.Forms.TextBox txtJthTempo;
@@ -442,7 +401,6 @@
         private System.Windows.Forms.Button btnTutup;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label txtNama;
         private System.Windows.Forms.TextBox txtAlamat;

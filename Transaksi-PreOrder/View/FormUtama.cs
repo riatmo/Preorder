@@ -119,13 +119,7 @@ namespace Transaksi_PreOrder
 
         private void btnBuatPesanan_Click(object sender, EventArgs e)
         {
-            FormPesanan formPesanan = new FormPesanan("tambah pesanan", controller1);
-
-            formPesanan.PesananCreate += PesananCreateEventHandler;
-
-             //FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
-            //formDetail.DetailPesananCreate += onCreateEventHandlerDetail;
-            formPesanan.ShowDialog();
+            
         }
 
         private void onCreateEventHandler(Barang brg)
@@ -179,7 +173,7 @@ namespace Transaksi_PreOrder
         private void FormUtama_Load(object sender, EventArgs e)
         {
             //tampil kode admin yg login
-            txtAdmin.Text = currentAdmin;
+           txtAdmin.Text = currentAdmin;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -227,6 +221,37 @@ namespace Transaksi_PreOrder
                 MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void filToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuatPesanan_Click_1(object sender, EventArgs e)
+        {
+            FormPesanan formPesanan = new FormPesanan("tambah pesanan", controller1);
+
+            formPesanan.PesananCreate += PesananCreateEventHandler;
+
+            //FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
+            //formDetail.DetailPesananCreate += onCreateEventHandlerDetail;
+            formPesanan.ShowDialog();
         }
     }
 }

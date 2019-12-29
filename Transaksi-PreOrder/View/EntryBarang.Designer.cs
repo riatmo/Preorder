@@ -35,20 +35,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pcPreview = new System.Windows.Forms.PictureBox();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtKdBarang = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtNmBarang = new System.Windows.Forms.TextBox();
             this.txtHarga = new System.Windows.Forms.TextBox();
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtWarna = new System.Windows.Forms.TextBox();
             this.txtQty = new System.Windows.Forms.TextBox();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.btnTutup = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -122,24 +118,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Kuantitas";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 283);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Sub Total";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 322);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Total";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pcPreview);
@@ -186,63 +164,49 @@
             // 
             this.txtKdBarang.Location = new System.Drawing.Point(128, 68);
             this.txtKdBarang.Name = "txtKdBarang";
-            this.txtKdBarang.Size = new System.Drawing.Size(130, 20);
+            this.txtKdBarang.Size = new System.Drawing.Size(160, 20);
             this.txtKdBarang.TabIndex = 10;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(128, 319);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(130, 20);
-            this.txtTotal.TabIndex = 11;
             // 
             // txtNmBarang
             // 
             this.txtNmBarang.Location = new System.Drawing.Point(128, 102);
             this.txtNmBarang.Name = "txtNmBarang";
-            this.txtNmBarang.Size = new System.Drawing.Size(130, 20);
+            this.txtNmBarang.Size = new System.Drawing.Size(160, 20);
             this.txtNmBarang.TabIndex = 12;
             // 
             // txtHarga
             // 
             this.txtHarga.Location = new System.Drawing.Point(128, 136);
             this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(130, 20);
+            this.txtHarga.Size = new System.Drawing.Size(160, 20);
             this.txtHarga.TabIndex = 13;
             // 
             // txtUkuran
             // 
             this.txtUkuran.Location = new System.Drawing.Point(128, 171);
             this.txtUkuran.Name = "txtUkuran";
-            this.txtUkuran.Size = new System.Drawing.Size(130, 20);
+            this.txtUkuran.Size = new System.Drawing.Size(160, 20);
             this.txtUkuran.TabIndex = 14;
             // 
             // txtWarna
             // 
             this.txtWarna.Location = new System.Drawing.Point(128, 205);
             this.txtWarna.Name = "txtWarna";
-            this.txtWarna.Size = new System.Drawing.Size(130, 20);
+            this.txtWarna.Size = new System.Drawing.Size(160, 20);
             this.txtWarna.TabIndex = 15;
             // 
             // txtQty
             // 
             this.txtQty.Location = new System.Drawing.Point(128, 243);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(130, 20);
+            this.txtQty.Size = new System.Drawing.Size(160, 20);
             this.txtQty.TabIndex = 16;
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.Location = new System.Drawing.Point(128, 280);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(130, 20);
-            this.txtSubTotal.TabIndex = 18;
             // 
             // btnTutup
             // 
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Location = new System.Drawing.Point(352, 373);
+            this.btnTutup.Location = new System.Drawing.Point(31, 374);
             this.btnTutup.Name = "btnTutup";
             this.btnTutup.Size = new System.Drawing.Size(276, 23);
             this.btnTutup.TabIndex = 19;
@@ -253,7 +217,7 @@
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambah.Location = new System.Drawing.Point(31, 373);
+            this.btnTambah.Location = new System.Drawing.Point(346, 374);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(276, 23);
             this.btnTambah.TabIndex = 20;
@@ -278,17 +242,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.btnTutup);
-            this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.txtWarna);
             this.Controls.Add(this.txtUkuran);
             this.Controls.Add(this.txtHarga);
             this.Controls.Add(this.txtNmBarang);
-            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtKdBarang);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -315,19 +275,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pcPreview;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtKdBarang;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtNmBarang;
         private System.Windows.Forms.TextBox txtUkuran;
         private System.Windows.Forms.TextBox txtWarna;
         private System.Windows.Forms.TextBox txtQty;
-        private System.Windows.Forms.TextBox txtSubTotal;
         private System.Windows.Forms.Button btnTutup;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Panel panel1;

@@ -127,7 +127,7 @@
             // 
             this.txtKdDetail.Location = new System.Drawing.Point(127, 59);
             this.txtKdDetail.Name = "txtKdDetail";
-            this.txtKdDetail.Size = new System.Drawing.Size(117, 20);
+            this.txtKdDetail.Size = new System.Drawing.Size(230, 20);
             this.txtKdDetail.TabIndex = 8;
             // 
             // txtKdPesanan
@@ -135,44 +135,44 @@
             this.txtKdPesanan.Location = new System.Drawing.Point(127, 123);
             this.txtKdPesanan.Name = "txtKdPesanan";
             this.txtKdPesanan.ReadOnly = true;
-            this.txtKdPesanan.Size = new System.Drawing.Size(117, 20);
+            this.txtKdPesanan.Size = new System.Drawing.Size(230, 20);
             this.txtKdPesanan.TabIndex = 11;
             // 
             // txtQty
             // 
             this.txtQty.Location = new System.Drawing.Point(127, 156);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(117, 20);
+            this.txtQty.Size = new System.Drawing.Size(230, 20);
             this.txtQty.TabIndex = 12;
             // 
             // txtSubTotal
             // 
             this.txtSubTotal.Location = new System.Drawing.Point(127, 192);
             this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(117, 20);
+            this.txtSubTotal.Size = new System.Drawing.Size(230, 20);
             this.txtSubTotal.TabIndex = 13;
             // 
             // txtUangMuka
             // 
             this.txtUangMuka.Location = new System.Drawing.Point(127, 225);
             this.txtUangMuka.Name = "txtUangMuka";
-            this.txtUangMuka.Size = new System.Drawing.Size(117, 20);
+            this.txtUangMuka.Size = new System.Drawing.Size(230, 20);
             this.txtUangMuka.TabIndex = 14;
             // 
             // txtSisaPembayaran
             // 
             this.txtSisaPembayaran.Location = new System.Drawing.Point(127, 260);
             this.txtSisaPembayaran.Name = "txtSisaPembayaran";
-            this.txtSisaPembayaran.Size = new System.Drawing.Size(117, 20);
+            this.txtSisaPembayaran.Size = new System.Drawing.Size(230, 20);
             this.txtSisaPembayaran.TabIndex = 15;
             // 
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambah.Location = new System.Drawing.Point(283, 57);
+            this.btnTambah.Location = new System.Drawing.Point(207, 375);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(75, 23);
+            this.btnTambah.Size = new System.Drawing.Size(150, 23);
             this.btnTambah.TabIndex = 16;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -182,9 +182,9 @@
             // 
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Location = new System.Drawing.Point(283, 93);
+            this.btnTutup.Location = new System.Drawing.Point(25, 375);
             this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(75, 23);
+            this.btnTutup.Size = new System.Drawing.Size(150, 23);
             this.btnTutup.TabIndex = 17;
             this.btnTutup.Text = "Tutup";
             this.btnTutup.UseVisualStyleBackColor = false;
@@ -214,7 +214,7 @@
             this.txtKdBarang.Location = new System.Drawing.Point(127, 90);
             this.txtKdBarang.Name = "txtKdBarang";
             this.txtKdBarang.ReadOnly = true;
-            this.txtKdBarang.Size = new System.Drawing.Size(117, 20);
+            this.txtKdBarang.Size = new System.Drawing.Size(230, 20);
             this.txtKdBarang.TabIndex = 20;
             // 
             // panel1
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 372);
+            this.ClientSize = new System.Drawing.Size(382, 420);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtKdBarang);
             this.Controls.Add(this.txtCatatan);

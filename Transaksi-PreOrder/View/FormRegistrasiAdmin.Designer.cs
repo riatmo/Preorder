@@ -185,7 +185,7 @@
             // 
             this.btnSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSimpan.Location = new System.Drawing.Point(33, 302);
+            this.btnSimpan.Location = new System.Drawing.Point(33, 305);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(120, 23);
             this.btnSimpan.TabIndex = 15;
@@ -196,7 +196,7 @@
             // 
             this.btnSelesai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelesai.Location = new System.Drawing.Point(194, 302);
+            this.btnSelesai.Location = new System.Drawing.Point(194, 305);
             this.btnSelesai.Name = "btnSelesai";
             this.btnSelesai.Size = new System.Drawing.Size(129, 23);
             this.btnSelesai.TabIndex = 16;

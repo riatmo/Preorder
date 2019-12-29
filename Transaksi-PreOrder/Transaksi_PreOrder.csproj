@@ -70,6 +70,14 @@
     <Compile Include="Controller\BarangController.cs" />
     <Compile Include="Controller\DetailPesananController.cs" />
     <Compile Include="Controller\PesananController.cs" />
+    <Compile Include="Controller\ProdusenController.cs" />
+    <Compile Include="View\FormProdusen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProdusen.Designer.cs">
+      <DependentUpon>FormProdusen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Repository\ProdusenRepository.cs" />
     <Compile Include="View\FormPembayaran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +134,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FormProdusen.resx">
+      <DependentUpon>FormProdusen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormPembayaran.resx">
       <DependentUpon>FormPembayaran.cs</DependentUpon>
     </EmbeddedResource>

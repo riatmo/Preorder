@@ -144,5 +144,10 @@ namespace Transaksi_PreOrder
             //tampil kode admin yg login
             txtAdmin.Text = currentAdmin;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
