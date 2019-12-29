@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lvwData = new System.Windows.Forms.ListView();
@@ -42,10 +43,10 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnEntryBarang = new System.Windows.Forms.Button();
             this.btnPembayaran = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblOperator = new System.Windows.Forms.Label();
             this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -63,6 +64,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +99,7 @@
             // lvwData
             // 
             this.lvwData.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lvwData.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvwData.HideSelection = false;
             this.lvwData.Location = new System.Drawing.Point(3, 4);
             this.lvwData.Name = "lvwData";
@@ -124,6 +127,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(3, 3);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(527, 28);
@@ -137,6 +141,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(536, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(451, 28);
@@ -162,9 +167,10 @@
             // txtCari
             // 
             this.txtCari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCari.Location = new System.Drawing.Point(3, 7);
+            this.txtCari.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCari.Location = new System.Drawing.Point(3, 6);
             this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(867, 20);
+            this.txtCari.Size = new System.Drawing.Size(867, 21);
             this.txtCari.TabIndex = 2;
             this.txtCari.Text = "Ketik tanggal pesanan disini...";
             // 
@@ -173,6 +179,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnCari.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.Location = new System.Drawing.Point(876, 3);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 28);
@@ -188,17 +195,17 @@
             this.tableLayoutPanel1.Controls.Add(this.btnDashboard, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnEntryBarang, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnPembayaran, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.lblOperator, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.txtAdmin, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 14;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.53964F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.076686F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.582838F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.29851F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.19403F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.686567F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.582838F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.582838F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.582838F));
@@ -218,7 +225,7 @@
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.Location = new System.Drawing.Point(3, 232);
             this.btnDashboard.Name = "btnDashboard";
@@ -232,7 +239,7 @@
             this.btnEntryBarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnEntryBarang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEntryBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntryBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntryBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntryBarang.ForeColor = System.Drawing.Color.Black;
             this.btnEntryBarang.Location = new System.Drawing.Point(3, 276);
             this.btnEntryBarang.Name = "btnEntryBarang";
@@ -247,7 +254,7 @@
             this.btnPembayaran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnPembayaran.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPembayaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPembayaran.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPembayaran.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembayaran.ForeColor = System.Drawing.Color.Black;
             this.btnPembayaran.Location = new System.Drawing.Point(3, 320);
             this.btnPembayaran.Name = "btnPembayaran";
@@ -257,25 +264,14 @@
             this.btnPembayaran.UseVisualStyleBackColor = false;
             this.btnPembayaran.Click += new System.EventHandler(this.btnPembayaran_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Aplikasi Pre-Order dan Transaksi";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 616);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 615);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 13);
+            this.label3.Size = new System.Drawing.Size(194, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,10 +280,10 @@
             // 
             this.lblOperator.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblOperator.AutoSize = true;
-            this.lblOperator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperator.Location = new System.Drawing.Point(3, 523);
             this.lblOperator.Name = "lblOperator";
-            this.lblOperator.Size = new System.Drawing.Size(92, 24);
+            this.lblOperator.Size = new System.Drawing.Size(94, 23);
             this.lblOperator.TabIndex = 9;
             this.lblOperator.Text = "Operator";
             this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,12 +292,22 @@
             // 
             this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdmin.Enabled = false;
-            this.txtAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdmin.Location = new System.Drawing.Point(3, 560);
             this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.Size = new System.Drawing.Size(194, 38);
+            this.txtAdmin.Size = new System.Drawing.Size(194, 37);
             this.txtAdmin.TabIndex = 10;
             this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(39, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 168);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // contextMenuStrip1
             // 
@@ -375,6 +381,7 @@
             this.lstBarang.Name = "lstBarang";
             this.lstBarang.Size = new System.Drawing.Size(132, 22);
             this.lstBarang.Text = "List Barang";
+            this.lstBarang.Click += new System.EventHandler(this.lstBarang_Click);
             // 
             // lstDistributor
             // 
@@ -397,7 +404,7 @@
             // barTentang
             // 
             this.barTentang.Name = "barTentang";
-            this.barTentang.Size = new System.Drawing.Size(62, 20);
+            this.barTentang.Size = new System.Drawing.Size(61, 20);
             this.barTentang.Text = "Tentang";
             // 
             // FormUtama
@@ -420,6 +427,7 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -440,7 +448,6 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnEntryBarang;
         private System.Windows.Forms.Button btnPembayaran;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -459,6 +466,7 @@
         private System.Windows.Forms.ToolStripMenuItem barTentang;
         private System.Windows.Forms.Label lblOperator;
         private System.Windows.Forms.TextBox txtAdmin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Transaksi_PreOrder
     public partial class FormUtama : Form
     {
         private List<Barang> listBarang = new List<Barang>();
-        //private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
+        private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
         private List<Pesanan> listPesanan = new List<Pesanan>();
 
         //tampil kode admin yg login
@@ -141,7 +141,6 @@ namespace Transaksi_PreOrder
            //lvwData.Items.Add(item);
         }
 
-      
 
         private void btnEntryBarang_Click(object sender, EventArgs e)
         {
@@ -241,6 +240,11 @@ namespace Transaksi_PreOrder
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void lstBarang_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnDetailPesanan_Click(object sender, EventArgs e)

@@ -103,7 +103,7 @@ namespace Transaksi_PreOrder.Model.Repository
             {
                 // deklarasi perintah SQL
                 string sql = @"select kd_pesanan, cara_bayar
-                               from pesanan order by kd_pesanan";
+                               from pesanan order by (SELECT RIGHT(kd_pesanan,3))";
                 //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
 
                 // membuat objek command menggunakan blok using
@@ -171,7 +171,9 @@ namespace Transaksi_PreOrder.Model.Repository
             //               from pesanan
             //               WHERE kd_pesanan=(SELECT MAX(kd_pesanan) FROM pesanan);";
 
-            string sql = @"SELECT MAX(right(kd_pesanan,2)) as nopesanan FROM pesanan";
+            //string sql = @"SELECT MAX(right(kd_pesanan,2)) as nopesanan FROM pesanan";
+
+            string sql = @"SELECT RIGHT(kd_pesanan,3) AS nopesanan FROM pesanan order by nopesanan desc LIMIT 1";
 
 
             // membuat objek command menggunakan blok using
@@ -183,7 +185,6 @@ namespace Transaksi_PreOrder.Model.Repository
                     // panggil method Read untuk mendapatkan baris dari result set
                     if (dtr.Read())
                     {
-
                         no = Convert.ToInt32(dtr["nopesanan"]);
                     }
                 }

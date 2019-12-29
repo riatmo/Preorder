@@ -78,6 +78,24 @@ namespace Transaksi_PreOrder
 
         }
 
+        public FormDetailPesanan(DetailPesanan obj1, DetailPesananController controller1, string title)
+            : this()
+        {
+            // ganti text/judul form
+            this.Text = title;
+            this.controller1 = controller1;
+
+            isNewData = false; // set status edit data
+            detpsn = obj1; // set objek mhs yang akan diedit
+
+            // untuk edit data, tampilkan data lama
+
+            txtKdDetail.Text = detpsn.KdPesanan + "X";
+            txtKdPesanan.Text = detpsn.KdPesanan;
+            //txtAdmin.Text = psn.KdAdmin;
+
+        }
+
         private void btnTambah_Click(object sender, EventArgs e)
         {
             // jika data baru, inisialisasi objek mahasiswa
@@ -105,7 +123,7 @@ namespace Transaksi_PreOrder
                     ReloadForm();
                 }
 
-                
+
             }
             else // edit data, panggil method Update
             {
@@ -124,9 +142,9 @@ namespace Transaksi_PreOrder
 
         private void FormDetailPesanan_Load(object sender, EventArgs e)
         {
-           // txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
-            
-           // txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
+            // txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
+
+            // txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
         }
     }
 }

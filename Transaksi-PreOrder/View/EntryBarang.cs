@@ -117,5 +117,10 @@ namespace Transaksi_PreOrder
             }
 
         }
+
+        private void btnTutup_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -104,13 +104,22 @@ namespace Transaksi_PreOrder
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
+            if (lvwDetailPesanan.SelectedItems.Count > 0)
+            {
+                DetailPesanan update = detailPesanan[lvwDetailPesanan.SelectedIndices[0]];
 
+                FormDetailPesanan formDetail = new FormDetailPesanan(update, controller, "Tambah Detail Pesanan");
 
-            FormDetailPesanan formDetail = new FormDetailPesanan("Tambah Detail Pesanan",controller);
+                formDetail.DetailPesananCreate += CreateDetailHandler;
 
-            formDetail.DetailPesananCreate += CreateDetailHandler;
+                formDetail.ShowDialog();
+            }
 
-            formDetail.ShowDialog();
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data belum dipilih", "Peringatan", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

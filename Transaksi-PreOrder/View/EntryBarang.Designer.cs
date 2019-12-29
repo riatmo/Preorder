@@ -252,6 +252,7 @@
             this.btnTutup.TabIndex = 19;
             this.btnTutup.Text = "Tutup";
             this.btnTutup.UseVisualStyleBackColor = false;
+            this.btnTutup.Click += new System.EventHandler(this.btnTutup_Click);
             // 
             // btnTambah
             // 
@@ -287,7 +288,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 39);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
@@ -316,7 +317,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(335, 277);
             this.tableLayoutPanel3.TabIndex = 24;
             // 
