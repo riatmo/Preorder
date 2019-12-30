@@ -72,6 +72,36 @@
     <Compile Include="Controller\PembelianController.cs" />
     <Compile Include="Controller\PesananController.cs" />
     <Compile Include="Controller\ProdusenController.cs" />
+    <Compile Include="View\FormListPelanggan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListPelanggan.Designer.cs">
+      <DependentUpon>FormListPelanggan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormListPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListPembelian.Designer.cs">
+      <DependentUpon>FormListPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormListAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListAdmin.Designer.cs">
+      <DependentUpon>FormListAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormListProdusen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListProdusen.Designer.cs">
+      <DependentUpon>FormListProdusen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormListBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormListBarang.Designer.cs">
+      <DependentUpon>FormListBarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormListDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +172,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FormListAdmin.resx">
+      <DependentUpon>FormListAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormListBarang.resx">
+      <DependentUpon>FormListBarang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormListDetail.resx">
       <DependentUpon>FormListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormListPelanggan.resx">
+      <DependentUpon>FormListPelanggan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormListPembelian.resx">
+      <DependentUpon>FormListPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormListProdusen.resx">
+      <DependentUpon>FormListProdusen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProdusen.resx">
       <DependentUpon>FormProdusen.cs</DependentUpon>

@@ -145,6 +145,16 @@ namespace Transaksi_PreOrder
                         MessageBoxIcon.Exclamation);
             }
         }
+
+        private void txtCariDetail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 
