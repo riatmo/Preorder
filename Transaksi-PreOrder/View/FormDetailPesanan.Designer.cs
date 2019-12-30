@@ -205,6 +205,7 @@
             this.btnTambah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambah.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.Location = new System.Drawing.Point(3, 3);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(189, 23);
@@ -218,11 +219,12 @@
             this.btnTutup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTutup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTutup.Location = new System.Drawing.Point(244, 3);
             this.btnTutup.Name = "btnTutup";
             this.btnTutup.Size = new System.Drawing.Size(191, 23);
             this.btnTutup.TabIndex = 17;
-            this.btnTutup.Text = "Tutup";
+            this.btnTutup.Text = "Selesai";
             this.btnTutup.UseVisualStyleBackColor = false;
             // 
             // label9

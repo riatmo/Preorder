@@ -44,9 +44,9 @@
             this.btnEntryBarang = new System.Windows.Forms.Button();
             this.btnPembayaran = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblOperator = new System.Windows.Forms.Label();
             this.txtAdmin = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblOperator = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -132,7 +132,7 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(527, 28);
             this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Perbaiki";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
@@ -146,7 +146,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(451, 28);
             this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Hapus";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
@@ -276,18 +276,8 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblOperator
-            // 
-            this.lblOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOperator.AutoSize = true;
-            this.lblOperator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOperator.Location = new System.Drawing.Point(3, 523);
-            this.lblOperator.Name = "lblOperator";
-            this.lblOperator.Size = new System.Drawing.Size(194, 23);
-            this.lblOperator.TabIndex = 9;
-            this.lblOperator.Text = "Operator";
-            this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+
+
             // txtAdmin
             // 
             this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -308,6 +298,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(121, 168);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblOperator
+            // 
+            this.lblOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblOperator.AutoSize = true;
+            this.lblOperator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperator.Location = new System.Drawing.Point(3, 523);
+            this.lblOperator.Name = "lblOperator";
+            this.lblOperator.Size = new System.Drawing.Size(194, 23);
+            this.lblOperator.TabIndex = 9;
+            this.lblOperator.Text = "Operator";
+            this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // contextMenuStrip1
             // 

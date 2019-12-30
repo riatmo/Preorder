@@ -250,7 +250,7 @@
             this.btnTutup.Name = "btnTutup";
             this.btnTutup.Size = new System.Drawing.Size(277, 23);
             this.btnTutup.TabIndex = 19;
-            this.btnTutup.Text = "Tutup";
+            this.btnTutup.Text = "Selesai";
             this.btnTutup.UseVisualStyleBackColor = false;
             this.btnTutup.Click += new System.EventHandler(this.btnTutup_Click);
             // 
