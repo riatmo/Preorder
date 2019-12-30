@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
             this.lblStatusPesanan = new System.Windows.Forms.Label();
             this.txtKdPembeli = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtKdPesanan = new System.Windows.Forms.TextBox();
-            this.txtTglPesanan = new System.Windows.Forms.TextBox();
-            this.txtJthTempo = new System.Windows.Forms.TextBox();
-            this.txtAdmin = new System.Windows.Forms.TextBox();
             this.txtAltPesanan = new System.Windows.Forms.TextBox();
             this.txtKecPesanan = new System.Windows.Forms.TextBox();
             this.txtKabPesanan = new System.Windows.Forms.TextBox();
@@ -60,59 +52,23 @@
             this.lblTelfon = new System.Windows.Forms.Label();
             this.txtStatusPesanan = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtKdPesanan = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.datePesanan = new System.Windows.Forms.DateTimePicker();
+            this.dateTempo = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kode Pesanan";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(316, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tanggal Pesanan";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(316, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Jatuh Tempo";
-            // 
-            // lblAdmin
-            // 
-            this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(3, 59);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(100, 15);
-            this.lblAdmin.TabIndex = 4;
-            this.lblAdmin.Text = "Admin";
             // 
             // lblStatusPesanan
             // 
@@ -179,43 +135,6 @@
             this.label11.Size = new System.Drawing.Size(101, 15);
             this.label11.TabIndex = 10;
             this.label11.Text = "Kode Pos";
-            // 
-            // txtKdPesanan
-            // 
-            this.txtKdPesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKdPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKdPesanan.Location = new System.Drawing.Point(109, 11);
-            this.txtKdPesanan.Name = "txtKdPesanan";
-            this.txtKdPesanan.Size = new System.Drawing.Size(178, 21);
-            this.txtKdPesanan.TabIndex = 12;
-            // 
-            // txtTglPesanan
-            // 
-            this.txtTglPesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTglPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTglPesanan.Location = new System.Drawing.Point(423, 11);
-            this.txtTglPesanan.Name = "txtTglPesanan";
-            this.txtTglPesanan.Size = new System.Drawing.Size(185, 21);
-            this.txtTglPesanan.TabIndex = 13;
-            // 
-            // txtJthTempo
-            // 
-            this.txtJthTempo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtJthTempo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJthTempo.Location = new System.Drawing.Point(423, 56);
-            this.txtJthTempo.Name = "txtJthTempo";
-            this.txtJthTempo.Size = new System.Drawing.Size(185, 21);
-            this.txtJthTempo.TabIndex = 14;
-            // 
-            // txtAdmin
-            // 
-            this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdmin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdmin.Location = new System.Drawing.Point(109, 56);
-            this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.ReadOnly = true;
-            this.txtAdmin.Size = new System.Drawing.Size(178, 21);
-            this.txtAdmin.TabIndex = 15;
             // 
             // txtAltPesanan
             // 
@@ -413,30 +332,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(611, 43);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.44092F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15485F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.830481F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.60391F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.96984F));
-            this.tableLayoutPanel2.Controls.Add(this.txtAdmin, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblAdmin, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtKdPesanan, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtJthTempo, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtTglPesanan, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 69);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(611, 89);
-            this.tableLayoutPanel2.TabIndex = 38;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 5;
@@ -489,6 +384,109 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(611, 37);
             this.tableLayoutPanel5.TabIndex = 41;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(316, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tanggal Pesanan";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(316, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Jatuh Tempo";
+            // 
+            // txtKdPesanan
+            // 
+            this.txtKdPesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtKdPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKdPesanan.Location = new System.Drawing.Point(109, 11);
+            this.txtKdPesanan.Name = "txtKdPesanan";
+            this.txtKdPesanan.Size = new System.Drawing.Size(178, 21);
+            this.txtKdPesanan.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Kode Pesanan";
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Location = new System.Drawing.Point(3, 59);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(100, 15);
+            this.lblAdmin.TabIndex = 4;
+            this.lblAdmin.Text = "Admin";
+            // 
+            // txtAdmin
+            // 
+            this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAdmin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdmin.Location = new System.Drawing.Point(109, 56);
+            this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.ReadOnly = true;
+            this.txtAdmin.Size = new System.Drawing.Size(178, 21);
+            this.txtAdmin.TabIndex = 15;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.44092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.15485F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.830481F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.60391F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.96984F));
+            this.tableLayoutPanel2.Controls.Add(this.txtAdmin, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblAdmin, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtKdPesanan, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.datePesanan, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dateTempo, 4, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 69);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(611, 89);
+            this.tableLayoutPanel2.TabIndex = 38;
+            // 
+            // datePesanan
+            // 
+            this.datePesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.datePesanan.Location = new System.Drawing.Point(423, 12);
+            this.datePesanan.Name = "datePesanan";
+            this.datePesanan.Size = new System.Drawing.Size(185, 20);
+            this.datePesanan.TabIndex = 16;
+            // 
+            // dateTempo
+            // 
+            this.dateTempo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTempo.Location = new System.Drawing.Point(423, 56);
+            this.dateTempo.Name = "dateTempo";
+            this.dateTempo.Size = new System.Drawing.Size(185, 20);
+            this.dateTempo.TabIndex = 17;
+            // 
             // FormPesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,31 +505,22 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Label lblStatusPesanan;
         private System.Windows.Forms.Label txtKdPembeli;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtKdPesanan;
-        private System.Windows.Forms.TextBox txtTglPesanan;
-        private System.Windows.Forms.TextBox txtJthTempo;
-        private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.TextBox txtAltPesanan;
         private System.Windows.Forms.TextBox txtKecPesanan;
         private System.Windows.Forms.TextBox txtKabPesanan;
@@ -550,8 +539,16 @@
         private System.Windows.Forms.Label lblTelfon;
         private System.Windows.Forms.ComboBox txtStatusPesanan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtKdPesanan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.TextBox txtAdmin;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.DateTimePicker datePesanan;
+        private System.Windows.Forms.DateTimePicker dateTempo;
     }
 }

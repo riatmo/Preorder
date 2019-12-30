@@ -122,7 +122,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.65614F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.34387F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel2.Controls.Add(this.txtCPdetailpesanan, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCariPesanan, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 2, 0);
@@ -140,7 +140,7 @@
             this.txtCPdetailpesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPdetailpesanan.Location = new System.Drawing.Point(3, 8);
             this.txtCPdetailpesanan.Name = "txtCPdetailpesanan";
-            this.txtCPdetailpesanan.Size = new System.Drawing.Size(291, 21);
+            this.txtCPdetailpesanan.Size = new System.Drawing.Size(290, 21);
             this.txtCPdetailpesanan.TabIndex = 0;
             this.txtCPdetailpesanan.Text = "Masukkan Kode Detail Pesanan ...";
             // 
@@ -151,7 +151,7 @@
             this.btnCariPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCariPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariPesanan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCariPesanan.Location = new System.Drawing.Point(300, 4);
+            this.btnCariPesanan.Location = new System.Drawing.Point(299, 4);
             this.btnCariPesanan.Name = "btnCariPesanan";
             this.btnCariPesanan.Size = new System.Drawing.Size(100, 30);
             this.btnCariPesanan.TabIndex = 1;
@@ -163,7 +163,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(620, 11);
+            this.label8.Location = new System.Drawing.Point(619, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 2;

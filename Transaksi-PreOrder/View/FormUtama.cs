@@ -73,9 +73,10 @@ namespace Transaksi_PreOrder
                 // // tampilkan data mhs yg baru ke list view
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(psn.KdPesanan);
+                item.SubItems.Add(psn.TglPesan);
                // item.SubItems.Add(psn.TglPesan);
                item.SubItems.Add(psn.CaraBayar);
-                //item.SubItems.Add(psn.JatuhTempo);
+                item.SubItems.Add(psn.JatuhTempo);
 
 
 
@@ -97,9 +98,10 @@ namespace Transaksi_PreOrder
             // // tampilkan data mhs yg baru ke list view
              ListViewItem item = new ListViewItem(noUrut.ToString());
              item.SubItems.Add(psn.KdPesanan);
+            item.SubItems.Add(psn.TglPesan);
            //  item.SubItems.Add(psn.TglPesan);
-           // item.SubItems.Add(psn.CaraBayar);
-           // item.SubItems.Add(psn.JatuhTempo);
+            item.SubItems.Add(psn.CaraBayar);
+           item.SubItems.Add(psn.JatuhTempo);
             
             
 
@@ -113,6 +115,8 @@ namespace Transaksi_PreOrder
             ListViewItem itemRow = lvwData.Items[index];
             itemRow.SubItems[1].Text = psn.KdPesanan;
             itemRow.SubItems[2].Text = psn.CaraBayar;
+            itemRow.SubItems[3].Text = psn.TglPesan;
+            itemRow.SubItems[4].Text = psn.JatuhTempo;
 
             
         }

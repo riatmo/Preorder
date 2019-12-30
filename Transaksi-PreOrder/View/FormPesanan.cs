@@ -99,6 +99,8 @@ namespace Transaksi_PreOrder
             
             txtKdPesanan.Text = psn.KdPesanan;
             txtAdmin.Text = psn.KdAdmin;
+            datePesanan.Text = psn.TglPesan;
+            dateTempo.Text = psn.JatuhTempo;
            
         }
 
@@ -113,9 +115,18 @@ namespace Transaksi_PreOrder
             if (isNewData) psn = new Pesanan();
 
             // set nilai property objek mahasiswa yg diambil dari TextBox
-            
+
+            datePesanan.Format = DateTimePickerFormat.Custom;
+            datePesanan.CustomFormat = "yyyy-MM-dd";
+
+            dateTempo.Format = DateTimePickerFormat.Custom;
+            dateTempo.CustomFormat = "yyyy-MM-dd";
+
             psn.KdPesanan = txtKdPesanan.Text;
             psn.KdAdmin = txtAdmin.Text;
+            psn.TglPesan = datePesanan.Text;
+            psn.JatuhTempo = dateTempo.Text;
+            
             //psn.CaraBayar = cmbPlhPembayaran.Text;
 
             PesananInfo.KodePesanan = txtKdPesanan.Text;

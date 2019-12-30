@@ -196,9 +196,9 @@
             this.tableLayoutPanel1.Controls.Add(this.btnEntryBarang, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnPembayaran, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.lblOperator, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.txtAdmin, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblOperator, 0, 10);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -278,15 +278,15 @@
             // 
             // lblOperator
             // 
-            this.lblOperator.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOperator.AutoSize = true;
             this.lblOperator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperator.Location = new System.Drawing.Point(3, 523);
             this.lblOperator.Name = "lblOperator";
-            this.lblOperator.Size = new System.Drawing.Size(94, 23);
+            this.lblOperator.Size = new System.Drawing.Size(194, 23);
             this.lblOperator.TabIndex = 9;
             this.lblOperator.Text = "Operator";
-            this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAdmin
             // 
@@ -356,14 +356,14 @@
             // btnBuatPesanan
             // 
             this.btnBuatPesanan.Name = "btnBuatPesanan";
-            this.btnBuatPesanan.Size = new System.Drawing.Size(180, 22);
+            this.btnBuatPesanan.Size = new System.Drawing.Size(151, 22);
             this.btnBuatPesanan.Text = "Buat Pesanan";
             this.btnBuatPesanan.Click += new System.EventHandler(this.btnBuatPesanan_Click_1);
             // 
             // btnDetailPesanan
             // 
             this.btnDetailPesanan.Name = "btnDetailPesanan";
-            this.btnDetailPesanan.Size = new System.Drawing.Size(180, 22);
+            this.btnDetailPesanan.Size = new System.Drawing.Size(151, 22);
             this.btnDetailPesanan.Text = "Detail Pesanan";
             this.btnDetailPesanan.Click += new System.EventHandler(this.btnDetailPesanan_Click);
             // 
@@ -404,7 +404,7 @@
             // barTentang
             // 
             this.barTentang.Name = "barTentang";
-            this.barTentang.Size = new System.Drawing.Size(61, 20);
+            this.barTentang.Size = new System.Drawing.Size(62, 20);
             this.barTentang.Text = "Tentang";
             // 
             // FormUtama
