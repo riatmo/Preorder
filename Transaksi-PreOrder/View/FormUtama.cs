@@ -84,6 +84,25 @@ namespace Transaksi_PreOrder
             }
         }
 
+        private void onCreateEventHandler(Barang brg)
+        {
+            // tambahkan objek mhs yang baru ke dalam collection
+
+            // ENABLE BUAT DAFTAR PESANAN
+
+            /*listBarang.Add(brg);
+            var noUrut = lvwListBarang.Items.Count + 1;
+
+            var item = new ListViewItem(noUrut.ToString());
+            item.SubItems.Add(brg.KdBarang);
+            item.SubItems.Add(brg.Nama);
+            item.SubItems.Add(Convert.ToString(brg.Harga));
+            item.SubItems.Add(Convert.ToString(brg.Qty));
+            item.SubItems.Add(brg.Warna);
+            item.SubItems.Add(brg.Ukuran);
+
+            lvwListBarang.Items.Add(item);*/
+        }
 
         private void PesananCreateEventHandler(Pesanan psn)
         {
@@ -126,34 +145,18 @@ namespace Transaksi_PreOrder
             
         }
 
-        private void onCreateEventHandler(Barang brg)
-        {
-           // tambahkan objek mhs yang baru ke dalam collection
-
-           // ENABLE BUAT DAFTAR PESANAN
-
-           //listBarang.Add(brg);
-
-           //int noUrut = lvwData.Items.Count + 1;
-
-           // // tampilkan data mhs yg baru ke list view
-          // ListViewItem item = new ListViewItem(noUrut.ToString());
-           //item.SubItems.Add(brg.KdBarang);
-          // item.SubItems.Add(brg.Nama);
-          // item.SubItems.Add(Convert.ToString(brg.Harga));
-
-           //lvwData.Items.Add(item);
-        }
+        
 
 
         private void btnEntryBarang_Click(object sender, EventArgs e)
         {
-
             EntryBarang entryBarang = new EntryBarang("tambah Barang", controller);
 
-            entryBarang.onCreate += onCreateEventHandler;
+            //entryBarang.onCreate += onCreateEventHandler;
+            //EntryBarang entryBarang = new EntryBarang();
 
             entryBarang.ShowDialog();
+
         }
 
         private void FormUtama_Load(object sender, EventArgs e)
@@ -248,7 +251,8 @@ namespace Transaksi_PreOrder
 
         private void lstBarang_Click(object sender, EventArgs e)
         {
-
+            FormListBarang frm = new FormListBarang();
+            frm.ShowDialog();
         }
 
         private void btnDetailPesanan_Click(object sender, EventArgs e)

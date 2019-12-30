@@ -20,7 +20,7 @@ namespace Transaksi_PreOrder
         public delegate void CreateUpdateHandler(Barang brg);
 
         //event tambah data
-        public event CreateUpdateHandler onCreate;
+        //public event CreateUpdateHandler onCreate;
 
         //event update data
         public event CreateUpdateHandler onUpdate;
@@ -61,9 +61,14 @@ namespace Transaksi_PreOrder
             brg = obj; // set objek mhs yang akan diedit
 
             // untuk edit data, tampilkan data lama
-             int harga = Convert.ToInt32(txtHarga.Text);
-             harga = brg.Harga;
-           // txtHarga.Text = brg.Harga;
+            //int harga = Convert.ToInt32(txtHarga.Text);
+            //harga = brg.Harga;
+
+            //int qty = Convert.ToInt32(txtQty.Text);
+            //qty = brg.Qty;
+            txtHarga.Text = brg.Harga.ToString();
+            txtQty.Text = brg.Qty.ToString();
+            //txtHarga.Text = brg.Harga;
             txtKdBarang.Text = brg.KdBarang;
             txtNmBarang.Text = brg.Nama;
             txtUkuran.Text = brg.Ukuran;
@@ -77,7 +82,7 @@ namespace Transaksi_PreOrder
 
             // set nilai property objek mahasiswa yg diambil dari TextBox
             brg.Harga = Convert.ToInt32(txtHarga.Text);
-            //brg.Harga = txtHarga.Text;
+            brg.Qty = Convert.ToInt32(txtQty.Text);
             brg.KdBarang = txtKdBarang.Text;
             brg.Nama = txtNmBarang.Text;
             brg.Ukuran = txtUkuran.Text;
@@ -92,10 +97,11 @@ namespace Transaksi_PreOrder
 
                 if (result > 0) // tambah data berhasil
                 {
-                    onCreate(brg); // panggil event OnCreate
+                    //onCreate(brg); // panggil event OnCreate
 
                     // reset form input, utk persiapan input data berikutnya
                     txtHarga.Clear();
+                    txtQty.Clear();
                     txtKdBarang.Clear();
                     txtNmBarang.Clear();
                     txtUkuran.Clear();

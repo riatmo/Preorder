@@ -71,6 +71,7 @@
             this.txtCariBarang.Size = new System.Drawing.Size(590, 21);
             this.txtCariBarang.TabIndex = 0;
             this.txtCariBarang.Text = "Ketik nama barang yang ingin di cari ...";
+            this.txtCariBarang.TextChanged += new System.EventHandler(this.txtCariBarang_TextChanged);
             // 
             // btnCari
             // 
@@ -138,6 +139,7 @@
             // 
             this.lvwListBarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwListBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwListBarang.HideSelection = false;
             this.lvwListBarang.Location = new System.Drawing.Point(3, 3);
             this.lvwListBarang.Name = "lvwListBarang";
             this.lvwListBarang.Size = new System.Drawing.Size(712, 370);
@@ -173,6 +175,7 @@
             this.btnHapus.TabIndex = 1;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnPerbaiki
             // 
@@ -186,6 +189,7 @@
             this.btnPerbaiki.TabIndex = 2;
             this.btnPerbaiki.Text = "Perbaiki";
             this.btnPerbaiki.UseVisualStyleBackColor = false;
+            this.btnPerbaiki.Click += new System.EventHandler(this.btnPerbaiki_Click);
             // 
             // btnTutup
             // 
@@ -232,10 +236,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCariBarang;
         private System.Windows.Forms.Button btnCari;
-        private System.Windows.Forms.ListView lvwListBarang;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnPerbaiki;
         private System.Windows.Forms.Button btnTutup;
+        private System.Windows.Forms.ListView lvwListBarang;
     }
 }
