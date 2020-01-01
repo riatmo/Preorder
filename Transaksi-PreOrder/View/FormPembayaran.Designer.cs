@@ -46,6 +46,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtKdTatasnama = new System.Windows.Forms.TextBox();
             this.cmbPilihPembayaran = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbPesanan = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lvwDPTranspem = new System.Windows.Forms.ListView();
             this.btnSelesaiTP = new System.Windows.Forms.Button();
@@ -56,11 +58,9 @@
             this.txtSisPem = new System.Windows.Forms.Label();
             this.txtTotTag = new System.Windows.Forms.TextBox();
             this.txtJumPem = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtKekurangan = new System.Windows.Forms.TextBox();
             this.btnTambahTP = new System.Windows.Forms.Button();
             this.btnHapusTP = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cmbPesanan = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -124,7 +124,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.65614F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.34387F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel2.Controls.Add(this.txtCPdetailpesanan, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCariPesanan, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 2, 0);
@@ -142,7 +142,7 @@
             this.txtCPdetailpesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPdetailpesanan.Location = new System.Drawing.Point(3, 8);
             this.txtCPdetailpesanan.Name = "txtCPdetailpesanan";
-            this.txtCPdetailpesanan.Size = new System.Drawing.Size(289, 21);
+            this.txtCPdetailpesanan.Size = new System.Drawing.Size(287, 21);
             this.txtCPdetailpesanan.TabIndex = 0;
             this.txtCPdetailpesanan.Text = "Masukkan Kode Detail Pesanan ...";
             // 
@@ -153,7 +153,7 @@
             this.btnCariPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCariPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariPesanan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCariPesanan.Location = new System.Drawing.Point(298, 4);
+            this.btnCariPesanan.Location = new System.Drawing.Point(296, 4);
             this.btnCariPesanan.Name = "btnCariPesanan";
             this.btnCariPesanan.Size = new System.Drawing.Size(99, 30);
             this.btnCariPesanan.TabIndex = 1;
@@ -165,7 +165,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(617, 11);
+            this.label8.Location = new System.Drawing.Point(615, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 2;
@@ -176,7 +176,7 @@
             this.lblKodePsn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblKodePsn.AutoSize = true;
             this.lblKodePsn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKodePsn.Location = new System.Drawing.Point(762, 11);
+            this.lblKodePsn.Location = new System.Drawing.Point(761, 11);
             this.lblKodePsn.Name = "lblKodePsn";
             this.lblKodePsn.Size = new System.Drawing.Size(0, 15);
             this.lblKodePsn.TabIndex = 3;
@@ -300,6 +300,32 @@
             this.cmbPilihPembayaran.Size = new System.Drawing.Size(121, 24);
             this.cmbPilihPembayaran.TabIndex = 13;
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(411, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Status Pesanan";
+            // 
+            // cmbPesanan
+            // 
+            this.cmbPesanan.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPesanan.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.cmbPesanan.FormattingEnabled = true;
+            this.cmbPesanan.Items.AddRange(new object[] {
+            "Tunda",
+            "Proses",
+            "Selesai"});
+            this.cmbPesanan.Location = new System.Drawing.Point(572, 59);
+            this.cmbPesanan.Name = "cmbPesanan";
+            this.cmbPesanan.Size = new System.Drawing.Size(121, 24);
+            this.cmbPesanan.TabIndex = 15;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lvwDPTranspem);
@@ -355,7 +381,7 @@
             this.tableLayoutPanel5.Controls.Add(this.txtSisPem, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.txtTotTag, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtJumPem, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.textBox4, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.txtKekurangan, 1, 2);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
@@ -414,19 +440,18 @@
             this.txtJumPem.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJumPem.Location = new System.Drawing.Point(592, 37);
             this.txtJumPem.Name = "txtJumPem";
-            this.txtJumPem.ReadOnly = true;
             this.txtJumPem.Size = new System.Drawing.Size(225, 21);
             this.txtJumPem.TabIndex = 12;
             // 
-            // textBox4
+            // txtKekurangan
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(592, 69);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(225, 21);
-            this.textBox4.TabIndex = 12;
+            this.txtKekurangan.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtKekurangan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKekurangan.Location = new System.Drawing.Point(592, 69);
+            this.txtKekurangan.Name = "txtKekurangan";
+            this.txtKekurangan.ReadOnly = true;
+            this.txtKekurangan.Size = new System.Drawing.Size(225, 21);
+            this.txtKekurangan.TabIndex = 12;
             // 
             // btnTambahTP
             // 
@@ -456,32 +481,6 @@
             this.btnHapusTP.TabIndex = 1;
             this.btnHapusTP.Text = "Hapus";
             this.btnHapusTP.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(411, 63);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Status Pesanan";
-            // 
-            // cmbPesanan
-            // 
-            this.cmbPesanan.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbPesanan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPesanan.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.cmbPesanan.FormattingEnabled = true;
-            this.cmbPesanan.Items.AddRange(new object[] {
-            "Tunda",
-            "Proses",
-            "Selesai"});
-            this.cmbPesanan.Location = new System.Drawing.Point(572, 59);
-            this.cmbPesanan.Name = "cmbPesanan";
-            this.cmbPesanan.Size = new System.Drawing.Size(121, 24);
-            this.cmbPesanan.TabIndex = 15;
             // 
             // FormPembayaran
             // 
@@ -543,7 +542,7 @@
         private System.Windows.Forms.Label txtSisPem;
         private System.Windows.Forms.TextBox txtTotTag;
         private System.Windows.Forms.TextBox txtJumPem;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtKekurangan;
         private System.Windows.Forms.Button btnTambahTP;
         private System.Windows.Forms.Button btnHapusTP;
         private System.Windows.Forms.Label label8;

@@ -146,5 +146,20 @@ namespace Transaksi_PreOrder.Controller
             return no;
         }
 
+        public int Total(string kdpsn)
+        {
+            int no;
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new PesananRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                no = _repository.Total(kdpsn);
+            }
+
+            return no;
+        }
+
     }
 }

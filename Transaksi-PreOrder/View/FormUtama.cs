@@ -127,6 +127,8 @@ namespace Transaksi_PreOrder
             
 
             lvwData.Items.Add(item);
+            
+
         }
 
         private void PesananUpdateEventHandler(Pesanan psn)
@@ -140,7 +142,7 @@ namespace Transaksi_PreOrder
             itemRow.SubItems[4].Text = psn.JatuhTempo;
             itemRow.SubItems[5].Text = psn.StatusPesanan;
 
-            
+            loadPesanan();
         }
 
         private void btnBuatPesanan_Click(object sender, EventArgs e)
@@ -284,5 +286,12 @@ namespace Transaksi_PreOrder
             FormListDetail frm = new FormListDetail();
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loadPesanan();
+        }
+
+        
     }
 }

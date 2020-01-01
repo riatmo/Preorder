@@ -59,6 +59,7 @@
             this.barAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.barPanduan = new System.Windows.Forms.ToolStripMenuItem();
             this.barTentang = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -106,6 +107,7 @@
             this.lvwData.Size = new System.Drawing.Size(990, 584);
             this.lvwData.TabIndex = 0;
             this.lvwData.UseCompatibleStateImageBehavior = false;
+            
             // 
             // tableLayoutPanel2
             // 
@@ -199,6 +201,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtAdmin, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblOperator, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 7);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -276,8 +279,6 @@
             this.label3.Text = "v.1.0";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-
-
             // txtAdmin
             // 
             this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -409,6 +410,16 @@
             this.barTentang.Size = new System.Drawing.Size(62, 20);
             this.barTentang.Text = "Tentang";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 36);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "btnRefresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +480,7 @@
         private System.Windows.Forms.Label lblOperator;
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
