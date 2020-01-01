@@ -75,8 +75,9 @@ namespace Transaksi_PreOrder
                 item.SubItems.Add(psn.KdPesanan);
                 item.SubItems.Add(psn.TglPesan);
                // item.SubItems.Add(psn.TglPesan);
-               item.SubItems.Add(psn.CaraBayar);
+                item.SubItems.Add(psn.CaraBayar);
                 item.SubItems.Add(psn.JatuhTempo);
+                item.SubItems.Add(psn.StatusPesanan);
 
 
 
@@ -121,6 +122,7 @@ namespace Transaksi_PreOrder
            //  item.SubItems.Add(psn.TglPesan);
             item.SubItems.Add(psn.CaraBayar);
            item.SubItems.Add(psn.JatuhTempo);
+            item.SubItems.Add(psn.StatusPesanan);
             
             
 
@@ -132,10 +134,11 @@ namespace Transaksi_PreOrder
             int index = lvwData.SelectedIndices[0];
 
             ListViewItem itemRow = lvwData.Items[index];
-            itemRow.SubItems[1].Text = psn.KdPesanan;
-            itemRow.SubItems[2].Text = psn.CaraBayar;
-            itemRow.SubItems[3].Text = psn.TglPesan;
+            itemRow.SubItems[1].Text = psn.KdPesanan; 
+            itemRow.SubItems[2].Text = psn.TglPesan;
+            itemRow.SubItems[3].Text = psn.CaraBayar;
             itemRow.SubItems[4].Text = psn.JatuhTempo;
+            itemRow.SubItems[5].Text = psn.StatusPesanan;
 
             
         }
@@ -247,6 +250,27 @@ namespace Transaksi_PreOrder
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
             
+
+
+            if (lvwData.SelectedItems.Count > 0)
+            {
+                // ambil objek mhs yang mau diedit dari collection
+                Pesanan psn = listPesanan[lvwData.SelectedIndices[0]];
+
+                // buat objek form entry data mahasiswa
+                FormPembayaran frmByr = new FormPembayaran("Update", psn, controller1);
+
+                // mendaftarkan method event handler untuk merespon event OnUpdate
+                frmByr.PesananUpdate += PesananUpdateEventHandler;
+
+                // tampilkan form entry mahasiswa
+                frmByr.ShowDialog();
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data belum dipilih", "Peringatan", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+            }
         }
 
         private void lstBarang_Click(object sender, EventArgs e)

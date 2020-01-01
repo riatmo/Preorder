@@ -256,7 +256,6 @@
             this.txtKdBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKdBarang.Location = new System.Drawing.Point(120, 40);
             this.txtKdBarang.Name = "txtKdBarang";
-            this.txtKdBarang.ReadOnly = true;
             this.txtKdBarang.Size = new System.Drawing.Size(315, 21);
             this.txtKdBarang.TabIndex = 20;
             // 

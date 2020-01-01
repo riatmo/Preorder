@@ -317,6 +317,7 @@
             this.txtStatusPesanan.Name = "txtStatusPesanan";
             this.txtStatusPesanan.Size = new System.Drawing.Size(180, 24);
             this.txtStatusPesanan.TabIndex = 36;
+            this.txtStatusPesanan.Text = "Tunda";
             // 
             // tableLayoutPanel1
             // 

@@ -25,24 +25,28 @@ namespace Transaksi_PreOrder.Model.Repository
         public int Create(DetailPesanan detailPesanan)
         {
             int result = 0;
-
-
-            //detail pesanan
-            //string sql2 = @"insert into detail_pesanan (kd_detail, kd_barang, Qty, Subtotal, kd_pesanan)
-            //               values (@kd_detail, @kd_barang, @Qty, @Subtotal, @kd_pesanan)";
+            
 
             //detail pesanan
-            string sql = @"insert into detail_pesanan (kd_detail,kd_pesanan)
-                           values (@kddetail,@kdpesanan)";
+            string sql = @"insert into detail_pesanan (kd_detail, kd_barang, Qty, Subtotal, kd_pesanan)
+                           values (@kd_detail, @kd_barang, @Qty, ( @Qty * (SELECT harga FROM barang WHERE kd_barang = @kd_barang)), @kd_pesanan);
+
+                           UPDATE pesanan SET total = (SELECT SUM(subtotal) FROM detail_pesanan WHERE kd_pesanan = @kd_pesanan)
+                           WHERE kd_pesanan = @kd_pesanan
+                            ";
+
+            //detail pesanan
+            //string sql = @"insert into detail_pesanan (kd_detail,kd_pesanan)
+            //               values (@kddetail,@kdpesanan)";
 
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
             {
                 // mendaftarkan parameter dan mengeset nilainya
-                cmd.Parameters.AddWithValue("@kddetail", detailPesanan.KdDetail);
-                //cmd.Parameters.AddWithValue("@kd_barang", detail.KdBarang);
-                //cmd.Parameters.AddWithValue("@Qty", detail.Qty);
+                cmd.Parameters.AddWithValue("@kd_detail", detailPesanan.KdDetail);
+                cmd.Parameters.AddWithValue("@kd_barang", detailPesanan.KdBarang);
+                cmd.Parameters.AddWithValue("@Qty", detailPesanan.Qty);
                 //cmd.Parameters.AddWithValue("@Subtotal", detail.Subtotal);
-                cmd.Parameters.AddWithValue("@kdpesanan", detailPesanan.KdPesanan);  
+                cmd.Parameters.AddWithValue("@kd_pesanan", detailPesanan.KdPesanan);  
 
                 try
                 {
@@ -63,16 +67,17 @@ namespace Transaksi_PreOrder.Model.Repository
             int result = 0;
 
             // deklarasi perintah SQL
-            string sql = @"update detail_pesanan set kd_detail = @kd_detail
-                           where kd_pesanan = @kd_pesanan";
+            string sql = @"update detail_pesanan set qty = @qty, kd_barang = @kd_barang, subtotal =( @Qty * (SELECT harga FROM barang WHERE kd_barang = @kd_barang))
+                           where kd_detail = @kd_detail";
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
             {
                 // mendaftarkan parameter dan mengeset nilainya
+                cmd.Parameters.AddWithValue("@kd_barang", detailPesanan.KdBarang);
+                cmd.Parameters.AddWithValue("@qty", detailPesanan.Qty);
                 cmd.Parameters.AddWithValue("@kd_detail", detailPesanan.KdDetail);
-                cmd.Parameters.AddWithValue("@kd_pesanan", detailPesanan.KdPesanan);
-                
+
 
                 try
                 {
@@ -111,9 +116,9 @@ namespace Transaksi_PreOrder.Model.Repository
 
                             detail.KdDetail = dtr["kd_detail"].ToString();
                             detail.KdPesanan = dtr["kd_pesanan"].ToString();
-                            //detail.KdBarang = dtr["kd_barang"].ToString();
-                            //detail.Subtotal = Convert.ToInt16(dtr["subtotal"]);
-                            //detail.Qty = Convert.ToInt16(dtr["qty"]);
+                            detail.KdBarang = dtr["kd_barang"].ToString();
+                            detail.Subtotal = Convert.ToInt16(dtr["subtotal"]);
+                            detail.Qty = Convert.ToInt16(dtr["qty"]);
 
                             list.Add(detail);
                         }
@@ -156,6 +161,69 @@ namespace Transaksi_PreOrder.Model.Repository
             }
 
             return no;
+        }
+
+        public int Delete(DetailPesanan detailPesanan)
+        {
+            int result = 0;
+
+            // deklarasi perintah SQL
+            string sql = @"DELETE FROM detail_pesanan where kd_detail=@kd_detail;
+                           UPDATE pesanan SET total = (SELECT SUM(subtotal) FROM detail_pesanan WHERE kd_pesanan = @kd_pesanan)
+                           WHERE kd_pesanan = @kd_pesanan 
+                            ";
+
+                           
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                // mendaftarkan parameter dan mengeset nilainya
+                cmd.Parameters.AddWithValue("@kd_detail", detailPesanan.KdDetail);
+                cmd.Parameters.AddWithValue("@kd_pesanan", detailPesanan.KdPesanan);
+
+                try
+                {
+                    // jalankan perintah DELETE dan tampung hasilnya ke dalam variabel result
+                    result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.Print("Delete error: {0}", ex.Message);
+                }
+            }
+
+            return result;
+        }
+
+        public int BacaSUb(string kddet)
+        {
+            int Subtotal = 0;
+
+
+            string sql = @"select subtotal
+                               from detail_pesanan where kd_detail = @kd_detail";
+            //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@kd_detail", kddet);
+
+
+                using (MySqlDataReader dtr = cmd.ExecuteReader())
+                {
+
+                    while (dtr.Read()){
+                        Subtotal = Convert.ToInt16(dtr["subtotal"]);
+                    }
+                    
+
+
+                }
+
+            }
+            return Subtotal;
         }
     }
 }

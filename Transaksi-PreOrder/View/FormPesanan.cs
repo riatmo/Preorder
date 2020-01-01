@@ -101,6 +101,7 @@ namespace Transaksi_PreOrder
             txtAdmin.Text = psn.KdAdmin;
             datePesanan.Text = psn.TglPesan;
             dateTempo.Text = psn.JatuhTempo;
+            txtStatusPesanan.Text = psn.StatusPesanan;
            
         }
 
@@ -126,6 +127,7 @@ namespace Transaksi_PreOrder
             psn.KdAdmin = txtAdmin.Text;
             psn.TglPesan = datePesanan.Text;
             psn.JatuhTempo = dateTempo.Text;
+            psn.StatusPesanan = txtStatusPesanan.Text;
             
             //psn.CaraBayar = cmbPlhPembayaran.Text;
 
@@ -147,6 +149,12 @@ namespace Transaksi_PreOrder
                     //txtKdPesanan.Clear();
                     
                 }
+
+                FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
+
+                formDetail.DetailPesananCreate += onCreateEventHandler;
+
+                formDetail.ShowDialog();
             }
             else // edit data, panggil method Update
             {
@@ -160,11 +168,7 @@ namespace Transaksi_PreOrder
                 }
             }
 
-            FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
-
-            formDetail.DetailPesananCreate += onCreateEventHandler;
             
-            formDetail.ShowDialog();
         }
 
        

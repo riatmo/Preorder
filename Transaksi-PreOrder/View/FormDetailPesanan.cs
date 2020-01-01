@@ -42,6 +42,8 @@ namespace Transaksi_PreOrder
         private void ReloadForm()
         {
             txtKdDetail.ResetText();
+            txtKdBarang.ResetText();
+            txtQty.ResetText();
             txtKdDetail.Update();
             txtKdDetail.Text = FormPesanan.PesananInfo.KodePesanan + "X" + Convert.ToString(controller1.noDetail(txtKdPesanan.Text) + 1);
             //and how many controls or settings you want, just add them here
@@ -73,7 +75,10 @@ namespace Transaksi_PreOrder
             // untuk edit data, tampilkan data lama
 
             txtKdDetail.Text = detpsn.KdDetail;
+            txtQty.Text = Convert.ToString( detpsn.Qty);
+            txtKdBarang.Text = detpsn.KdBarang;
             txtKdPesanan.Text = detpsn.KdPesanan;
+            
             //txtAdmin.Text = psn.KdAdmin;
 
         }
@@ -85,13 +90,17 @@ namespace Transaksi_PreOrder
             this.Text = title;
             this.controller1 = controller1;
 
-            isNewData = false; // set status edit data
+            //isNewData = false; // set status edit data
             detpsn = obj1; // set objek mhs yang akan diedit
 
             // untuk edit data, tampilkan data lama
 
             txtKdDetail.Text = detpsn.KdPesanan + "X";
             txtKdPesanan.Text = detpsn.KdPesanan;
+            detpsn.Qty = 0;
+            detpsn.Subtotal = 0;
+            detpsn.KdBarang = "";
+
             //txtAdmin.Text = psn.KdAdmin;
 
         }
@@ -105,7 +114,8 @@ namespace Transaksi_PreOrder
 
             detpsn.KdDetail = txtKdDetail.Text;
             detpsn.KdPesanan = txtKdPesanan.Text;
-            //psn.KdAdmin = txtAdmin.Text;
+            detpsn.Qty = Convert.ToInt16(txtQty.Text);
+            detpsn.KdBarang = txtKdBarang.Text;
 
             int result1 = 0;
 

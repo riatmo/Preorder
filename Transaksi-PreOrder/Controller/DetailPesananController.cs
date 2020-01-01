@@ -95,6 +95,32 @@ namespace Transaksi_PreOrder.Controller
 
         }
 
+        public int Delete(DetailPesanan detail)
+        {
+            int result = 0;
+
+
+            // membuat objek context menggunakan blok using
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek dari class repository
+                _repository = new DetailPesananRepository(context);
+
+                // panggil method Delete class repository untuk menghapus data
+                result = _repository.Delete(detail);
+            }
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data mahasiswa berhasil dihapus !", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Data mahasiswa gagal dihapus !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            return result;
+        }
 
         public int noDetail(string kdpesanan)
         {
@@ -110,5 +136,21 @@ namespace Transaksi_PreOrder.Controller
 
             return no;
         }
+
+        public int Subtotal(string kddet)
+        {
+            int no;
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new DetailPesananRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                no = _repository.BacaSUb(kddet);
+            }
+
+            return no;
+        }
+
     }
 }

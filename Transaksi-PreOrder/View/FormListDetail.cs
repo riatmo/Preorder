@@ -78,6 +78,7 @@ namespace Transaksi_PreOrder
             // tambahkan objek mhs yang baru ke dalam collection
             detailPesanan.Add(detail);
 
+
             int noUrut = lvwDetailPesanan.Items.Count + 1;
 
             // tampilkan data mhs yg baru ke list view
@@ -86,6 +87,8 @@ namespace Transaksi_PreOrder
             item.SubItems.Add(detail.KdPesanan);
             item.SubItems.Add(detail.KdBarang);
             item.SubItems.Add(Convert.ToString(detail.Qty));
+            item.SubItems.Add(Convert.ToString(controller.Subtotal(detail.KdDetail)));
+
 
             lvwDetailPesanan.Items.Add(item);
         }
@@ -99,16 +102,19 @@ namespace Transaksi_PreOrder
             ListViewItem itemRow = lvwDetailPesanan.Items[index];
             itemRow.SubItems[1].Text = detail.KdDetail;
             itemRow.SubItems[2].Text = detail.KdPesanan;
-            
+            itemRow.SubItems[3].Text = detail.KdBarang;
+            itemRow.SubItems[4].Text = Convert.ToString(detail.Qty);
+            itemRow.SubItems[5].Text = Convert.ToString(controller.Subtotal(detail.KdDetail));
+
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
             if (lvwDetailPesanan.SelectedItems.Count > 0)
             {
-                DetailPesanan update = detailPesanan[lvwDetailPesanan.SelectedIndices[0]];
+                DetailPesanan tambah = detailPesanan[lvwDetailPesanan.SelectedIndices[0]];
 
-                FormDetailPesanan formDetail = new FormDetailPesanan(update, controller, "Tambah Detail Pesanan");
+                FormDetailPesanan formDetail = new FormDetailPesanan(tambah, controller, "Tambah Detail Pesanan");
 
                 formDetail.DetailPesananCreate += CreateDetailHandler;
 
@@ -153,8 +159,29 @@ namespace Transaksi_PreOrder
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            if (lvwDetailPesanan.SelectedItems.Count > 0)
+            {
+                var konfirmasi = MessageBox.Show("Apakah data mahasiswa ingin dihapus?", "Konfirmasi",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
+                if (konfirmasi == DialogResult.Yes)
+                {
+                    // ambil objek mhs yang mau dihapus dari collection
+                    DetailPesanan pesanan = detailPesanan[lvwDetailPesanan.SelectedIndices[0]];
+
+                    // panggil operasi CRUD
+                    var result = controller.Delete(pesanan);
+                    if (result > 0) LoadDetail();
+                }
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
+
+        
     }
     
 

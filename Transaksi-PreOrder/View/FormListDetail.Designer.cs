@@ -30,7 +30,7 @@
         {
             this.lvwDetailPesanan = new System.Windows.Forms.ListView();
             this.btnTambah = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.brnUpdate = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnCariDetail = new System.Windows.Forms.Button();
             this.txtCariDetail = new System.Windows.Forms.TextBox();
@@ -40,6 +40,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnSelesai = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -63,27 +64,27 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTambah.Location = new System.Drawing.Point(207, 4);
+            this.btnTambah.Location = new System.Drawing.Point(3, 4);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(198, 23);
+            this.btnTambah.Size = new System.Drawing.Size(173, 23);
             this.btnTambah.TabIndex = 1;
-            this.btnTambah.Text = "Hapus";
+            this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // btnUpdate
+            // brnUpdate
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(198, 23);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Perbaiki";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.brnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.brnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.brnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brnUpdate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnUpdate.Location = new System.Drawing.Point(182, 4);
+            this.brnUpdate.Name = "brnUpdate";
+            this.brnUpdate.Size = new System.Drawing.Size(173, 23);
+            this.brnUpdate.TabIndex = 2;
+            this.brnUpdate.Text = "Perbaiki";
+            this.brnUpdate.UseVisualStyleBackColor = false;
+            this.brnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnHapus
             // 
@@ -91,11 +92,11 @@
             this.btnHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHapus.Location = new System.Drawing.Point(517, 4);
+            this.btnHapus.Location = new System.Drawing.Point(361, 4);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(199, 23);
+            this.btnHapus.Size = new System.Drawing.Size(173, 23);
             this.btnHapus.TabIndex = 3;
-            this.btnHapus.Text = "Selesai";
+            this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
@@ -126,13 +127,14 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.40909F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.40909F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.77273F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.40909F));
-            this.tableLayoutPanel2.Controls.Add(this.btnHapus, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnTambah, 1, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.brnUpdate, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnTambah, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnHapus, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSelesai, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 489);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -151,7 +153,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(718, 32);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
@@ -165,7 +167,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 377F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(719, 377);
             this.tableLayoutPanel4.TabIndex = 10;
             // 
@@ -205,6 +207,19 @@
             this.label12.TabIndex = 26;
             this.label12.Text = "List Detail Pesanan";
             // 
+            // btnSelesai
+            // 
+            this.btnSelesai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelesai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelesai.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelesai.Location = new System.Drawing.Point(540, 4);
+            this.btnSelesai.Name = "btnSelesai";
+            this.btnSelesai.Size = new System.Drawing.Size(176, 23);
+            this.btnSelesai.TabIndex = 4;
+            this.btnSelesai.Text = "Selesai";
+            this.btnSelesai.UseVisualStyleBackColor = false;
+            // 
             // FormListDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,7 +248,7 @@
 
         private System.Windows.Forms.ListView lvwDetailPesanan;
         private System.Windows.Forms.Button btnTambah;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button brnUpdate;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnCariDetail;
         private System.Windows.Forms.TextBox txtCariDetail;
@@ -243,5 +258,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnSelesai;
     }
 }
