@@ -292,6 +292,10 @@ namespace Transaksi_PreOrder
             loadPesanan();
         }
 
-        
+        private void pelangganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListPelanggan frm = new FormListPelanggan();
+            frm.ShowDialog();
+        }
     }
 }

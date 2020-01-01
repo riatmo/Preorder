@@ -47,6 +47,7 @@
             this.txtAdmin = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblOperator = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -59,7 +60,7 @@
             this.barAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.barPanduan = new System.Windows.Forms.ToolStripMenuItem();
             this.barTentang = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -107,7 +108,6 @@
             this.lvwData.Size = new System.Drawing.Size(990, 584);
             this.lvwData.TabIndex = 0;
             this.lvwData.UseCompatibleStateImageBehavior = false;
-            
             // 
             // tableLayoutPanel2
             // 
@@ -312,6 +312,16 @@
             this.lblOperator.Text = "Operator";
             this.lblOperator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 36);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "btnRefresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -338,6 +348,7 @@
             this.filToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.barAdmin,
+            this.pelangganToolStripMenuItem,
             this.barPanduan,
             this.barTentang});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -410,15 +421,12 @@
             this.barTentang.Size = new System.Drawing.Size(62, 20);
             this.barTentang.Text = "Tentang";
             // 
-            // button1
+            // pelangganToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(3, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "btnRefresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pelangganToolStripMenuItem.Name = "pelangganToolStripMenuItem";
+            this.pelangganToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.pelangganToolStripMenuItem.Text = "Pelanggan";
+            this.pelangganToolStripMenuItem.Click += new System.EventHandler(this.pelangganToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -481,6 +489,7 @@
         private System.Windows.Forms.TextBox txtAdmin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem pelangganToolStripMenuItem;
     }
 }
 

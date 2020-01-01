@@ -638,3 +638,4 @@ P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormListPelanggan.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormListPembelian.resources
 P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormListProdusen.resources
+P:\Repo\P_PreOrder-dan-Transaksi\Transaksi-PreOrder\obj\Debug\Transaksi_PreOrder.FormPelanggan.resources
