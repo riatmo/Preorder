@@ -68,11 +68,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(96, 8);
+            this.label1.Location = new System.Drawing.Point(87, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 19);
+            this.label1.Size = new System.Drawing.Size(178, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRASI ADMIN";
             // 
@@ -228,6 +228,7 @@
             this.btnSimpan.TabIndex = 15;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // btnSelesai
             // 
@@ -241,6 +242,7 @@
             this.btnSelesai.TabIndex = 16;
             this.btnSelesai.Text = "Selesai";
             this.btnSelesai.UseVisualStyleBackColor = false;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // tableLayoutPanel1
             // 

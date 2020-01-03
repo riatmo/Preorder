@@ -50,8 +50,7 @@ namespace Transaksi_PreOrder
         }
 
         // constructor untuk inisialisasi data ketika entri data baru
-        public FormDetailPesanan(string title, DetailPesananController controller1)
-            : this()
+        public FormDetailPesanan(string title, DetailPesananController controller1) : this()
         {
             // ganti text/judul form
             this.Text = title;
@@ -78,9 +77,6 @@ namespace Transaksi_PreOrder
             txtQty.Text = Convert.ToString( detpsn.Qty);
             txtKdBarang.Text = detpsn.KdBarang;
             txtKdPesanan.Text = detpsn.KdPesanan;
-            
-            //txtAdmin.Text = psn.KdAdmin;
-
         }
 
         public FormDetailPesanan(DetailPesanan obj1, DetailPesananController controller1, string title)
@@ -100,9 +96,6 @@ namespace Transaksi_PreOrder
             detpsn.Qty = 0;
             detpsn.Subtotal = 0;
             detpsn.KdBarang = "";
-
-            //txtAdmin.Text = psn.KdAdmin;
-
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
@@ -132,8 +125,6 @@ namespace Transaksi_PreOrder
                     //txtKdPesanan.Clear();
                     ReloadForm();
                 }
-
-
             }
             else // edit data, panggil method Update
             {
@@ -146,8 +137,6 @@ namespace Transaksi_PreOrder
                     this.Close();
                 }
             }
-
-
         }
 
         private void FormDetailPesanan_Load(object sender, EventArgs e)
@@ -155,6 +144,11 @@ namespace Transaksi_PreOrder
             // txtKdPesanan.Text = FormPesanan.PesananInfo.KodePesanan;
 
             // txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

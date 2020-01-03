@@ -20,17 +20,15 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             //inisialisasi objek conn
             _conn = context.Conn;
-        }
-
-        
+        }     
 
         public int Create(Barang brg)
         {
             int result = 0;
 
             // deklarasi perintah SQL
-            string sql = @"insert into barang (kd_barang, nama,kuantitas, harga, ukuran, warna)
-                           values (@kdbarang, @nama, @kuantitas, @harga, @ukuran, @warna)";
+            string sql = @"insert into barang (kd_barang, nama,kuantitas, harga, ukuran, warna,beli)
+                           values (@kdbarang, @nama, @kuantitas, @harga, @ukuran, @warna,@beli)";
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
@@ -42,7 +40,7 @@ namespace Transaksi_PreOrder.Model.Repository
                 cmd.Parameters.AddWithValue("@harga", brg.Harga);
                 cmd.Parameters.AddWithValue("@ukuran", brg.Ukuran);
                 cmd.Parameters.AddWithValue("@warna", brg.Warna);
-
+                cmd.Parameters.AddWithValue("@beli", brg.Beli);
 
                 try
                 {
@@ -64,7 +62,7 @@ namespace Transaksi_PreOrder.Model.Repository
 
             // deklarasi perintah SQL
 
-            string sql = @"update barang set nama = @nama,  warna = @warna, kuantitas = @kuantitas, harga= @harga, ukuran= @ukuran
+            string sql = @"update barang set nama = @nama,  warna = @warna, kuantitas = @kuantitas, harga= @harga, ukuran= @ukuran,beli = @beli
                            where kd_barang = @kdbarang";
 
             // membuat objek command menggunakan blok using
@@ -77,6 +75,7 @@ namespace Transaksi_PreOrder.Model.Repository
                 cmd.Parameters.AddWithValue("@harga", brg.Harga);
                 cmd.Parameters.AddWithValue("@ukuran", brg.Ukuran);
                 cmd.Parameters.AddWithValue("@warna", brg.Warna);
+                cmd.Parameters.AddWithValue("@beli", brg.Beli);
 
                 try
                 {
@@ -128,7 +127,7 @@ namespace Transaksi_PreOrder.Model.Repository
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"select kd_barang, nama, harga,  ukuran, warna, kuantitas
+                string sql = @"select kd_barang, nama, harga,  ukuran, warna, kuantitas,beli
                                from barang 
                                order by nama";
 
@@ -149,6 +148,7 @@ namespace Transaksi_PreOrder.Model.Repository
                             //brg.Qty = (int32)dtr["qty"].ToString();
                             brg.Qty = Convert.ToInt32(dtr["kuantitas"]);
                             brg.Harga = Convert.ToInt32(dtr["harga"]);
+                            brg.Beli = Convert.ToInt32(dtr["beli"]);
                             brg.Ukuran = dtr["ukuran"].ToString();
                             brg.Warna = dtr["warna"].ToString();
 
@@ -173,7 +173,7 @@ namespace Transaksi_PreOrder.Model.Repository
             try
             {
                 // deklarasi perintah SQL
-                string sql = @"select kd_barang, nama, harga,  ukuran, warna, kuantitas
+                string sql = @"select kd_barang, nama, harga,  ukuran, warna, kuantitas,beli
                                from barang 
                                where nama like @nama
                                order by nama";
@@ -198,6 +198,7 @@ namespace Transaksi_PreOrder.Model.Repository
                             //brg.Qty = (int32)dtr["qty"].ToString();
                             brg.Qty = Convert.ToInt32(dtr["kuantitas"]);
                             brg.Harga = Convert.ToInt32(dtr["harga"]);
+                            brg.Beli = Convert.ToInt32(dtr["beli"]);
                             brg.Ukuran = dtr["ukuran"].ToString();
                             brg.Warna = dtr["warna"].ToString();
 

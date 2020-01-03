@@ -57,7 +57,7 @@
             this.tableLayoutPanel4.Controls.Add(this.btnHapus, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnPerbaiki, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSelesai, 3, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 483);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 487);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -140,7 +140,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 36);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 44);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel1
@@ -149,22 +149,22 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.label12);
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 30);
+            this.panel1.Size = new System.Drawing.Size(712, 36);
             this.panel1.TabIndex = 28;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(299, 5);
+            this.label12.Location = new System.Drawing.Point(288, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 19);
+            this.label12.Size = new System.Drawing.Size(146, 23);
             this.label12.TabIndex = 26;
-            this.label12.Text = "List Pembelian";
+            this.label12.Text = "LIST PEMBELIAN";
             // 
             // tableLayoutPanel1
             // 
@@ -189,7 +189,7 @@
             this.txtCariBarang.Name = "txtCariBarang";
             this.txtCariBarang.Size = new System.Drawing.Size(590, 21);
             this.txtCariBarang.TabIndex = 0;
-            this.txtCariBarang.Text = "Ketik nama barang yang ingin di cari ...";
+            this.txtCariBarang.Text = "Ketik Kode Pembelian yang ingin di cari ...";
             this.txtCariBarang.TextChanged += new System.EventHandler(this.txtCariBarang_TextChanged);
             // 
             // btnCari
@@ -209,13 +209,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(742, 537);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormListPembelian";
-            this.Text = "FormListPembelian";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "List Pembelian";
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

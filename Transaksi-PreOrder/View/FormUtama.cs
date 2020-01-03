@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 using Transaksi_PreOrder.Model.Entity;
 using Transaksi_PreOrder.Controller;
@@ -21,6 +22,7 @@ namespace Transaksi_PreOrder
         private List<Pesanan> listPesanan = new List<Pesanan>();
         private List<Produsen> listProdusen = new List<Produsen>();
         private List<Pembelian> listPembelian = new List<Pembelian>();
+        private List<Admin> listAdmin = new List<Admin>();
 
         //tampil kode admin yg login
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
@@ -29,6 +31,7 @@ namespace Transaksi_PreOrder
         private PesananController psnController;
         private ProdusenController prodController;
         private PembelianController pblController;
+        private AdminController admController;
 
         public FormUtama()
         {
@@ -38,6 +41,7 @@ namespace Transaksi_PreOrder
             psnController = new PesananController();
             prodController = new ProdusenController();
             pblController = new PembelianController();
+            admController = new AdminController();
 
             InisialisasiListView();
             loadPesanan();
@@ -56,7 +60,6 @@ namespace Transaksi_PreOrder
             lvwData.Columns.Add("Jatuh Tempo", 200, HorizontalAlignment.Center);
             lvwData.Columns.Add("Status Pesanan", 200, HorizontalAlignment.Center);
         }
-
 
         private void loadPesanan()
         {
@@ -245,14 +248,103 @@ namespace Transaksi_PreOrder
 
         private void btnPembelian_Click(object sender, EventArgs e)
         {
-            FormPembelian frmPbl = new FormPembelian("Pembelian", pblController);
-            frmPbl.ShowDialog();
+
+            /*if (lvwData.SelectedItems.Count > 0)
+            {
+                // ambil objek mhs yang mau diedit dari collection
+                Pesanan psn = listPesanan[lvwData.SelectedIndices[0]];
+
+                // buat objek form entry data mahasiswa
+                //FormPembayaran frmByr = new FormPembayaran("Buat Pembayaran", psn, psnController);
+                FormPembelian frmPbl = new FormPembelian("Pembelian", pblController, psn);
+
+                // mendaftarkan method event handler untuk merespon event OnUpdate
+
+                // tampilkan form entry mahasiswa
+                frmPbl.ShowDialog();
+            }
+            else // data belum dipilih
+            {
+                MessageBox.Show("Data belum dipilih", "Peringatan", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+            }*/
+
+            FormListDetail frm = new FormListDetail();
+            frm.ShowDialog();
+
+
         }
 
         private void lstPembelian_Click(object sender, EventArgs e)
         {
             FormListPembelian frmLstPbl = new FormListPembelian();
             frmLstPbl.ShowDialog();
+        }
+
+        private void barPanduan_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory() + "\\Help.rtf";
+            System.Diagnostics.Process.Start(path);
+        }
+
+        private void lstRegisAdmin_Click(object sender, EventArgs e)
+        {
+            FormRegistrasiAdmin frmRegisAdm = new FormRegistrasiAdmin("Registrasi Admin", admController);
+            frmRegisAdm.ShowDialog();
+        }
+        private void lstAdmin_Click(object sender, EventArgs e)
+        {
+            FormListAdmin frmListAdm = new FormListAdmin();
+            frmListAdm.ShowDialog();
+        }
+
+        private void txtKodePesananCari_TextChanged(object sender, EventArgs e)
+        {
+            // kosongkan listview
+            lvwData.Items.Clear();
+
+            // panggil method ReadByNama dan tampung datanya ke dalam collection
+            listPesanan = psnController.ReadByKode(txtKodePesananCari.Text);
+
+            // ekstrak objek mhs dari collection
+            foreach (var psn in listPesanan)
+            {
+                var noUrut = lvwData.Items.Count + 1;
+
+                // // tampilkan data mhs yg baru ke list view
+                var item = new ListViewItem(noUrut.ToString());
+                item.SubItems.Add(psn.KdPesanan);
+                item.SubItems.Add(psn.TglPesan);
+                item.SubItems.Add(psn.CaraBayar);
+                item.SubItems.Add(psn.JatuhTempo);
+                item.SubItems.Add(psn.StatusPesanan);
+
+                lvwData.Items.Add(item);
+            }
+        }
+
+        private void lstRegisAdmin_Click_1(object sender, EventArgs e)
+        {
+            FormRegistrasiAdmin frmRegisAdm = new FormRegistrasiAdmin("Registrasi Admin", admController);
+            frmRegisAdm.ShowDialog();
+        }
+
+        private void lstAdmin_Click_1(object sender, EventArgs e)
+        {
+            FormListAdmin frmListAdm = new FormListAdmin();
+            frmListAdm.ShowDialog();
+        }
+
+        private void lstProdusen_Click(object sender, EventArgs e)
+        {
+            FormListProdusen frmListProd = new FormListProdusen();
+            frmListProd.ShowDialog();
+        }
+
+        private void barTentang_Click(object sender, EventArgs e)
+        {
+            Tentang frmTtg = new Tentang();
+            frmTtg.ShowDialog();
         }
     }
 }

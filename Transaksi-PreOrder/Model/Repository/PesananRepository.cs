@@ -39,15 +39,10 @@ namespace Transaksi_PreOrder.Model.Repository
                 // mendaftarkan parameter dan mengeset nilainya
                 cmd.Parameters.AddWithValue("@kdpesanan", pesanan.KdPesanan);
                 cmd.Parameters.AddWithValue("@kd_admin", pesanan.KdAdmin);
-                //cmd.Parameters.AddWithValue("@cara_bayar", pesanan.CaraBayar);
                 cmd.Parameters.AddWithValue("@tgl_pesanan", pesanan.TglPesan);
                 cmd.Parameters.AddWithValue("@jatuh_tempo", pesanan.JatuhTempo);
                 cmd.Parameters.AddWithValue("@sts_pesanan", pesanan.StatusPesanan);
-                //cmd.Parameters.AddWithValue("@catatan", pesanan.Catatan);
-                // cmd.Parameters.AddWithValue("@uang_muka", pesanan.Dp);
-                // cmd.Parameters.AddWithValue("@sisa_bayar", pesanan.SisaPembayaran);
-                 cmd.Parameters.AddWithValue("@kd_pembeli", pesanan.KdPembeli);
-
+                cmd.Parameters.AddWithValue("@kd_pembeli", pesanan.KdPembeli);
 
                 try
                 {
@@ -59,8 +54,7 @@ namespace Transaksi_PreOrder.Model.Repository
                     System.Diagnostics.Debug.Print("Create error: {0}", ex.Message);
                 }
             }
-
-            
+        
             return result1;
         }
 
@@ -82,7 +76,6 @@ namespace Transaksi_PreOrder.Model.Repository
                 cmd.Parameters.AddWithValue("@cara_bayar", psn.CaraBayar);
                 cmd.Parameters.AddWithValue("@sts_pesanan", psn.StatusPesanan);
                 cmd.Parameters.AddWithValue("@uang_muka", psn.Dp);
-
 
                 try
                 {
@@ -120,8 +113,8 @@ namespace Transaksi_PreOrder.Model.Repository
                             Pesanan psn = new Pesanan();
                             
                             psn.KdPesanan = dtr["kd_pesanan"].ToString();
-                             psn.TglPesan = dtr["tgl_pesanan"].ToString();
-                             psn.JatuhTempo = dtr["jatuh_tempo"].ToString();
+                            psn.TglPesan = dtr["tgl_pesanan"].ToString();
+                            psn.JatuhTempo = dtr["jatuh_tempo"].ToString();
                             psn.StatusPesanan = dtr["sts_pesanan"].ToString();
                             psn.CaraBayar = dtr["cara_bayar"].ToString();
                             psn.total = Convert.ToInt16( dtr["total"]);
@@ -138,6 +131,54 @@ namespace Transaksi_PreOrder.Model.Repository
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print("ReadAll error: {0}", ex.Message);
+            }
+
+            return list;
+        }
+
+        public List<Pesanan> ReadByKode(string kdPesanan)
+        {
+            // membuat objek collection untuk menampung objek mahasiswa
+            List<Pesanan> list = new List<Pesanan>();
+
+            try
+            {
+                // deklarasi perintah SQL
+                string sql = @"select kd_pesanan, cara_bayar,jatuh_tempo, tgl_pesanan, sts_pesanan, total,uang_muka,sisa_bayar, kd_pembeli
+                               from pesanan where kd_pesanan like @kd_pesanan order by kd_pesanan";
+
+                // membuat objek command menggunakan blok using
+                using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+                {
+                    // mendaftarkan parameter dan mengeset nilainya
+                    cmd.Parameters.AddWithValue("@kd_pesanan", "%" + kdPesanan + "%");
+
+                    // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
+                    using (MySqlDataReader dtr = cmd.ExecuteReader())
+                    {
+                        // panggil method Read untuk mendapatkan baris dari result set
+                        while (dtr.Read())
+                        {
+                            // proses konversi dari row result set ke object
+                            Pesanan psn = new Pesanan();
+                            psn.KdPesanan = dtr["kd_pesanan"].ToString();
+                            psn.TglPesan = dtr["tgl_pesanan"].ToString();
+                            psn.JatuhTempo = dtr["jatuh_tempo"].ToString();
+                            psn.StatusPesanan = dtr["sts_pesanan"].ToString();
+                            psn.CaraBayar = dtr["cara_bayar"].ToString();
+                            psn.total = Convert.ToInt16(dtr["total"]);
+                            psn.Dp = Convert.ToInt16(dtr["uang_muka"]);
+                            psn.SisaPembayaran = Convert.ToInt16(dtr["sisa_bayar"]);
+                            psn.KdPembeli = dtr["kd_pembeli"].ToString();
+
+                            list.Add(psn);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("ReadByNama error: {0}", ex.Message);
             }
 
             return list;
@@ -178,7 +219,7 @@ namespace Transaksi_PreOrder.Model.Repository
             // deklarasi perintah SQL
 
 
-            string sql = @"update pesanan set cara_bayar = @cara_bayar
+            string sql = @"update pesanan set cara_bayar = @cara_bayar, sts_pesanan = @sts_pesanan
                            where kd_pesanan = @kd_pesanan";
 
             // membuat objek command menggunakan blok using
@@ -187,7 +228,7 @@ namespace Transaksi_PreOrder.Model.Repository
                 // mendaftarkan parameter dan mengeset nilainya
                 cmd.Parameters.AddWithValue("@kd_pesanan", psn.KdPesanan);
                 cmd.Parameters.AddWithValue("@cara_bayar", psn.CaraBayar);
-
+                cmd.Parameters.AddWithValue("@sts_pesanan", psn.CaraBayar);
 
                 try
                 {
@@ -207,7 +248,6 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             int ttl = 0;
 
-
             string sql = @"select total
                                from pesanan where kd_pesanan = @kd_pesanan";
             //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
@@ -225,8 +265,6 @@ namespace Transaksi_PreOrder.Model.Repository
                     {
                         ttl = Convert.ToInt16(dtr["total"]);
                     }
-
-
 
                 }
 
@@ -269,7 +307,6 @@ namespace Transaksi_PreOrder.Model.Repository
             string nama = "";
 
             string sql = @"SELECT pembeli.nama_pembeli as jeneng from pembeli join pesanan on pembeli.kd_pembeli = pesanan.kd_pembeli where pesanan.kd_pembeli = @kdpembeli";
-
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))

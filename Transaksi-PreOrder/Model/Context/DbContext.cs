@@ -37,7 +37,6 @@ namespace Transaksi_PreOrder.Model.Context
             return conn;
         }
 
-
         // Method ini digunakan untuk menghapus objek koneksi dari memory ketika sudah tidak digunakan
         public void Dispose()
         {

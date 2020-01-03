@@ -15,14 +15,10 @@ namespace Transaksi_PreOrder
 {
     public partial class FormPembayaran : Form
     {
-
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
 
         //deklarasi untuk event tambah data & update
         public delegate void CreatePesananHandler(Pesanan psn);
-
-        //event tambah data
-        //public event CreatePesananHandler PesananCreate;
 
         //event update data
         public event CreatePesananHandler PesananUpdate;
@@ -36,43 +32,19 @@ namespace Transaksi_PreOrder
         public FormPembayaran()
         {
             InitializeComponent();
-
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         // constructor untuk inisialisasi data ketika mengedit data
-        public FormPembayaran(string title, Pesanan obj1, PesananController controller1)
-            : this()
+        public FormPembayaran(string title, Pesanan obj1, PesananController controller1) : this()
         {
             // ganti text/judul form
             this.Text = title;
             this.controller1 = controller1;
 
-             // set status edit data
+            // set status edit data
             psn = obj1; // set objek mhs yang akan diedit
 
             // untuk edit data, tampilkan data lama
-
-            //txtKdPesanan.Text = psn.KdPesanan;
-            //txtAdmin.Text = psn.KdAdmin;
-            //datePesanan.Text = psn.TglPesan;
-            //dateTempo.Text = psn.JatuhTempo;
-            //txtStatusPesanan.Text = psn.StatusPesanan;
             lblKodePsn.Text = psn.KdPesanan;
             txtKdTpembeli.Text = psn.KdPembeli;
             txtKdTatasnama.Text = controller1.Nama(psn.KdPembeli);
@@ -81,19 +53,13 @@ namespace Transaksi_PreOrder
             txtTotTag.Text = Convert.ToString( controller1.Total(psn.KdPesanan));
             txtJumPem.Text = Convert.ToString(psn.Dp);
             txtKekurangan.Text = Convert.ToString(controller1.Total(psn.KdPesanan) - Convert.ToInt16( txtJumPem.Text));
-            
-            
-            //txtKekurangan.Text = Convert.ToString(psn.SisaPembayaran);
-
         }
 
         private void btnTambahTP_Click(object sender, EventArgs e)
         {
-
-
-
             psn.CaraBayar = cmbPilihPembayaran.Text;
             psn.Dp = Convert.ToInt16( txtJumPem.Text);
+            psn.StatusPesanan = cmbPesanan.Text;
 
             int result1 = 0;
             result1 = controller1.Update(psn);
@@ -102,16 +68,17 @@ namespace Transaksi_PreOrder
             {
                 PesananUpdate(psn); // panggil event OnUpdate
                 this.Close();
-            }
-
-           
-            
-
+            }                
         }
 
-        private void FormPembayaran_Load(object sender, EventArgs e)
+        private void btnSelesaiTP_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+        }
+
+        private void btnHapusTP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

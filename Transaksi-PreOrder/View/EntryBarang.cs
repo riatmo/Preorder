@@ -73,6 +73,7 @@ namespace Transaksi_PreOrder
             txtNmBarang.Text = brg.Nama;
             txtUkuran.Text = brg.Ukuran;
             txtWarna.Text = brg.Warna;
+            txtBeli.Text = brg.Beli.ToString();
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
@@ -87,6 +88,7 @@ namespace Transaksi_PreOrder
             brg.Nama = txtNmBarang.Text;
             brg.Ukuran = txtUkuran.Text;
             brg.Warna = txtWarna.Text;
+            brg.Beli = Convert.ToInt32(txtBeli.Text);
 
             int result = 0;
 
@@ -106,6 +108,7 @@ namespace Transaksi_PreOrder
                     txtNmBarang.Clear();
                     txtUkuran.Clear();
                     txtWarna.Clear();
+                    txtBeli.Clear();
 
                     txtKdBarang.Focus();
                 }
@@ -124,7 +127,7 @@ namespace Transaksi_PreOrder
 
         }
 
-        private void btnTutup_Click(object sender, EventArgs e)
+        private void btnSelesai_Click(object sender, EventArgs e)
         {
             this.Close();
         }

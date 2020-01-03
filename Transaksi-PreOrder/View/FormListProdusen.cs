@@ -125,11 +125,6 @@ namespace Transaksi_PreOrder
             }
         }
 
-        private void btnTutup_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtCariProdusen_TextChanged(object sender, EventArgs e)
         {
             // kosongkan listview
@@ -152,6 +147,11 @@ namespace Transaksi_PreOrder
                 // tampilkan data mhs ke listview
                 lvwListProdusen.Items.Add(item);
             }
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

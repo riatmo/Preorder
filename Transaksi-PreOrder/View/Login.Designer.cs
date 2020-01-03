@@ -62,7 +62,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(183, 14);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "root";
+            this.txtUsername.Text = "Username";
             // 
             // panel1
             // 
@@ -91,7 +91,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(183, 14);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "root";
+            this.txtPassword.Text = "Password";
             // 
             // panel2
             // 
@@ -151,8 +151,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

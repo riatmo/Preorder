@@ -41,7 +41,7 @@
             this.txtKdPosPesanan = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
-            this.btnTutup = new System.Windows.Forms.Button();
+            this.btnSelesai = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNamaPel = new System.Windows.Forms.TextBox();
@@ -185,13 +185,13 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(249, 8);
+            this.label12.Location = new System.Drawing.Point(225, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 19);
+            this.label12.Size = new System.Drawing.Size(148, 23);
             this.label12.TabIndex = 26;
-            this.label12.Text = "Buat Pesanan";
+            this.label12.Text = "BUAT PESANAN";
             // 
             // btnTambah
             // 
@@ -207,19 +207,19 @@
             this.btnTambah.UseVisualStyleBackColor = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // btnTutup
+            // btnSelesai
             // 
-            this.btnTutup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutup.Location = new System.Drawing.Point(330, 7);
-            this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(278, 23);
-            this.btnTutup.TabIndex = 24;
-            this.btnTutup.Text = "Selesai";
-            this.btnTutup.UseVisualStyleBackColor = false;
-            this.btnTutup.Click += new System.EventHandler(this.btnTutup_Click);
+            this.btnSelesai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelesai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelesai.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelesai.Location = new System.Drawing.Point(330, 7);
+            this.btnSelesai.Name = "btnSelesai";
+            this.btnSelesai.Size = new System.Drawing.Size(278, 23);
+            this.btnSelesai.TabIndex = 24;
+            this.btnSelesai.Text = "Selesai";
+            this.btnSelesai.UseVisualStyleBackColor = false;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // panel1
             // 
@@ -376,7 +376,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.407407F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.2963F));
             this.tableLayoutPanel5.Controls.Add(this.btnTambah, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnTutup, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnSelesai, 2, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(12, 462);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -498,8 +498,10 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormPesanan";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Pesanan";
             this.Load += new System.EventHandler(this.FormPesanan_Load);
             this.panel1.ResumeLayout(false);
@@ -528,7 +530,7 @@
         private System.Windows.Forms.TextBox txtKdPosPesanan;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnTambah;
-        private System.Windows.Forms.Button btnTutup;
+        private System.Windows.Forms.Button btnSelesai;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtNamaPel;

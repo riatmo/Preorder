@@ -64,11 +64,11 @@ namespace Transaksi_PreOrder.Controller
 
             if (result > 0)
             {
-                MessageBox.Show("Data Produsen berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Produsen berhasil ditambah !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data Produsen gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data Produsen gagal ditambah !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result;
@@ -78,7 +78,7 @@ namespace Transaksi_PreOrder.Controller
         {
             int result = 0;
 
-            // Validasi kode produsen tidak boleh NULL
+            // Validasi Kode produsen tidak boleh NULL
             if (string.IsNullOrEmpty(prod.KdProdusen))
             {
                 MessageBox.Show("Kode Produsen harus diisi !!!", "Peringatan",
@@ -89,7 +89,7 @@ namespace Transaksi_PreOrder.Controller
             // Validasi nama tidak boleh NULL
             if (string.IsNullOrEmpty(prod.Nama))
             {
-                MessageBox.Show("Kode Produsen harus diisi !!!", "Peringatan",
+                MessageBox.Show("Nama harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -97,7 +97,7 @@ namespace Transaksi_PreOrder.Controller
             // Validasi alamat tidak boleh NULL
             if (string.IsNullOrEmpty(prod.Alamat))
             {
-                MessageBox.Show("Kode Produsen harus diisi !!!", "Peringatan",
+                MessageBox.Show("Alamat harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -105,7 +105,7 @@ namespace Transaksi_PreOrder.Controller
             // Validasi telepon tidak boleh NULL
             if (string.IsNullOrEmpty(prod.Telpon))
             {
-                MessageBox.Show("Kode Produsen harus diisi !!!", "Peringatan",
+                MessageBox.Show("Telepon harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -122,11 +122,45 @@ namespace Transaksi_PreOrder.Controller
 
             if (result > 0)
             {
-                MessageBox.Show("Data Produsen berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Produsen berhasil diperbaiki !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data Produsen gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data Produsen gagal diperbaiki !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            return result;
+        }
+
+        public int Delete(Produsen prod)
+        {
+            int result = 0;
+
+            // Validasi Kode produsen tidak boleh NULL
+            if (string.IsNullOrEmpty(prod.KdProdusen))
+            {
+                MessageBox.Show("Kode Produsen harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // membuat objek context menggunakan blok using
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek dari class repository
+                _repository = new ProdusenRepository(context);
+
+                // panggil method Delete class repository untuk menghapus data
+                result = _repository.Delete(prod);
+            }
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data Produsen berhasil dihapus !", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Data Produsen gagal dihapus !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result;
@@ -165,33 +199,7 @@ namespace Transaksi_PreOrder.Controller
             }
 
             return list;
-        }
-
-        public int Delete(Produsen prod)
-        {
-            int result = 0;
-
-            // membuat objek context menggunakan blok using
-            using (DbContext context = new DbContext())
-            {
-                // membuat objek dari class repository
-                _repository = new ProdusenRepository(context);
-
-                // panggil method Delete class repository untuk menghapus data
-                result = _repository.Delete(prod);
-            }
-
-            if (result > 0)
-            {
-                MessageBox.Show("Data Produsen berhasil dihapus !", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("Data Produsen gagal dihapus !!!", "Peringatan",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            return result;
-        }
+        }      
 
         public int noProdusen()
         {

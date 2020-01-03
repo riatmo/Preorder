@@ -16,15 +16,46 @@ namespace Transaksi_PreOrder.Controller
         //objek CRUD
         private PesananRepository _repository;
 
-
         public int Create(Pesanan psn)
         {
             int result1 = 0;
 
-            // cek npm yang diinputkan tidak boleh kosong
+            // Validavsi kode pesanan tidak boleh NUL
             if (string.IsNullOrEmpty(psn.KdPesanan))
             {
                 MessageBox.Show("Kode barang harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validavsi Tanggal Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.TglPesan))
+            {
+                MessageBox.Show("Tanggal Pesanan harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validavsi JatuhTempo Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.JatuhTempo))
+            {
+                MessageBox.Show("Tanggal jatuh tempol harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validavsi Kode Admin Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.KdAdmin))
+            {
+                MessageBox.Show("Kode Admin harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validavsi Status Pesanan Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.StatusPesanan))
+            {
+                MessageBox.Show("Status Pesanan harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -41,11 +72,11 @@ namespace Transaksi_PreOrder.Controller
 
             if (result1 > 0)
             {
-                MessageBox.Show("Data mahasiswa berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Pesanan berhasil dibuat !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data mahasiswa gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data Pesanan gagal dibuat !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result1;
@@ -55,7 +86,7 @@ namespace Transaksi_PreOrder.Controller
         {
             int result1 = 0;
 
-            // cek npm yang diinputkan tidak boleh kosong
+            // Validavsi kode pesanan tidak boleh NUL
             if (string.IsNullOrEmpty(psn.KdPesanan))
             {
                 MessageBox.Show("Kode barang harus diisi !!!", "Peringatan",
@@ -63,7 +94,31 @@ namespace Transaksi_PreOrder.Controller
                 return 0;
             }
 
+            // Validavsi Tanggal Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.TglPesan))
+            {
+                MessageBox.Show("Tanggal Pesanan harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validavsi JatuhTempo Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.JatuhTempo))
+            {
+                MessageBox.Show("Tanggal jatuh tempol harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
             
+
+            // Validavsi Status Pesanan Pemesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.StatusPesanan))
+            {
+                MessageBox.Show("Status Pesanan harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
 
             // membuat objek context menggunakan blok using
             using (DbContext context = new DbContext())
@@ -77,14 +132,48 @@ namespace Transaksi_PreOrder.Controller
 
             if (result1 > 0)
             {
-                MessageBox.Show("Data mahasiswa berhasil disimpan !", "Informasi",
+                MessageBox.Show("Data Pesanan berhasil diperbaiki !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data mahasiswa gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data mahasiswa gagal diperbaiki !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result1;
+        }
+
+        public int Delete(Pesanan psn)
+        {
+            int result = 0;
+
+            // Validavsi kode pesanan tidak boleh NUL
+            if (string.IsNullOrEmpty(psn.KdPesanan))
+            {
+                MessageBox.Show("Kode barang harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // membuat objek context menggunakan blok using
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek dari class repository
+                _repository = new PesananRepository(context);
+
+                // panggil method Delete class repository untuk menghapus data
+                result = _repository.Delete(psn);
+            }
+
+            if (result > 0)
+            {
+                MessageBox.Show("Data pesanan berhasil dihapus !", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Data pesanan gagal dihapus !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            return result;
         }
 
         public List<Pesanan> ReadAllPesanan()
@@ -101,13 +190,12 @@ namespace Transaksi_PreOrder.Controller
             }
 
             return list;
-
         }
 
-        public int Delete(Pesanan psn)
+        public List<Pesanan> ReadByKode(string kdPesanan)
         {
-            int result = 0;
-
+            // membuat objek collection
+            List<Pesanan> list = new List<Pesanan>();
 
             // membuat objek context menggunakan blok using
             using (DbContext context = new DbContext())
@@ -115,21 +203,11 @@ namespace Transaksi_PreOrder.Controller
                 // membuat objek dari class repository
                 _repository = new PesananRepository(context);
 
-                // panggil method Delete class repository untuk menghapus data
-                result = _repository.Delete(psn);
+                // panggil method GetByNama yang ada di dalam class repository
+                list = _repository.ReadByKode(kdPesanan);
             }
-
-            if (result > 0)
-            {
-                MessageBox.Show("Data mahasiswa berhasil dihapus !", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("Data mahasiswa gagal dihapus !!!", "Peringatan",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            return result;
-        }
+            return list;
+        }       
 
         public int noPesanan()
         {

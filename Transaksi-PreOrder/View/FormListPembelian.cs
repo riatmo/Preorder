@@ -69,8 +69,8 @@ namespace Transaksi_PreOrder
                 item.SubItems.Add(pbl.KdBarang);
                 item.SubItems.Add(pbl.KdPesanan);
                 item.SubItems.Add(pbl.KdAdmin);
-                item.SubItems.Add(pbl.Jumlah);
-                item.SubItems.Add(pbl.SubTotal);
+                item.SubItems.Add(pbl.Jumlah.ToString());
+                item.SubItems.Add(pbl.SubTotal.ToString());
 
                 lvwListPembelian.Items.Add(item);
             }
@@ -91,8 +91,8 @@ namespace Transaksi_PreOrder
             itemRow.SubItems[6].Text = pbl.KdBarang;
             itemRow.SubItems[7].Text = pbl.KdPesanan;
             itemRow.SubItems[8].Text = pbl.KdAdmin;
-            itemRow.SubItems[9].Text = pbl.Jumlah;
-            itemRow.SubItems[10].Text = pbl.SubTotal;
+            itemRow.SubItems[9].Text = pbl.Jumlah.ToString();
+            itemRow.SubItems[10].Text = pbl.SubTotal.ToString();
         }
 
         private void btnPerbaiki_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace Transaksi_PreOrder
                 Pembelian pbl = listPembelian[lvwListPembelian.SelectedIndices[0]];
 
                 // buat objek form entry data mahasiswa
-                FormPembelian frmPbl = new FormPembelian("Edit Data Produsen", pbl, pblController);
+                FormPembelian frmPbl = new FormPembelian( pbl, pblController, "Edit Data Produsen");
 
                 // mendaftarkan method event handler untuk merespon event OnUpdate
                 frmPbl.PembelianUpdate += UpdatePembelianEventHandler;
@@ -170,8 +170,8 @@ namespace Transaksi_PreOrder
                 item.SubItems.Add(pbl.KdBarang);
                 item.SubItems.Add(pbl.KdPesanan);
                 item.SubItems.Add(pbl.KdAdmin);
-                item.SubItems.Add(pbl.Jumlah);
-                item.SubItems.Add(pbl.SubTotal);
+                item.SubItems.Add(pbl.Jumlah.ToString());
+                item.SubItems.Add(pbl.SubTotal.ToString());
 
                 // tampilkan data mhs ke listview
                 lvwListPembelian.Items.Add(item);

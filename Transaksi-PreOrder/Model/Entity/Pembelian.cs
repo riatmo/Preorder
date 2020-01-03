@@ -16,7 +16,7 @@ namespace Transaksi_PreOrder.Model.Entity
         public string KdBarang { get; set; }
         public string KdPesanan { get; set; }
         public string KdAdmin { get; set; }
-        public string Jumlah { get; set; }
-        public string SubTotal { get; set; }
+        public int Jumlah { get; set; }
+        public int SubTotal { get; set; }
     }
 }

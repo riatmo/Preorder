@@ -36,7 +36,7 @@
             this.txtKdPesanan = new System.Windows.Forms.TextBox();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.btnTambah = new System.Windows.Forms.Button();
-            this.btnTutup = new System.Windows.Forms.Button();
+            this.btnSelesai = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtKdBarang = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -135,30 +135,31 @@
             this.btnTambah.UseVisualStyleBackColor = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // btnTutup
+            // btnSelesai
             // 
-            this.btnTutup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutup.Location = new System.Drawing.Point(214, 3);
-            this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(166, 23);
-            this.btnTutup.TabIndex = 17;
-            this.btnTutup.Text = "Selesai";
-            this.btnTutup.UseVisualStyleBackColor = false;
+            this.btnSelesai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelesai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelesai.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelesai.Location = new System.Drawing.Point(214, 3);
+            this.btnSelesai.Name = "btnSelesai";
+            this.btnSelesai.Size = new System.Drawing.Size(166, 23);
+            this.btnSelesai.TabIndex = 17;
+            this.btnSelesai.Text = "Selesai";
+            this.btnSelesai.UseVisualStyleBackColor = false;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(125, 7);
+            this.label9.Location = new System.Drawing.Point(109, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 19);
+            this.label9.Size = new System.Drawing.Size(160, 23);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Detail Pesanan";
+            this.label9.Text = "DETAIL PESANAN";
             // 
             // txtKdBarang
             // 
@@ -176,7 +177,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 34);
+            this.panel1.Size = new System.Drawing.Size(377, 35);
             this.panel1.TabIndex = 21;
             // 
             // tableLayoutPanel1
@@ -206,7 +207,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtQty, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.txtKdDetail, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtKdPesanan, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 69);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 67);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -227,8 +228,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.71429F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
             this.tableLayoutPanel3.Controls.Add(this.btnTambah, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnTutup, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 264);
+            this.tableLayoutPanel3.Controls.Add(this.btnSelesai, 2, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 259);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -240,12 +241,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(410, 308);
+            this.ClientSize = new System.Drawing.Size(408, 303);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormDetailPesanan";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Detail Pesanan";
             this.Load += new System.EventHandler(this.FormDetailPesanan_Load);
             this.panel1.ResumeLayout(false);
@@ -268,7 +271,7 @@
         private System.Windows.Forms.TextBox txtKdPesanan;
         private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.Button btnTambah;
-        private System.Windows.Forms.Button btnTutup;
+        private System.Windows.Forms.Button btnSelesai;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtKdBarang;
         private System.Windows.Forms.Panel panel1;

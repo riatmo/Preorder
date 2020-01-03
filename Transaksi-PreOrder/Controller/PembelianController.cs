@@ -20,11 +20,75 @@ namespace Transaksi_PreOrder.Controller
         {
             int result = 0;
 
-            // Validasi kode pembelian tidak boleh NULL
+            // Validavsi kode pembelian tidak boleh NULL
             if (string.IsNullOrEmpty(pbl.KdPembelian))
             {
                 MessageBox.Show("Kode pembelian harus diisi !!!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi nama barang tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.NamaBarang))
+            {
+                MessageBox.Show("Nama barang harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Tanggal pembelian tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.TglPembelian))
+            {
+                MessageBox.Show("Tanggal Pembelian harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Harga pembelian tidak boleh NULL
+            if (string.IsNullOrEmpty(Convert.ToString(pbl.HargaBeli)))
+            {
+                MessageBox.Show("Harga harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi jumlah tidak boleh NULL
+            if (string.IsNullOrEmpty(Convert.ToString(pbl.Jumlah.ToString())))
+            {
+                MessageBox.Show("Kuantitas harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode pesanan tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdPesanan))
+            {
+                MessageBox.Show("Kode pesanan harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode barang tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdBarang))
+            {
+                MessageBox.Show("Kode barang harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode produsen tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdProdusen))
+            {
+                MessageBox.Show("Kode produsen harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode admin tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdAdmin))
+            {
+                MessageBox.Show("Kode admin harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
@@ -38,15 +102,14 @@ namespace Transaksi_PreOrder.Controller
                 result = _repository.Create(pbl);
             }
 
-
             if (result > 0)
             {
-                MessageBox.Show("Data pembelian berhasil disimpan !!!", "Peringatan",
+                MessageBox.Show("Data pembelian berhasil ditambah !!!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Data pembelian gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data pembelian gagal ditambah !!!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return result;
@@ -56,7 +119,7 @@ namespace Transaksi_PreOrder.Controller
         {
             int result = 0;
 
-            // cek npm yang diinputkan tidak boleh kosong
+            // Validavsi kode pembelian tidak boleh NULL
             if (string.IsNullOrEmpty(pbl.KdPembelian))
             {
                 MessageBox.Show("Kode pembelian harus diisi !!!", "Peringatan",
@@ -64,7 +127,7 @@ namespace Transaksi_PreOrder.Controller
                 return 0;
             }
 
-            // cek nama yang diinputkan tidak boleh kosong
+            // Validasi nama barang tidak boleh NULL
             if (string.IsNullOrEmpty(pbl.NamaBarang))
             {
                 MessageBox.Show("Nama harus diisi !!!", "Peringatan",
@@ -72,31 +135,58 @@ namespace Transaksi_PreOrder.Controller
                 return 0;
             }
 
-            // cek angkatan yang diinputkan tidak boleh kosong
-            if (string.IsNullOrEmpty(Convert.ToString(pbl.HargaBeli)))
+            // Validasi Tanggal pembelian tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.TglPembelian))
+            {
+                MessageBox.Show("Tanggal Pembelian harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Harga pembelian tidak boleh NULL
+            if (string.IsNullOrEmpty(Convert.ToString(pbl.HargaBeli.ToString())))
             {
                 MessageBox.Show("Harga harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
-            if (string.IsNullOrEmpty(Convert.ToString(pbl.Jumlah)))
+            // Validasi jumlah tidak boleh NULL
+            if (string.IsNullOrEmpty(Convert.ToString(pbl.Jumlah.ToString())))
             {
-                MessageBox.Show("Harga harus diisi !!!", "Peringatan",
+                MessageBox.Show("Kuantitas harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
-            if (string.IsNullOrEmpty(pbl.Jumlah))
+            // Validasi Kode pesanan tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdPesanan))
             {
-                MessageBox.Show("Jumlah harus diisi !!!", "Peringatan",
+                MessageBox.Show("Kode pesanan harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
 
+            // Validasi Kode barang tidak boleh NULL
             if (string.IsNullOrEmpty(pbl.KdBarang))
             {
                 MessageBox.Show("Kode Barang harus diisi !!!", "Peringatan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode produsen tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdProdusen))
+            {
+                MessageBox.Show("Kode produsen harus diisi !!!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return 0;
+            }
+
+            // Validasi Kode admin tidak boleh NULL
+            if (string.IsNullOrEmpty(pbl.KdAdmin))
+            {
+                MessageBox.Show("Kode admin harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -113,11 +203,11 @@ namespace Transaksi_PreOrder.Controller
 
             if (result > 0)
             {
-                MessageBox.Show("Data pembelian disimpan !", "Informasi",
+                MessageBox.Show("Data pembelian berhasil diperbaiki !", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Data pembelian gagal disimpan !!!", "Peringatan",
+                MessageBox.Show("Data pembelian gagal diperbaiki !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             return result;
@@ -127,10 +217,10 @@ namespace Transaksi_PreOrder.Controller
         {
             int result = 0;
 
-            // cek nilai npm yang diinputkan tidak boleh kosong
+            // Validavsi kode pembelian tidak boleh NULL
             if (string.IsNullOrEmpty(pbl.KdPembelian))
             {
-                MessageBox.Show("KD pembelian harus diisi !!!", "Peringatan",
+                MessageBox.Show("Kode pembelian harus diisi !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return 0;
             }
@@ -189,6 +279,23 @@ namespace Transaksi_PreOrder.Controller
             }
 
             return list;
+        }
+
+
+        public Barang Barang(string kdbrg)
+        {
+            Barang brg = new Barang();
+
+            using (DbContext context = new DbContext())
+            {
+                // membuat objek class repository
+                _repository = new PembelianRepository(context);
+
+                // panggil method Create class repository untuk menambahkan data
+                brg = _repository.Barang(kdbrg);
+            }
+
+            return brg;
         }
     }
 }

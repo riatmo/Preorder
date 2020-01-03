@@ -31,7 +31,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnPerbaiki = new System.Windows.Forms.Button();
-            this.btnTutup = new System.Windows.Forms.Button();
+            this.btnSelesai = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lvwListProdusen = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,7 +56,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.31863F));
             this.tableLayoutPanel4.Controls.Add(this.btnHapus, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnPerbaiki, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnTutup, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSelesai, 3, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(12, 483);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -92,19 +92,19 @@
             this.btnPerbaiki.UseVisualStyleBackColor = false;
             this.btnPerbaiki.Click += new System.EventHandler(this.btnPerbaiki_Click);
             // 
-            // btnTutup
+            // btnSelesai
             // 
-            this.btnTutup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTutup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutup.Location = new System.Drawing.Point(509, 7);
-            this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(206, 23);
-            this.btnTutup.TabIndex = 0;
-            this.btnTutup.Text = "Selesai";
-            this.btnTutup.UseVisualStyleBackColor = false;
-            this.btnTutup.Click += new System.EventHandler(this.btnTutup_Click);
+            this.btnSelesai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelesai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
+            this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelesai.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelesai.Location = new System.Drawing.Point(509, 7);
+            this.btnSelesai.Name = "btnSelesai";
+            this.btnSelesai.Size = new System.Drawing.Size(206, 23);
+            this.btnSelesai.TabIndex = 0;
+            this.btnSelesai.Text = "Selesai";
+            this.btnSelesai.UseVisualStyleBackColor = false;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -139,7 +139,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 36);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 44);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel1
@@ -148,22 +148,22 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.label12);
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 30);
+            this.panel1.Size = new System.Drawing.Size(712, 36);
             this.panel1.TabIndex = 28;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(301, 5);
+            this.label12.Location = new System.Drawing.Point(290, 5);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 19);
+            this.label12.Size = new System.Drawing.Size(144, 23);
             this.label12.TabIndex = 26;
-            this.label12.Text = "List Produsen";
+            this.label12.Text = "LIST PRODUSEN";
             // 
             // tableLayoutPanel1
             // 
@@ -215,9 +215,10 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormListProdusen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "FormListProdusen";
+            this.Text = "List Produsen";
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -234,7 +235,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnPerbaiki;
-        private System.Windows.Forms.Button btnTutup;
+        private System.Windows.Forms.Button btnSelesai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ListView lvwListProdusen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

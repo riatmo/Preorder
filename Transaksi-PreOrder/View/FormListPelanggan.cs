@@ -56,7 +56,7 @@ namespace Transaksi_PreOrder
             lvwListPelanggan.Items.Clear();
 
             // panggil method ReadAll dan tampung datanya ke dalam collection
-            listPelanggan = controller.ReadAll();
+            listPelanggan = controller.ReadAllPelanggan();
 
             // ekstrak objek mhs dari collection
             foreach (var pel in listPelanggan)
@@ -117,8 +117,7 @@ namespace Transaksi_PreOrder
             itemRow.SubItems[6].Text = pel.Kabupaten;
             itemRow.SubItems[7].Text = pel.Provinsi;
             itemRow.SubItems[8].Text = pel.KodePos;
-
-        }
+       }
 
         private void btnPerbaiki_Click(object sender, EventArgs e)
         {
@@ -178,6 +177,11 @@ namespace Transaksi_PreOrder
                 MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

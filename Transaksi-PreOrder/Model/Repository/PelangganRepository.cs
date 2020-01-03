@@ -19,13 +19,10 @@ namespace Transaksi_PreOrder.Model.Repository
             _conn = context.Conn;
         }
 
-
         public int Create(Pelanggan pelanggan)
         {
             int result = 0;
-
-
-            
+     
             string sql = @"insert into pembeli(kd_pembeli, nama_pembeli, telp_pembeli, alamat_pembeli, kecamatan, kabupaten, provinsi, kode_pos)
                            values (@kd_pembeli, @nama_pembeli, @telp_pembeli, @alamat_pembeli, @kecamatan, @kabupaten, @provinsi, @kode_pos)";
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
@@ -52,10 +49,9 @@ namespace Transaksi_PreOrder.Model.Repository
             }
             return result;
 
-
         }
 
-        public List<Pelanggan> ReadAll()
+        public List<Pelanggan> ReadAllPelanggan()
         {
             // membuat objek collection untuk menampung objek mahasiswa
             List<Pelanggan> list = new List<Pelanggan>();
@@ -70,6 +66,56 @@ namespace Transaksi_PreOrder.Model.Repository
                 // membuat objek command menggunakan blok using
                 using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
                 {
+                    // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
+                    using (MySqlDataReader dtr = cmd.ExecuteReader())
+                    {
+                        // panggil method Read untuk mendapatkan baris dari result set
+                        while (dtr.Read())
+                        {
+                            // proses konversi dari row result set ke object
+                            Pelanggan plg = new Pelanggan();
+
+                            plg.KdPembeli = dtr["kd_pembeli"].ToString();
+                            plg.Nama = dtr["nama_pembeli"].ToString();
+                            plg.Hp = dtr["telp_pembeli"].ToString();
+                            plg.Alamat = dtr["alamat_pembeli"].ToString();
+                            plg.Kecamatan = dtr["kecamatan"].ToString();
+                            plg.Kabupaten = dtr["provinsi"].ToString();
+                            plg.Provinsi = dtr["provinsi"].ToString();
+                            plg.KodePos = dtr["kode_pos"].ToString();
+
+                            // tambahkan objek mahasiswa ke dalam collection
+                            list.Add(plg);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("ReadAll error: {0}", ex.Message);
+            }
+
+            return list;
+        }
+
+        public List<Pelanggan> ReadByNama(string nama)
+        {
+            // membuat objek collection untuk menampung objek mahasiswa
+            List<Pelanggan> list = new List<Pelanggan>();
+
+            try
+            {
+                // deklarasi perintah SQL
+                string sql = @"select kd_pembeli, nama_pembeli, telp_pembeli, alamat_pembeli, kecamatan, kabupaten, provinsi, kode_pos
+                               from pembeli where nama_pembeli like @nama_pembeli
+                               order by nama_pembeli";
+
+                // membuat objek command menggunakan blok using
+                using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+                {
+                    // mendaftarkan parameter dan mengeset nilainya
+                    cmd.Parameters.AddWithValue("@nama_pembeli", "%" + nama + "%");
+
                     // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
                     using (MySqlDataReader dtr = cmd.ExecuteReader())
                     {
@@ -123,7 +169,6 @@ namespace Transaksi_PreOrder.Model.Repository
                 cmd.Parameters.AddWithValue("@provinsi", pel.Provinsi);
                 cmd.Parameters.AddWithValue("@kode_pos", pel.KodePos);
 
-
                 try
                 {
                     // jalankan perintah UPDATE dan tampung hasilnya ke dalam variabel result
@@ -165,9 +210,5 @@ namespace Transaksi_PreOrder.Model.Repository
 
             return result;
         }
-
-
-
-
     }
 }

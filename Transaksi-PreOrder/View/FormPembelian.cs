@@ -15,12 +15,12 @@ namespace Transaksi_PreOrder.View
 {
     public partial class FormPembelian : Form
     {
+        //tampil kode admin yg login
+        public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
+
         //deklarasi untuk event tambah data & update
         public delegate void CreatePembelianUpdateHandler(Pembelian pbl);
-
-        //event tambah data
-        //public event CreatePembelianUpdateHandler PembelianCreate;
-
+        
         //event update data
         public event CreatePembelianUpdateHandler PembelianUpdate;
 
@@ -39,15 +39,25 @@ namespace Transaksi_PreOrder.View
         }
 
         // constructor untuk inisialisasi data ketika entri data baru
-        public FormPembelian(string title, PembelianController pblController) : this()
+        public FormPembelian(string title, PembelianController pblController, DetailPesanan detpsn) : this()
         {
             // ganti text/judul form
             this.Text = title;
             this.pblController = pblController;
+
+            txtKdPesanan.Text = detpsn.KdDetail;
+            txtADMIN.Text = currentAdmin;
+            txtKdBarang.Text = detpsn.KdBarang;
+            txtKdPembelian.Text = detpsn.KdDetail;
+            txtQtyPbl.Text = Convert.ToString(detpsn.Qty);
+            txtNamaBrg.Text = pblController.Barang(detpsn.KdBarang).Nama;
+            txtJual.Text = Convert.ToString(pblController.Barang(detpsn.KdBarang).Harga);
+            txtHargaPbl.Text = pblController.Barang(detpsn.KdBarang).Beli.ToString();
+            txtSubPbl.Text = (detpsn.Qty* pblController.Barang(detpsn.KdBarang).Beli).ToString();
         }
 
         // constructor untuk inisialisasi data ketika mengedit data
-        public FormPembelian(string title, Pembelian pblDit, PembelianController pblController) : this()
+        public FormPembelian( Pembelian pblDit, PembelianController pblController, string title) : this()
         {
             // ganti text/judul form
             this.Text = title;
@@ -57,19 +67,24 @@ namespace Transaksi_PreOrder.View
             pbl = pblDit; // set objek mhs yang akan diedit
 
             // untuk edit data, tampilkan data lama        
-            pbl.KdPembelian = txtKdPembelian.Text;
-            pbl.NamaBarang = txtNamaBrg.Text;
-            pbl.TglPembelian = datePesananPbl.Text;
-            pbl.HargaBeli = Convert.ToInt32(txtHargaPbl.Text);
-            pbl.KdPesanan = txtKdPesanan.Text;
-            pbl.KdBarang = txtKdBarang.Text;
-            pbl.KdProdusen = txtKDprodusen.Text;
-            pbl.KdAdmin = txtADMIN.Text;
-            pbl.Jumlah = txtQtyPbl.Text;
-            pbl.SubTotal = txtSubPbl.Text;
+            txtKdPembelian.Text = pbl.KdPembelian.ToString();
+            datePesananPbl.Text = pbl.TglPembelian.ToString();
+            txtNamaBrg.Text=pbl.NamaBarang.ToString();
+            txtQtyPbl.Text = pbl.Jumlah.ToString();
+            txtHargaPbl.Text=pbl.HargaBeli.ToString();
+            txtKDprodusen.Text = pbl.KdProdusen.ToString();
+            txtKdBarang.Text = pbl.KdBarang.ToString();
+            txtKdPesanan.Text=pbl.KdPesanan.ToString();                              
+            txtADMIN.Text=pbl.KdAdmin.ToString();           
+            txtSubPbl.Text=pbl.SubTotal.ToString();
         }
 
-        private void btnTambahPbl_Click(object sender, EventArgs e)
+        private void btnSelesaiPbl_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTambahPbl_Click_1(object sender, EventArgs e)
         {
             // jika data baru, inisialisasi objek mahasiswa
             if (isNewData) pbl = new Pembelian();
@@ -81,15 +96,13 @@ namespace Transaksi_PreOrder.View
             pbl.KdPembelian = txtKdPembelian.Text;
             pbl.NamaBarang = txtNamaBrg.Text;
             pbl.TglPembelian = datePesananPbl.Text;
-            pbl.HargaBeli = Convert.ToInt16(txtHargaPbl.Text);
+            pbl.HargaBeli = Convert.ToInt32(txtHargaPbl.Text);
             pbl.KdPesanan = txtKdPesanan.Text;
             pbl.KdBarang = txtKdBarang.Text;
             pbl.KdProdusen = txtKDprodusen.Text;
             pbl.KdAdmin = txtADMIN.Text;
-            pbl.Jumlah = txtQtyPbl.Text;
-            pbl.SubTotal = txtSubPbl.Text;
-
-            
+            pbl.Jumlah = Convert.ToInt32(txtQtyPbl.Text);
+            pbl.SubTotal = Convert.ToInt32(txtSubPbl.Text);
 
             int result = 0;
 
@@ -100,8 +113,6 @@ namespace Transaksi_PreOrder.View
 
                 if (result > 0) // tambah data berhasil
                 {
-                    //PembelianCreate(pbl); // panggil event OnCreate
-
                     // reset form input, utk persiapan input data berikutnya
                     txtKdPembelian.Clear();
                     txtNamaBrg.Clear();
@@ -111,9 +122,6 @@ namespace Transaksi_PreOrder.View
                     txtHargaPbl.Clear();
                     txtQtyPbl.Clear();
                     txtSubPbl.Clear();
-
-                    //datePesananPbl.Clear;
-                    //txtADMIN.Clear();
 
                     txtKdPembelian.Focus();
                 }
@@ -129,11 +137,6 @@ namespace Transaksi_PreOrder.View
                     this.Close();
                 }
             }
-        }
-
-        private void btnSelesaiPbl_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

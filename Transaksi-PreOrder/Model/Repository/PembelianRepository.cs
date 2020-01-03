@@ -26,8 +26,8 @@ namespace Transaksi_PreOrder.Model.Repository
         {
             int result = 0;
 
-            string sql = @"insert into pembelian (kd_pembelian, nama_barang, tgl_pembelian, harga_beli, kd_pesanan, kd_barang, kd_produsen, kd_admin, jumlah_barang, sub_total) 
-                        values (@kd_pembelian, @nama_barang, @tgl_pembelian, @harga_beli, @kd_pesanan, @kd_barang, @kd_produsen, @kd_admin, @jumlah_barang, @sub_total)";
+            string sql = @"insert into pembelian (kd_pembelian, nama_barang, tgl_pembelian, harga_beli, kd_detail, kd_barang, kd_produsen, kd_admin, jumlah_barang, sub_total) 
+                        values (@kd_pembelian, @nama_barang, @tgl_pembelian, @harga_beli, @kd_detail, @kd_barang, @kd_produsen, @kd_admin, @jumlah_barang, @sub_total)";
 
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
             {
@@ -35,7 +35,7 @@ namespace Transaksi_PreOrder.Model.Repository
                 cmd.Parameters.AddWithValue("@nama_barang", pbl.NamaBarang);
                 cmd.Parameters.AddWithValue("@tgl_pembelian", pbl.TglPembelian);
                 cmd.Parameters.AddWithValue("@harga_beli", pbl.HargaBeli);
-                cmd.Parameters.AddWithValue("@kd_pesanan", pbl.KdPesanan);
+                cmd.Parameters.AddWithValue("@kd_detail", pbl.KdPesanan);
                 cmd.Parameters.AddWithValue("@kd_barang", pbl.KdBarang);
                 cmd.Parameters.AddWithValue("@kd_produsen", pbl.KdProdusen);
                 cmd.Parameters.AddWithValue("@kd_admin", pbl.KdAdmin);
@@ -61,21 +61,19 @@ namespace Transaksi_PreOrder.Model.Repository
 
             // deklarasi perintah SQL
 
-            string sql = @"update pembelian set tgl_pembelian = @tgl_pembelian,  nama_barang = @nama_barang, jumlah_barang = @jumlah_barang, harga_beli = @harga_beli, 
-                            kd_produsen = @kd_produsen, kd_barang = @kd_barang, kd_pesanan = @kd_pesanan, kd_admin = @kd_admin
+            string sql = @"update pembelian set tgl_pembelian = @tgl_pembelian,   jumlah_barang = @jumlah_barang, harga_beli = @harga_beli, 
+                            kd_produsen = @kd_produsen, kd_barang = @kd_barang, kd_admin = @kd_admin
                            where kd_pembelian = @kd_pembelian";
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
             {
                 // mendaftarkan parameter dan mengeset nilainya                
-                cmd.Parameters.AddWithValue("@tgl_pembelian", pbl.TglPembelian);
-                cmd.Parameters.AddWithValue("@nama_barang", pbl.NamaBarang);
+                cmd.Parameters.AddWithValue("@tgl_pembelian", pbl.TglPembelian);               
                 cmd.Parameters.AddWithValue("@jumlah_barang", pbl.Jumlah);
                 cmd.Parameters.AddWithValue("@harga_beli", pbl.HargaBeli);
                 cmd.Parameters.AddWithValue("@kd_produsen", pbl.KdProdusen);
                 cmd.Parameters.AddWithValue("@kd_barang", pbl.KdBarang);
-                cmd.Parameters.AddWithValue("@kd_pesanan", pbl.KdPesanan);
                 cmd.Parameters.AddWithValue("@kd_admin", pbl.KdAdmin);
                 cmd.Parameters.AddWithValue("@kd_pembelian", pbl.KdPembelian);
 
@@ -127,7 +125,7 @@ namespace Transaksi_PreOrder.Model.Repository
 
             try
             {
-                string sql = @"select kd_pembelian, tgl_pembelian, nama_barang, jumlah_barang, harga_beli, kd_produsen, kd_barang, kd_pesanan, kd_admin
+                string sql = @"select kd_pembelian, tgl_pembelian, nama_barang, jumlah_barang, harga_beli, kd_produsen, kd_barang, kd_detail, kd_admin,sub_total
                 from pembelian order by kd_pembelian";
 
                 using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
@@ -140,12 +138,13 @@ namespace Transaksi_PreOrder.Model.Repository
                             pbl.KdPembelian = dtr["kd_pembelian"].ToString();
                             pbl.TglPembelian = dtr["tgl_pembelian"].ToString();
                             pbl.NamaBarang = dtr["nama_barang"].ToString();
-                            pbl.NamaBarang = dtr["jumlah_barang"].ToString();
-                            pbl.HargaBeli = Convert.ToInt32(dtr["harga_beli"].ToString());
+                            pbl.Jumlah = Convert.ToInt16(dtr["jumlah_barang"]);
+                            pbl.HargaBeli = Convert.ToInt16(dtr["harga_beli"]);
                             pbl.KdProdusen = dtr["kd_produsen"].ToString();
                             pbl.KdBarang = dtr["kd_barang"].ToString();
-                            pbl.KdPesanan = dtr["kd_pesanan"].ToString();
+                            pbl.KdPesanan = dtr["kd_detail"].ToString();
                             pbl.KdAdmin = dtr["kd_admin"].ToString();
+                            pbl.SubTotal = Convert.ToInt16(dtr["sub_total"]);
 
                             list.Add(pbl);
                         }
@@ -169,14 +168,14 @@ namespace Transaksi_PreOrder.Model.Repository
                 // deklarasi perintah SQL
                 string sql = @"select kd_pembelian, tgl_pembelian, nama_barang, jumlah_barang, harga_beli, kd_produsen, kd_barang, kd_pesanan, kd_admin
                                from pembelian 
-                               where nama_barang like @nama_barang
-                               order by nama_barang";
+                               where kd_pembelian like @kd_pembelian
+                               order by kd_pembelian";
 
                 // membuat objek command menggunakan blok using
                 using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
                 {
                     // mendaftarkan parameter dan mengeset nilainya
-                    cmd.Parameters.AddWithValue("@nama_barang", "%" + nama + "%");
+                    cmd.Parameters.AddWithValue("@kd_pembelian", "%" + nama + "%");
 
                     // membuat objek dtr (data reader) untuk menampung result set (hasil perintah SELECT)
                     using (MySqlDataReader dtr = cmd.ExecuteReader())
@@ -208,6 +207,39 @@ namespace Transaksi_PreOrder.Model.Repository
             }
 
             return list;
+        }
+
+        public Barang Barang(string kdbrg)
+        {
+            Barang brg = new Barang();
+
+
+
+            string sql = @"select nama,harga,beli
+                               from barang where kd_barang = @kd_barang";
+            //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
+
+            // membuat objek command menggunakan blok using
+            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+            {
+                cmd.Parameters.AddWithValue("@kd_barang", kdbrg);
+
+
+                using (MySqlDataReader dtr = cmd.ExecuteReader())
+                {
+
+                    while (dtr.Read())
+                    {
+                        brg.Nama = dtr["nama"].ToString();
+                        brg.Harga = Convert.ToInt16(dtr["harga"]);
+                        brg.Beli = Convert.ToInt16(dtr["beli"]);
+                    }
+
+                }
+
+            }
+            return brg;
+
         }
 
     }

@@ -117,7 +117,51 @@ namespace Transaksi_PreOrder.Model.Repository
                             detail.KdDetail = dtr["kd_detail"].ToString();
                             detail.KdPesanan = dtr["kd_pesanan"].ToString();
                             detail.KdBarang = dtr["kd_barang"].ToString();
-                            detail.Subtotal = Convert.ToInt16(dtr["subtotal"]);
+                            detail.Subtotal = Convert.ToInt32(dtr["subtotal"]);
+                            detail.Qty = Convert.ToInt16(dtr["qty"]);
+
+                            list.Add(detail);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print("ReadAll error: {0}", ex.Message);
+            }
+
+            return list;
+        }
+
+        public List<DetailPesanan> ReadBy(string kddet)
+        {
+            // membuat objek collection untuk menampung objek mahasiswa
+            List<DetailPesanan> list = new List<DetailPesanan>();
+
+            try
+            {
+                // deklarasi perintah SQL
+                string sql = @"select kd_detail,kd_pesanan,kd_barang,qty,subtotal
+                               from detail_pesanan where kd_detail like @kd_detail order by kd_detail";
+                //, tgl_pesanan, jatuh_tempo, sts_pesanan,cara_bayar
+
+                // membuat objek command menggunakan blok using
+                using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
+                {
+                    // mendaftarkan parameter dan mengeset nilainya
+                    cmd.Parameters.AddWithValue("@kd_detail", "%" + kddet + "%");
+
+                    using (MySqlDataReader dtr = cmd.ExecuteReader())
+                    {
+                        while (dtr.Read())
+                        {
+                            DetailPesanan detail = new DetailPesanan();
+
+                            detail.KdDetail = dtr["kd_detail"].ToString();
+                            detail.KdPesanan = dtr["kd_pesanan"].ToString();
+                            detail.KdBarang = dtr["kd_barang"].ToString();
+                            detail.Subtotal = Convert.ToInt32(dtr["subtotal"]);
                             detail.Qty = Convert.ToInt16(dtr["qty"]);
 
                             list.Add(detail);
@@ -169,12 +213,8 @@ namespace Transaksi_PreOrder.Model.Repository
 
             // deklarasi perintah SQL
             string sql = @"DELETE FROM detail_pesanan where kd_detail=@kd_detail;
-UPDATE pesanan SET total = (SELECT SUM(subtotal) FROM detail_pesanan WHERE kd_pesanan = @kd_pesanan)
-                           WHERE kd_pesanan = @kd_pesanan
-                           
-                            ";
-
-                           
+                           UPDATE pesanan SET total = (SELECT SUM(subtotal) FROM detail_pesanan WHERE kd_pesanan = @kd_pesanan)
+                           WHERE kd_pesanan = @kd_pesanan";
 
             // membuat objek command menggunakan blok using
             using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
@@ -221,7 +261,7 @@ UPDATE pesanan SET total = (SELECT SUM(subtotal) FROM detail_pesanan WHERE kd_pe
                 {
 
                     while (dtr.Read()){
-                        Subtotal = Convert.ToInt16(dtr["subtotal"]);
+                        Subtotal = Convert.ToInt32(dtr["subtotal"]);
                     }
                     
 

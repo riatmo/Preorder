@@ -141,8 +141,9 @@ namespace Transaksi_PreOrder
             if (isNewData) // tambah data baru, panggil method Create
             {
                 // panggil operasi CRUD
-                result1 = psnController.Create(psn);
                 result1 = plgController.Create(plg);
+                result1 = psnController.Create(psn);
+                
 
                 if (result1 > 0) // tambah data berhasil
                 {
@@ -172,7 +173,7 @@ namespace Transaksi_PreOrder
             }            
         }
 
-        private void btnTutup_Click(object sender, EventArgs e)
+        private void btnSelesai_Click(object sender, EventArgs e)
         {
             this.Close();
         }

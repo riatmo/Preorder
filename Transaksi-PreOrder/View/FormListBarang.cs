@@ -41,9 +41,10 @@ namespace Transaksi_PreOrder
             lvwListBarang.GridLines = true;
 
             lvwListBarang.Columns.Add("No.", 35, HorizontalAlignment.Center);
-            lvwListBarang.Columns.Add("KD Barang", 80, HorizontalAlignment.Center);
-            lvwListBarang.Columns.Add("Nama", 292, HorizontalAlignment.Center);
-            lvwListBarang.Columns.Add("Harga", 100, HorizontalAlignment.Left);
+            lvwListBarang.Columns.Add("KD Barang", 100, HorizontalAlignment.Center);
+            lvwListBarang.Columns.Add("Nama", 183, HorizontalAlignment.Center);
+            lvwListBarang.Columns.Add("Harga", 90, HorizontalAlignment.Left);
+            lvwListBarang.Columns.Add("Beli", 90, HorizontalAlignment.Left);
             lvwListBarang.Columns.Add("Qty", 50, HorizontalAlignment.Center);
             lvwListBarang.Columns.Add("Warna", 80, HorizontalAlignment.Center);
             lvwListBarang.Columns.Add("Ukuran", 80, HorizontalAlignment.Center);
@@ -67,6 +68,7 @@ namespace Transaksi_PreOrder
                 item.SubItems.Add(brg.KdBarang);
                 item.SubItems.Add(brg.Nama);
                 item.SubItems.Add(Convert.ToString(brg.Harga));
+                item.SubItems.Add(Convert.ToString(brg.Beli));
                 item.SubItems.Add(Convert.ToString(brg.Qty));
                 item.SubItems.Add(brg.Warna);
                 item.SubItems.Add(brg.Ukuran);
@@ -86,16 +88,16 @@ namespace Transaksi_PreOrder
             itemRow.SubItems[1].Text = brg.KdBarang;
             itemRow.SubItems[2].Text = brg.Nama;
             itemRow.SubItems[3].Text = Convert.ToString(brg.Harga);
-            itemRow.SubItems[4].Text = Convert.ToString(brg.Qty);
-            itemRow.SubItems[5].Text = brg.Warna;
-            itemRow.SubItems[6].Text = brg.Ukuran;
+            itemRow.SubItems[4].Text = Convert.ToString(brg.Beli);
+            itemRow.SubItems[5].Text = Convert.ToString(brg.Qty);
+            itemRow.SubItems[6].Text = brg.Warna;
+            itemRow.SubItems[7].Text = brg.Ukuran;
 
         }
 
 
         private void btnPerbaiki_Click(object sender, EventArgs e)
         {
-
             if(lvwListBarang.SelectedItems.Count > 0)
             { 
             // ambil objek mhs yang mau diedit dari collection
@@ -159,6 +161,7 @@ namespace Transaksi_PreOrder
                 item.SubItems.Add(brg.KdBarang);
                 item.SubItems.Add(brg.Nama);
                 item.SubItems.Add(Convert.ToString(brg.Harga));
+                item.SubItems.Add(Convert.ToString(brg.Beli));
                 item.SubItems.Add(Convert.ToString(brg.Qty));
                 item.SubItems.Add(brg.Warna);
                 item.SubItems.Add(brg.Ukuran);
@@ -166,6 +169,11 @@ namespace Transaksi_PreOrder
                 // tampilkan data mhs ke listview
                 lvwListBarang.Items.Add(item);
             }
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

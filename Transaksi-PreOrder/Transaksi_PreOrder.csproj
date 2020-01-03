@@ -73,6 +73,12 @@
     <Compile Include="Controller\PembelianController.cs" />
     <Compile Include="Controller\PesananController.cs" />
     <Compile Include="Controller\ProdusenController.cs" />
+    <Compile Include="View\Tentang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tentang.Designer.cs">
+      <DependentUpon>Tentang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UbahPasswordAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Tentang.resx">
+      <DependentUpon>Tentang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UbahPasswordAdmin.resx">
+      <DependentUpon>UbahPasswordAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

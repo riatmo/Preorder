@@ -194,39 +194,7 @@ namespace Transaksi_PreOrder.Model.Repository
             }
 
             return result;
-        }
-
-       /* public int Pembayaran(Pesanan psn)
-        {
-            int result1 = 0;
-
-            // deklarasi perintah SQL
-
-
-            string sql = @"update pesanan set cara_bayar = @cara_bayar
-                           where kd_pesanan = @kd_pesanan";
-
-            // membuat objek command menggunakan blok using
-            using (MySqlCommand cmd = new MySqlCommand(sql, _conn))
-            {
-                // mendaftarkan parameter dan mengeset nilainya
-                cmd.Parameters.AddWithValue("@kd_pesanan", psn.KdPesanan);
-                cmd.Parameters.AddWithValue("@cara_bayar", psn.CaraBayar);
-
-
-                try
-                {
-                    // jalankan perintah UPDATE dan tampung hasilnya ke dalam variabel result
-                    result1 = cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.Print("Update error: {0}", ex.Message);
-                }
-            }
-
-            return result1;
-        }*/
+        }      
 
         public int NoProdusen()
         {

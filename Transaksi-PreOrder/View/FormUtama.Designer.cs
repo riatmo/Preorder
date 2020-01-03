@@ -37,7 +37,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCari = new System.Windows.Forms.TextBox();
+            this.txtKodePesananCari = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSegarkan = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,7 +61,11 @@
             this.lstPembelian = new System.Windows.Forms.ToolStripMenuItem();
             this.pelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listPelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produsenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstProdusen = new System.Windows.Forms.ToolStripMenuItem();
             this.barAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstRegisAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.barPanduan = new System.Windows.Forms.ToolStripMenuItem();
             this.barTentang = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
@@ -160,7 +164,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.txtCari, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtKodePesananCari, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(200, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -168,15 +172,15 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(996, 34);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
-            // txtCari
+            // txtKodePesananCari
             // 
-            this.txtCari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCari.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCari.Location = new System.Drawing.Point(3, 6);
-            this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(990, 21);
-            this.txtCari.TabIndex = 2;
-            this.txtCari.Text = "Ketik tanggal pesanan disini...";
+            this.txtKodePesananCari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtKodePesananCari.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKodePesananCari.Location = new System.Drawing.Point(3, 6);
+            this.txtKodePesananCari.Name = "txtKodePesananCari";
+            this.txtKodePesananCari.Size = new System.Drawing.Size(990, 21);
+            this.txtKodePesananCari.TabIndex = 2;
+            this.txtKodePesananCari.Text = "Ketik tanggal pesanan disini...";
             // 
             // tableLayoutPanel1
             // 
@@ -206,10 +210,10 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.077021F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.524876F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.716418F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.223881F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.313433F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.985075F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.420566F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 670);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -221,7 +225,7 @@
             this.btnSegarkan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSegarkan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSegarkan.ForeColor = System.Drawing.Color.Black;
-            this.btnSegarkan.Location = new System.Drawing.Point(3, 449);
+            this.btnSegarkan.Location = new System.Drawing.Point(3, 450);
             this.btnSegarkan.Name = "btnSegarkan";
             this.btnSegarkan.Size = new System.Drawing.Size(194, 37);
             this.btnSegarkan.TabIndex = 5;
@@ -234,7 +238,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 609);
+            this.label3.Location = new System.Drawing.Point(3, 621);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 15);
             this.label3.TabIndex = 8;
@@ -246,7 +250,7 @@
             this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdmin.Enabled = false;
             this.txtAdmin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdmin.Location = new System.Drawing.Point(3, 555);
+            this.txtAdmin.Location = new System.Drawing.Point(3, 576);
             this.txtAdmin.Name = "txtAdmin";
             this.txtAdmin.Size = new System.Drawing.Size(194, 37);
             this.txtAdmin.TabIndex = 10;
@@ -267,7 +271,7 @@
             this.lblOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOperator.AutoSize = true;
             this.lblOperator.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOperator.Location = new System.Drawing.Point(3, 519);
+            this.lblOperator.Location = new System.Drawing.Point(3, 541);
             this.lblOperator.Name = "lblOperator";
             this.lblOperator.Size = new System.Drawing.Size(194, 23);
             this.lblOperator.TabIndex = 9;
@@ -281,7 +285,7 @@
             this.btnEntryBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntryBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntryBarang.ForeColor = System.Drawing.Color.Black;
-            this.btnEntryBarang.Location = new System.Drawing.Point(3, 191);
+            this.btnEntryBarang.Location = new System.Drawing.Point(3, 192);
             this.btnEntryBarang.Name = "btnEntryBarang";
             this.btnEntryBarang.Size = new System.Drawing.Size(194, 37);
             this.btnEntryBarang.TabIndex = 1;
@@ -296,7 +300,7 @@
             this.btnPembayaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPembayaran.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembayaran.ForeColor = System.Drawing.Color.Black;
-            this.btnPembayaran.Location = new System.Drawing.Point(3, 363);
+            this.btnPembayaran.Location = new System.Drawing.Point(3, 364);
             this.btnPembayaran.Name = "btnPembayaran";
             this.btnPembayaran.Size = new System.Drawing.Size(194, 37);
             this.btnPembayaran.TabIndex = 2;
@@ -311,7 +315,7 @@
             this.btnPembelian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPembelian.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembelian.ForeColor = System.Drawing.Color.Black;
-            this.btnPembelian.Location = new System.Drawing.Point(3, 320);
+            this.btnPembelian.Location = new System.Drawing.Point(3, 321);
             this.btnPembelian.Name = "btnPembelian";
             this.btnPembelian.Size = new System.Drawing.Size(194, 37);
             this.btnPembelian.TabIndex = 13;
@@ -326,7 +330,7 @@
             this.btnPelanggan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPelanggan.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPelanggan.ForeColor = System.Drawing.Color.Black;
-            this.btnPelanggan.Location = new System.Drawing.Point(3, 277);
+            this.btnPelanggan.Location = new System.Drawing.Point(3, 278);
             this.btnPelanggan.Name = "btnPelanggan";
             this.btnPelanggan.Size = new System.Drawing.Size(194, 37);
             this.btnPelanggan.TabIndex = 14;
@@ -341,7 +345,7 @@
             this.btnProdusen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdusen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdusen.ForeColor = System.Drawing.Color.Black;
-            this.btnProdusen.Location = new System.Drawing.Point(3, 234);
+            this.btnProdusen.Location = new System.Drawing.Point(3, 235);
             this.btnProdusen.Name = "btnProdusen";
             this.btnProdusen.Size = new System.Drawing.Size(194, 37);
             this.btnProdusen.TabIndex = 15;
@@ -375,6 +379,7 @@
             this.filToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.pelangganToolStripMenuItem,
+            this.produsenToolStripMenuItem,
             this.barAdmin,
             this.barPanduan,
             this.barTentang});
@@ -420,21 +425,21 @@
             // lstSupplier
             // 
             this.lstSupplier.Name = "lstSupplier";
-            this.lstSupplier.Size = new System.Drawing.Size(180, 22);
+            this.lstSupplier.Size = new System.Drawing.Size(151, 22);
             this.lstSupplier.Text = "Supplier";
             this.lstSupplier.Click += new System.EventHandler(this.lstSupplier_Click);
             // 
             // lstBarang
             // 
             this.lstBarang.Name = "lstBarang";
-            this.lstBarang.Size = new System.Drawing.Size(180, 22);
+            this.lstBarang.Size = new System.Drawing.Size(151, 22);
             this.lstBarang.Text = "List Barang";
             this.lstBarang.Click += new System.EventHandler(this.lstBarang_Click);
             // 
             // lstPembelian
             // 
             this.lstPembelian.Name = "lstPembelian";
-            this.lstPembelian.Size = new System.Drawing.Size(180, 22);
+            this.lstPembelian.Size = new System.Drawing.Size(151, 22);
             this.lstPembelian.Text = "List Pembelian";
             this.lstPembelian.Click += new System.EventHandler(this.lstPembelian_Click);
             // 
@@ -452,34 +457,71 @@
             this.listPelangganToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.listPelangganToolStripMenuItem.Text = "List Pelanggan";
             // 
+            // produsenToolStripMenuItem
+            // 
+            this.produsenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lstProdusen});
+            this.produsenToolStripMenuItem.Name = "produsenToolStripMenuItem";
+            this.produsenToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.produsenToolStripMenuItem.Text = "Produsen";
+            // 
+            // lstProdusen
+            // 
+            this.lstProdusen.Name = "lstProdusen";
+            this.lstProdusen.Size = new System.Drawing.Size(145, 22);
+            this.lstProdusen.Text = "List Produsen";
+            this.lstProdusen.Click += new System.EventHandler(this.lstProdusen_Click);
+            // 
             // barAdmin
             // 
+            this.barAdmin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lstRegisAdmin,
+            this.lstAdmin});
             this.barAdmin.Name = "barAdmin";
             this.barAdmin.Size = new System.Drawing.Size(55, 20);
             this.barAdmin.Text = "Admin";
+            // 
+            // lstRegisAdmin
+            // 
+            this.lstRegisAdmin.Name = "lstRegisAdmin";
+            this.lstRegisAdmin.Size = new System.Drawing.Size(163, 22);
+            this.lstRegisAdmin.Text = "Registrasi Admin";
+            this.lstRegisAdmin.Click += new System.EventHandler(this.lstRegisAdmin_Click_1);
+            // 
+            // lstAdmin
+            // 
+            this.lstAdmin.Name = "lstAdmin";
+            this.lstAdmin.Size = new System.Drawing.Size(163, 22);
+            this.lstAdmin.Text = "List Admin";
+            this.lstAdmin.Click += new System.EventHandler(this.lstAdmin_Click_1);
             // 
             // barPanduan
             // 
             this.barPanduan.Name = "barPanduan";
             this.barPanduan.Size = new System.Drawing.Size(66, 20);
             this.barPanduan.Text = "Panduan";
+            this.barPanduan.Click += new System.EventHandler(this.barPanduan_Click);
             // 
             // barTentang
             // 
             this.barTentang.Name = "barTentang";
             this.barTentang.Size = new System.Drawing.Size(62, 20);
             this.barTentang.Text = "Tentang";
+            this.barTentang.Click += new System.EventHandler(this.barTentang_Click);
             // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1196, 697);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormUtama";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.FormUtama_Load);
@@ -506,7 +548,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ListView lvwData;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox txtCari;
+        private System.Windows.Forms.TextBox txtKodePesananCari;
         private System.Windows.Forms.Button btnSegarkan;
         private System.Windows.Forms.Button btnEntryBarang;
         private System.Windows.Forms.Button btnPembayaran;
@@ -535,6 +577,10 @@
         private System.Windows.Forms.ToolStripMenuItem pelangganToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listPelangganToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lstPembelian;
+        private System.Windows.Forms.ToolStripMenuItem lstRegisAdmin;
+        private System.Windows.Forms.ToolStripMenuItem lstAdmin;
+        private System.Windows.Forms.ToolStripMenuItem produsenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lstProdusen;
     }
 }
 
