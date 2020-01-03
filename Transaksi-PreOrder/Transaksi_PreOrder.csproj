@@ -73,6 +73,18 @@
     <Compile Include="Controller\PembelianController.cs" />
     <Compile Include="Controller\PesananController.cs" />
     <Compile Include="Controller\ProdusenController.cs" />
+    <Compile Include="View\UbahPasswordAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UbahPasswordAdmin.Designer.cs">
+      <DependentUpon>UbahPasswordAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPembelian.Designer.cs">
+      <DependentUpon>FormPembelian.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormPelanggan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormListProdusen.resx">
       <DependentUpon>FormListProdusen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPembelian.resx">
+      <DependentUpon>FormPembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProdusen.resx">
       <DependentUpon>FormProdusen.cs</DependentUpon>

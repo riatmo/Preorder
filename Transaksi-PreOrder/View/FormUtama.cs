@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using Transaksi_PreOrder.Model.Entity;
 using Transaksi_PreOrder.Controller;
+using Transaksi_PreOrder.View;
 
 namespace Transaksi_PreOrder
 {
@@ -18,35 +19,33 @@ namespace Transaksi_PreOrder
         private List<Barang> listBarang = new List<Barang>();
         private List<DetailPesanan> detailPesanan = new List<DetailPesanan>();
         private List<Pesanan> listPesanan = new List<Pesanan>();
+        private List<Produsen> listProdusen = new List<Produsen>();
+        private List<Pembelian> listPembelian = new List<Pembelian>();
 
         //tampil kode admin yg login
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
 
-        private BarangController controller;
-        private PesananController controller1;
-        //private PesananController pesananController;
-
-       // private DetailPesananController controllerdetail;
+        private BarangController brgController;
+        private PesananController psnController;
+        private ProdusenController prodController;
+        private PembelianController pblController;
 
         public FormUtama()
         {
             InitializeComponent();
 
-            controller = new BarangController();
-            controller1 = new PesananController();
-            //pesananController = new pesa
-           // controllerdetail = new DetailPesananController();
+            brgController = new BarangController();
+            psnController = new PesananController();
+            prodController = new ProdusenController();
+            pblController = new PembelianController();
 
             InisialisasiListView();
             loadPesanan();
-
-    }
-
-        
-
+        }
+      
         private void InisialisasiListView()
         {
-            lvwData.View = View.Details;
+            lvwData.View = System.Windows.Forms.View.Details;
             lvwData.FullRowSelect = true;
             lvwData.GridLines = true;
 
@@ -63,8 +62,7 @@ namespace Transaksi_PreOrder
         {
             lvwData.Items.Clear();
 
-
-            listPesanan = controller1.ReadAllPesanan();
+            listPesanan = psnController.ReadAllPesanan();
 
             foreach(var psn in listPesanan)
             {
@@ -74,61 +72,31 @@ namespace Transaksi_PreOrder
                 var item = new ListViewItem(noUrut.ToString());
                 item.SubItems.Add(psn.KdPesanan);
                 item.SubItems.Add(psn.TglPesan);
-               // item.SubItems.Add(psn.TglPesan);
                 item.SubItems.Add(psn.CaraBayar);
                 item.SubItems.Add(psn.JatuhTempo);
                 item.SubItems.Add(psn.StatusPesanan);
 
-
-
                 lvwData.Items.Add(item);
             }
-        }
-
-        private void onCreateEventHandler(Barang brg)
-        {
-            // tambahkan objek mhs yang baru ke dalam collection
-
-            // ENABLE BUAT DAFTAR PESANAN
-
-            /*listBarang.Add(brg);
-            var noUrut = lvwListBarang.Items.Count + 1;
-
-            var item = new ListViewItem(noUrut.ToString());
-            item.SubItems.Add(brg.KdBarang);
-            item.SubItems.Add(brg.Nama);
-            item.SubItems.Add(Convert.ToString(brg.Harga));
-            item.SubItems.Add(Convert.ToString(brg.Qty));
-            item.SubItems.Add(brg.Warna);
-            item.SubItems.Add(brg.Ukuran);
-
-            lvwListBarang.Items.Add(item);*/
-        }
+        }       
 
         private void PesananCreateEventHandler(Pesanan psn)
         {
-            // tambahkan objek mhs yang baru ke dalam collection
-
+            // tambahkan objek psn yang baru ke dalam collection
             // ENABLE BUAT DAFTAR PESANAN
-
             listPesanan.Add(psn);
 
-             int noUrut = lvwData.Items.Count + 1;
+            int noUrut = lvwData.Items.Count + 1;
 
-            // // tampilkan data mhs yg baru ke list view
-             ListViewItem item = new ListViewItem(noUrut.ToString());
-             item.SubItems.Add(psn.KdPesanan);
+            // tampilkan data mhs yg baru ke list view
+            ListViewItem item = new ListViewItem(noUrut.ToString());
+            item.SubItems.Add(psn.KdPesanan);
             item.SubItems.Add(psn.TglPesan);
-           //  item.SubItems.Add(psn.TglPesan);
             item.SubItems.Add(psn.CaraBayar);
-           item.SubItems.Add(psn.JatuhTempo);
+            item.SubItems.Add(psn.JatuhTempo);
             item.SubItems.Add(psn.StatusPesanan);
-            
-            
 
-            lvwData.Items.Add(item);
-            
-
+            lvwData.Items.Add(item);           
         }
 
         private void PesananUpdateEventHandler(Pesanan psn)
@@ -145,30 +113,17 @@ namespace Transaksi_PreOrder
             loadPesanan();
         }
 
-        private void btnBuatPesanan_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        
-
-
         private void btnEntryBarang_Click(object sender, EventArgs e)
         {
-            EntryBarang entryBarang = new EntryBarang("tambah Barang", controller);
-
-            //entryBarang.onCreate += onCreateEventHandler;
-            //EntryBarang entryBarang = new EntryBarang();
+            EntryBarang entryBarang = new EntryBarang("Tambah Barang", brgController);
 
             entryBarang.ShowDialog();
-
         }
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            //tampil kode admin yg login
-           txtAdmin.Text = currentAdmin;
-            
+           //tampil kode admin yg login
+           txtAdmin.Text = currentAdmin;          
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -179,7 +134,7 @@ namespace Transaksi_PreOrder
                 Pesanan psn = listPesanan[lvwData.SelectedIndices[0]];
 
                 // buat objek form entry data mahasiswa
-                FormPesanan frmPesanan = new FormPesanan("Update", psn, controller1);
+                FormPesanan frmPesanan = new FormPesanan("Update Pesanan", psn, psnController);
 
                 // mendaftarkan method event handler untuk merespon event OnUpdate
                 frmPesanan.PesananUpdate += PesananUpdateEventHandler;
@@ -198,7 +153,7 @@ namespace Transaksi_PreOrder
         {
             if (lvwData.SelectedItems.Count > 0)
             {
-                var konfirmasi = MessageBox.Show("Apakah data mahasiswa ingin dihapus?", "Konfirmasi",
+                var konfirmasi = MessageBox.Show("Apakah data Pesanan ingin dihapus?", "Konfirmasi",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (konfirmasi == DialogResult.Yes)
@@ -207,60 +162,35 @@ namespace Transaksi_PreOrder
                     Pesanan pesanan = listPesanan[lvwData.SelectedIndices[0]];
 
                     // panggil operasi CRUD
-                    var result = controller1.Delete(pesanan);
+                    var result = psnController.Delete(pesanan);
                     if (result > 0) loadPesanan();
                 }
             }
             else // data belum dipilih
             {
-                MessageBox.Show("Data mahasiswa belum dipilih !!!", "Peringatan",
+                MessageBox.Show("Data pesanan belum dipilih !!!", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void filToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAdmin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        }       
 
         private void btnBuatPesanan_Click_1(object sender, EventArgs e)
         {
-            FormPesanan formPesanan = new FormPesanan("tambah pesanan", controller1);
+            FormPesanan formPesanan = new FormPesanan("Buat Pesanan", psnController);
 
             formPesanan.PesananCreate += PesananCreateEventHandler;
     
-            //FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
-            //formDetail.DetailPesananCreate += onCreateEventHandlerDetail;
             formPesanan.ShowDialog();
         }
 
         private void btnPembayaran_Click(object sender, EventArgs e)
-        {
-            
-
-
+        {           
             if (lvwData.SelectedItems.Count > 0)
             {
                 // ambil objek mhs yang mau diedit dari collection
                 Pesanan psn = listPesanan[lvwData.SelectedIndices[0]];
 
                 // buat objek form entry data mahasiswa
-                FormPembayaran frmByr = new FormPembayaran("Update", psn, controller1);
+                FormPembayaran frmByr = new FormPembayaran("Buat Pembayaran", psn, psnController);
 
                 // mendaftarkan method event handler untuk merespon event OnUpdate
                 frmByr.PesananUpdate += PesananUpdateEventHandler;
@@ -287,15 +217,42 @@ namespace Transaksi_PreOrder
             frm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSegarkan_Click(object sender, EventArgs e)
         {
             loadPesanan();
         }
 
-        private void pelangganToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnPelanggan_Click(object sender, EventArgs e)
         {
             FormListPelanggan frm = new FormListPelanggan();
             frm.ShowDialog();
+        }
+
+        private void btnProdusen_Click(object sender, EventArgs e)
+        {
+            FormProdusen frmProd = new FormProdusen("Tambah Data Produsen", prodController);            
+
+            frmProd.ShowDialog();
+        }
+
+        private void lstSupplier_Click(object sender, EventArgs e)
+        {
+            FormListProdusen frmLstProd = new FormListProdusen();
+            frmLstProd.ShowDialog();
+        }
+
+        
+
+        private void btnPembelian_Click(object sender, EventArgs e)
+        {
+            FormPembelian frmPbl = new FormPembelian("Pembelian", pblController);
+            frmPbl.ShowDialog();
+        }
+
+        private void lstPembelian_Click(object sender, EventArgs e)
+        {
+            FormListPembelian frmLstPbl = new FormListPembelian();
+            frmLstPbl.ShowDialog();
         }
     }
 }

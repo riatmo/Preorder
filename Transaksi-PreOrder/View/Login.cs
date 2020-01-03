@@ -26,29 +26,15 @@ namespace Transaksi_PreOrder
                 set;
             }
         }
-
-        
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
+      
         public void btnLoginAppForm_Click(object sender, EventArgs e)
         {
-            AdminController controller = new AdminController();
+            AdminController admController = new AdminController();
 
-            string kodeAdmin = controller.KodeAdmin(txtUsername.Text, txtPassword.Text);
+            string kodeAdmin = admController.KodeAdmin(txtUsername.Text, txtPassword.Text);
             AdminInfo.CurrentLoggedInAdmin = kodeAdmin;
-
-            
-
-            bool IsValidAdmin = controller.IsValidAdmin(txtUsername.Text, txtPassword.Text);
+          
+            bool IsValidAdmin = admController.IsValidAdmin(txtUsername.Text, txtPassword.Text);
             if (IsValidAdmin)
             {
                 this.DialogResult = DialogResult.OK;

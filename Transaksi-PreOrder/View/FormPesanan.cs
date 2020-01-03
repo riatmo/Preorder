@@ -11,8 +11,6 @@ using System.Windows.Forms;
 using Transaksi_PreOrder.Model.Entity;
 using Transaksi_PreOrder.Controller;
 
-
-
 namespace Transaksi_PreOrder
 {
     public partial class FormPesanan : Form
@@ -22,21 +20,21 @@ namespace Transaksi_PreOrder
         public string currentAdmin = Login.AdminInfo.CurrentLoggedInAdmin;
 
         //deklarasi untuk event tambah data & update
-        public delegate void CreatePesananHandler(Pesanan psn);
+        public delegate void CreatePesananEventHandler(Pesanan psn);
 
         //event tambah data
-        public event CreatePesananHandler PesananCreate;
+        public event CreatePesananEventHandler PesananCreate;
 
         //event update data
-        public event CreatePesananHandler PesananUpdate;
+        public event CreatePesananEventHandler PesananUpdate;
 
-        //objek kontroller pesanan
-        private PesananController controller1;
+        //objek controller pesanan
+        private PesananController psnController;
 
         //objek kontroller detail
-        private DetailPesananController controllerdetail;
+        private DetailPesananController detailpsnController;
 
-        private PelangganController controllerPelanggan;
+        private PelangganController plgController;
 
         //private AdminController controllerAdmin;
 
@@ -46,17 +44,14 @@ namespace Transaksi_PreOrder
         // deklarasi field untuk meyimpan objek pesanan
         private Pesanan psn;
 
+        // deklarasi field untuk meyimpan objek pelanggan
         private Pelanggan plg;
-
-
 
         public FormPesanan()
         {
             InitializeComponent();
-            controllerdetail = new DetailPesananController();
-            controllerPelanggan = new PelangganController();
-
-
+            detailpsnController = new DetailPesananController();
+            plgController = new PelangganController();
         }
 
         internal class PesananInfo
@@ -67,35 +62,28 @@ namespace Transaksi_PreOrder
             }
         }
 
-
         // constructor untuk inisialisasi data ketika entri data baru
-        public FormPesanan(string title, PesananController controller1)
-            : this()
+        public FormPesanan(string title, PesananController psnController) : this()
         {
             // ganti text/judul form
             this.Text = title;
-            this.controller1 = controller1;
+            this.psnController = psnController;
 
-            txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
+            txtKdPesanan.Text = "PN00" + Convert.ToString(psnController.noPesanan() + 1);
         }
 
         private void FormPesanan_Load(object sender, EventArgs e)
         {
             //tampil kode admin yg login
-            txtAdmin.Text = currentAdmin;
-            //txtKdPesanan.Text = "PN00" + Convert.ToString(controller1.noPesanan() + 1);
-
-
+            txtAdmin.Text = currentAdmin;          
         }
 
-
         // constructor untuk inisialisasi data ketika mengedit data
-        public FormPesanan(string title, Pesanan obj1, PesananController controller1)
-            : this()
+        public FormPesanan(string title, Pesanan obj1, PesananController psnController) : this()
         {
             // ganti text/judul form
             this.Text = title;
-            this.controller1 = controller1;
+            this.psnController = psnController;
 
             isNewData = false; // set status edit data
             psn = obj1; // set objek mhs yang akan diedit
@@ -122,6 +110,7 @@ namespace Transaksi_PreOrder
 
             if (isNewData)  plg = new Pelanggan();
 
+            // set nilai property objek pelanggan yg diambil dari TextBox
             plg.KdPembeli = txtKodePel.Text;
             plg.Nama = txtNamaPel.Text;
             plg.Hp = txtTelfon.Text;
@@ -131,17 +120,13 @@ namespace Transaksi_PreOrder
             plg.Provinsi = txtProvPesanan.Text;
             plg.KodePos = txtKdPosPesanan.Text;
 
-
-
-
-            // set nilai property objek mahasiswa yg diambil dari TextBox
-
             datePesanan.Format = DateTimePickerFormat.Custom;
             datePesanan.CustomFormat = "yyyy-MM-dd";
 
             dateTempo.Format = DateTimePickerFormat.Custom;
             dateTempo.CustomFormat = "yyyy-MM-dd";
 
+            // set nilai property objek pesanan yg diambil dari TextBox
             psn.KdPesanan = txtKdPesanan.Text;
             psn.KdPembeli = txtKodePel.Text;
             psn.KdAdmin = txtAdmin.Text;
@@ -149,18 +134,15 @@ namespace Transaksi_PreOrder
             psn.JatuhTempo = dateTempo.Text;
             psn.StatusPesanan = txtStatusPesanan.Text;
             
-            //psn.CaraBayar = cmbPlhPembayaran.Text;
-
             PesananInfo.KodePesanan = txtKdPesanan.Text;
-
 
             int result1 = 0;
 
             if (isNewData) // tambah data baru, panggil method Create
             {
                 // panggil operasi CRUD
-                result1 = controller1.Create(psn);
-                result1 = controllerPelanggan.Create(plg);
+                result1 = psnController.Create(psn);
+                result1 = plgController.Create(plg);
 
                 if (result1 > 0) // tambah data berhasil
                 {
@@ -171,7 +153,7 @@ namespace Transaksi_PreOrder
                     
                 }
 
-                FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", controllerdetail);
+                FormDetailPesanan formDetail = new FormDetailPesanan("tambah Barang", detailpsnController);
 
                 formDetail.DetailPesananCreate += onCreateEventHandler;
 
@@ -180,23 +162,14 @@ namespace Transaksi_PreOrder
             else // edit data, panggil method Update
             {
                 // panggil operasi CRUD
-                result1 = controller1.Update(psn);
+                result1 = psnController.Update(psn);
 
                 if (result1 > 0)
                 {
                     PesananUpdate(psn); // panggil event OnUpdate
                     this.Close();
                 }
-            }
-
-            
-        }
-
-       
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            }            
         }
 
         private void btnTutup_Click(object sender, EventArgs e)

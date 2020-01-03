@@ -114,7 +114,7 @@ namespace Transaksi_PreOrder
 
             detpsn.KdDetail = txtKdDetail.Text;
             detpsn.KdPesanan = txtKdPesanan.Text;
-            detpsn.Qty = Convert.ToInt16(txtQty.Text);
+            detpsn.Qty = Convert.ToInt32(txtQty.Text);
             detpsn.KdBarang = txtKdBarang.Text;
 
             int result1 = 0;

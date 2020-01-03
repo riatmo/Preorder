@@ -35,10 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pcPreview = new System.Windows.Forms.PictureBox();
-            this.btnHapus = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.txtKdBarang = new System.Windows.Forms.TextBox();
             this.txtNmBarang = new System.Windows.Forms.TextBox();
             this.txtHarga = new System.Windows.Forms.TextBox();
@@ -50,14 +46,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcPreview)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(267, 6);
+            this.label1.Location = new System.Drawing.Point(98, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 19);
             this.label1.TabIndex = 0;
@@ -81,7 +73,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 15);
+            this.label2.Size = new System.Drawing.Size(106, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Kode Barang";
             // 
@@ -92,7 +84,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 15);
+            this.label3.Size = new System.Drawing.Size(106, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nama Barang";
             // 
@@ -103,7 +95,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 15);
+            this.label4.Size = new System.Drawing.Size(106, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Harga";
             // 
@@ -114,7 +106,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 15);
+            this.label5.Size = new System.Drawing.Size(106, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ukuran";
             // 
@@ -125,7 +117,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 15);
+            this.label6.Size = new System.Drawing.Size(106, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "Warna";
             // 
@@ -136,107 +128,62 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 197);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 15);
+            this.label7.Size = new System.Drawing.Size(106, 15);
             this.label7.TabIndex = 6;
             this.label7.Text = "Kuantitas";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pcPreview);
-            this.groupBox1.Controls.Add(this.btnHapus);
-            this.groupBox1.Controls.Add(this.btnBrowse);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 271);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Preview";
-            // 
-            // pcPreview
-            // 
-            this.pcPreview.Location = new System.Drawing.Point(6, 37);
-            this.pcPreview.Name = "pcPreview";
-            this.pcPreview.Size = new System.Drawing.Size(317, 187);
-            this.pcPreview.TabIndex = 2;
-            this.pcPreview.TabStop = false;
-            // 
-            // btnHapus
-            // 
-            this.btnHapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHapus.Location = new System.Drawing.Point(233, 237);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(75, 23);
-            this.btnHapus.TabIndex = 1;
-            this.btnHapus.Text = "Hapus";
-            this.btnHapus.UseVisualStyleBackColor = false;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
-            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowse.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(143, 237);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 0;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = false;
             // 
             // txtKdBarang
             // 
             this.txtKdBarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKdBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKdBarang.Location = new System.Drawing.Point(97, 8);
+            this.txtKdBarang.Location = new System.Drawing.Point(115, 8);
             this.txtKdBarang.Name = "txtKdBarang";
-            this.txtKdBarang.Size = new System.Drawing.Size(190, 21);
+            this.txtKdBarang.Size = new System.Drawing.Size(229, 21);
             this.txtKdBarang.TabIndex = 10;
             // 
             // txtNmBarang
             // 
             this.txtNmBarang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNmBarang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNmBarang.Location = new System.Drawing.Point(97, 45);
+            this.txtNmBarang.Location = new System.Drawing.Point(115, 45);
             this.txtNmBarang.Name = "txtNmBarang";
-            this.txtNmBarang.Size = new System.Drawing.Size(190, 21);
+            this.txtNmBarang.Size = new System.Drawing.Size(229, 21);
             this.txtNmBarang.TabIndex = 12;
             // 
             // txtHarga
             // 
             this.txtHarga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHarga.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHarga.Location = new System.Drawing.Point(97, 82);
+            this.txtHarga.Location = new System.Drawing.Point(115, 82);
             this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(190, 21);
+            this.txtHarga.Size = new System.Drawing.Size(229, 21);
             this.txtHarga.TabIndex = 13;
             // 
             // txtUkuran
             // 
             this.txtUkuran.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUkuran.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUkuran.Location = new System.Drawing.Point(97, 119);
+            this.txtUkuran.Location = new System.Drawing.Point(115, 119);
             this.txtUkuran.Name = "txtUkuran";
-            this.txtUkuran.Size = new System.Drawing.Size(190, 21);
+            this.txtUkuran.Size = new System.Drawing.Size(229, 21);
             this.txtUkuran.TabIndex = 14;
             // 
             // txtWarna
             // 
             this.txtWarna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtWarna.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWarna.Location = new System.Drawing.Point(97, 156);
+            this.txtWarna.Location = new System.Drawing.Point(115, 156);
             this.txtWarna.Name = "txtWarna";
-            this.txtWarna.Size = new System.Drawing.Size(190, 21);
+            this.txtWarna.Size = new System.Drawing.Size(229, 21);
             this.txtWarna.TabIndex = 15;
             // 
             // txtQty
             // 
             this.txtQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtQty.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(97, 194);
+            this.txtQty.Location = new System.Drawing.Point(115, 194);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(190, 21);
+            this.txtQty.Size = new System.Drawing.Size(229, 21);
             this.txtQty.TabIndex = 16;
             // 
             // btnTutup
@@ -246,9 +193,9 @@
             this.btnTutup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(0)))));
             this.btnTutup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTutup.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTutup.Location = new System.Drawing.Point(351, 3);
+            this.btnTutup.Location = new System.Drawing.Point(194, 3);
             this.btnTutup.Name = "btnTutup";
-            this.btnTutup.Size = new System.Drawing.Size(277, 23);
+            this.btnTutup.Size = new System.Drawing.Size(150, 23);
             this.btnTutup.TabIndex = 19;
             this.btnTutup.Text = "Selesai";
             this.btnTutup.UseVisualStyleBackColor = false;
@@ -263,7 +210,7 @@
             this.btnTambah.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.Location = new System.Drawing.Point(3, 3);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(275, 23);
+            this.btnTambah.Size = new System.Drawing.Size(148, 23);
             this.btnTambah.TabIndex = 20;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -275,7 +222,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(625, 32);
+            this.panel1.Size = new System.Drawing.Size(341, 32);
             this.panel1.TabIndex = 21;
             // 
             // tableLayoutPanel1
@@ -289,7 +236,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(631, 39);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(347, 39);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
             // tableLayoutPanel2
@@ -300,26 +247,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.64286F));
             this.tableLayoutPanel2.Controls.Add(this.btnTambah, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnTutup, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 367);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 311);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(631, 29);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 29);
             this.tableLayoutPanel2.TabIndex = 23;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(308, 67);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 277F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(335, 277);
-            this.tableLayoutPanel3.TabIndex = 24;
             // 
             // tableLayoutPanel4
             // 
@@ -347,7 +280,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(290, 224);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(347, 224);
             this.tableLayoutPanel4.TabIndex = 25;
             // 
             // EntryBarang
@@ -355,21 +288,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(655, 413);
+            this.ClientSize = new System.Drawing.Size(370, 352);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.Name = "EntryBarang";
             this.Text = "Entry Barang";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcPreview)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -385,10 +314,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pcPreview;
-        private System.Windows.Forms.Button btnHapus;
-        private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.TextBox txtKdBarang;
         private System.Windows.Forms.TextBox txtNmBarang;
         private System.Windows.Forms.TextBox txtUkuran;
@@ -400,7 +325,6 @@
         public System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
     }
 }
